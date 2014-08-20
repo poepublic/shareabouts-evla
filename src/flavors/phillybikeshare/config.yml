@@ -1,0 +1,295 @@
+# Settings for the app
+app:
+  # HTML Title
+  title: Philly Bike Share
+  # Header name
+  name: Philly Bike Share
+  # Meta description that will show up in Google search results
+  meta_description: _(Shareabouts is a mapping tool to gather crowd sourced public input. Use it to collect suggested locations and comments in a social, engaging process.)
+  # Meta author that will show up in Google search results
+  meta_author: OpenPlans.org
+
+
+  # When the map loads, existing places will be loaded in chunks. By default,
+  # the size of the chunks will be a reasonable default dictated by the API
+  # server. If you would like to override the chunk size, use this setting:
+  # places_page_size: 100
+
+  # Optional. List view is supported by default. Set to false to disable.
+  # list_enabled: false
+
+# Settings for map and layer configs
+map:
+  geolocation_enabled: true
+  geolocation_onload: false
+
+  geocoding_enabled: true
+  geocode_field_label: _(Enter an address...)
+  geocode_bounding_box: [39.830159, -75.478821, 40.167331, -74.781189]  # top, left, bottom, right
+
+  options:
+    center:
+      lat: 39.9523524
+      lng: -75.1636075
+    zoom: 14
+    minZoom: 12
+    maxZoom: 17
+  layers:
+    - url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
+      attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
+#    - url: /static/data/philadelphia.geojson
+#      type: json
+#      rules:
+#        - condition: 'true'
+#          style:
+#            color: "#444"
+#            opacity: 0.6
+#            fillOpacity: 0.1
+#            weight: 1
+
+# The keys show up in the dropdown list when you are adding a new place
+# The values map the place type to map icons (defined below).
+place_types:
+  landmark:
+    label: _(Landmark)
+    rules:
+      - condition: '{{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/map-icon-inservice-legend.png
+          iconSize: [19, 25]
+          iconAnchor: [10, 25]
+
+      - condition: '{{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/map-icon-inservice.png
+          iconSize: [40, 52]
+          iconAnchor: [20, 52]
+
+activity:
+  # Optional. Activity is supported by default. Set to false to disable.
+  enabled: true
+  # How often to refresh the activity list, in milliseconds.
+  interval: 30000
+
+place:
+  adding_supported: false
+  add_button_label: _(Add a Place)
+  # Labels for the buttons that toggle the map and list views
+  show_list_button_label: _(List All Places)
+  show_map_button_label: _(Show the Map)
+  action_text: _(added)
+  title: _(Tell us more...)
+  action_text: _(created)
+  anonymous_name: _(Someone)
+  submit_button_label: _(Submit)
+
+  location_item_name: location
+
+  items:
+    - prompt: _(Your Name)
+      type: text
+      name: submitter_name
+      optional: true
+      attrs:
+        - key: placeholder
+          value: _(Name)
+        - key: size
+          value: 30
+    - prompt: _(Your Email)
+      type: text
+      name: private-submitter_email
+      optional: true
+      attrs:
+        - key: placeholder
+          value: _(Email address)
+        - key: size
+          value: 30
+    - prompt: _(Location Name)
+      type: text
+      name: name
+      optional: true
+      attrs:
+        - key: placeholder
+          value: _(Location Name)
+        - key: size
+          value: 30
+    - prompt: _(Location Type)
+      type: select
+      options:
+        - label: _(Choose One)
+          value: ''
+        - label: _(Landmark)
+          value: landmark
+        - label: _(Park)
+          value: park
+        - label: _(School)
+          value: school
+      name: location_type
+      attrs:
+        - key: required
+    - prompt: _(Description)
+      type: textarea
+      name: description
+      optional: true
+      attrs:
+        - key: placeholder
+          value: _(Description...)
+    - prompt: _(Image)
+      inputfile_label: _(Add an Image)
+      type: file
+      name: my_image
+      optional: true
+      attrs:
+        - key: accept
+          value: image/*
+
+survey:
+  submission_type: comments
+
+  # Response config
+  show_responses: true
+  response_name: _(comment)
+  response_plural_name: _(comments)
+  action_text: _(commented on)
+  anonymous_name: _(Someone)
+
+  # Survey form config
+  title: _(Leave a Comment)
+  form_link_text: _(Leave a Comment)
+  submit_btn_text: _(Comment)
+  items:
+    - prompt: _(Do you think this is a good spot for a bike share station?)
+      type: select
+      options:
+        - label: _(Y/N)
+          value: ''
+        - label: _(Yes)
+          value: yes
+        - label: _(No)
+          value: no
+      name: good_spot
+      optional: false
+      attrs:
+        - key: required
+    - prompt: _((If Yes) Great! Tell us why?)
+      type: select
+      options:
+        - label: _(Choose one...)
+          value: ''
+        - label: _(Near where I live)
+          value: live
+        - label: _(Near a transit stop or station that I use)
+          value: transit
+        - label: _(Near where I work)
+          value: work
+        - label: _(Otherwise useful to me)
+          value: useful
+        - label: _(Other)
+          value: other
+      name: why_good
+      attrs:
+        - key: required
+    - prompt: _((If No) We'd love to hear more about that.  Is it mostly because:)
+      type: select
+      options:
+        - label: _(Choose one...)
+          value: ''
+        - label: _(I would not use this station)
+          value: nouse
+        - label: _(The station is in the way of other activities here)
+          value: intheway
+        - label: _(I would feel unsafe using this station)
+          value: unsafe
+        - label: _(Other)
+          value: other
+      name: why_bad
+      attrs:
+        - key: required
+    - prompt: _(How safe would you feel using this station at night?)
+      type: select
+      options:
+        - label: _(Choose one...)
+          value: ''
+        - label: _(Very safe)
+          value: verysafe
+        - label: _(Somewhat safe)
+          value: safe
+        - label: _(Somewhat unsafe)
+          value: unsafe
+        - label: _(Very unsafe)
+          value: veryunsafe
+      name: safety
+      attrs:
+        - key: required
+    - prompt: _(Do you have any other comments?)
+      type: textarea
+      name: comments
+      attrs:
+        - key: placeholder
+          value: _(Comment...)
+    - prompt: _(Thanks! 3 quick questions about yourself.  What is your age?)
+      type: text
+      name: submitter_age
+      optional: true
+      attrs:
+        - key: placeholder
+          value: _(Age)
+        - key: size
+          value: 30
+    - prompt: _(What is your gender?)
+      type: select
+      options:
+        - label: _(Choose one...)
+          value: ''
+        - label: _(Male)
+          value: m
+        - label: _(Female)
+          value: f
+        - label: _(Other)
+          value: o
+      name: submitter_gender
+      attrs:
+        - key: required
+    - prompt: _(What is your race/ethnicity?)
+      type: select
+      options:
+        - label: _(Choose one...)
+          value: ''
+        - label: _(Hispanic/Latino)
+          value: latino
+        - label: _(Black/African American)
+          value: black
+        - label: _(White)
+          value: white
+        - label: _(Native American)
+          value: nativeamerican
+        - label: _(Asian/Pacific Islander)
+          value: asian
+        - label: _(Other)
+          value: other
+      name: submitter_race
+      attrs:
+        - key: required
+
+
+support:
+  submission_type: support
+  submit_btn_text: _(Support)
+  response_name: _(support)
+  response_plural_name: _(supports)
+  action_text: supported
+  anonymous_name: _(Someone)
+
+pages:
+  - title: _(About)
+    slug: about
+    name: overview
+    # start_page: true
+
+notifications:
+  on_new_place: true
+  submitter_email_field: private-submitter_email
