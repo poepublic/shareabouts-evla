@@ -148,19 +148,19 @@ place:
           value: image/*
 
 survey:
-  submission_type: comments
+  submission_type: surveys
 
   # Response config
   show_responses: true
-  response_name: _(comment)
-  response_plural_name: _(comments)
-  action_text: _(commented on)
+  response_name: _(survey)
+  response_plural_name: _(surveys)
+  action_text: _(surveyed)
   anonymous_name: _(Someone)
 
   # Survey form config
-  title: _(Leave a Comment)
-  form_link_text: _(Leave a Comment)
-  submit_btn_text: _(Comment)
+  title: _(Fill out the survey)
+  form_link_text: _(Fill out the survey)
+  submit_btn_text: _(Submit)
   items:
     - prompt: _(Do you think this is a good spot for a bike share station?)
       type: select
@@ -168,9 +168,9 @@ survey:
         - label: _(Y/N)
           value: ''
         - label: _(Yes)
-          value: yes
+          value: 'yes'
         - label: _(No)
-          value: no
+          value: 'no'
       name: good_spot
       optional: false
       attrs:
