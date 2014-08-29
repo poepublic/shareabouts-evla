@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 
 {% block site-title %}
-<a href="/">{{ config.app.name }}</a>
+<a href="/"><img id="site-logo" src="{{ config.static_url }}css/images/{% if LANGUAGE_CODE == 'es' %}logo-es.gif{% else %}logo.gif{% endif %}" title="{{ config.app.name }}"></a>
 {% endblock %}
 
 {% block meta %}
