@@ -15,7 +15,7 @@
           {{/if}}
         </strong>
         <span class="response-date">
-          around {{ pretty_created_datetime }}
+          {{#_}}around {{ pretty_created_datetime }}{{/_}}
         </span>
         {{/_}}
       </header>
@@ -45,97 +45,97 @@
     <fieldset>
       <div class="survey-field survey-field-good_spot">
         <label class="survey-label survey-label-good_spot" for="survey-good_spot">
-          Do you think this is a good spot for a bike share station?
+          {{#_}}Do you think this is a good spot for a bike share station?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-good_spot">
           <div id="survey-good_spot" class="radio-group">
-            <input type="radio" name="good_spot" id="good_spot_yes" required value="yes" /><label class="btn btn-radio" for="good_spot_yes">Yes</label>
-            <input type="radio" name="good_spot" id="good_spot_no" required value="no" /><label class="btn btn-radio" for="good_spot_no">No</label>
+            <input type="radio" name="good_spot" id="good_spot_yes" required value="yes" /><label class="btn btn-radio" for="good_spot_yes">{{#_}}Yes{{/_}}</label>
+            <input type="radio" name="good_spot" id="good_spot_no" required value="no" /><label class="btn btn-radio" for="good_spot_no">{{#_}}No{{/_}}</label>
           </div>
         </div>
       </div>
       <div class="survey-field survey-field-why_good" style="display: none;">
         <label class="survey-label survey-label-why_good" for="survey-why_good">
-          (If Yes) Great! Tell us why?
+          {{#_}}Great! Tell us why?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-why_good">
           <div id="survey-why_good" class="radio-group">
-            <input type="radio" name="why_good" id="why_good_live" value="live" /><label class="btn btn-radio" for="why_good_live">Near where I live</label><br/>
-            <input type="radio" name="why_good" id="why_good_transit" value="transit" /><label class="btn btn-radio" for="why_good_transit">Near a transit stop or station that I use</label><br/>
-            <input type="radio" name="why_good" id="why_good_work" value="work" /><label class="btn btn-radio" for="why_good_work">Near where I work</label><br/>
-            <input type="radio" name="why_good" id="why_good_useful" value="useful" /><label class="btn btn-radio" for="why_good_useful">Otherwise useful to me</label><br/>
-            <input type="radio" name="why_good" id="why_good_other" value="other" /><label class="btn btn-radio" for="why_good_other">Other</label>
+            <input type="radio" name="why_good" id="why_good_live" value="live" /><label class="btn btn-radio" for="why_good_live">{{#_}}Near where I live{{/_}}</label><br/>
+            <input type="radio" name="why_good" id="why_good_transit" value="transit" /><label class="btn btn-radio" for="why_good_transit">{{#_}}Near a transit stop or station that I use{{/_}}</label><br/>
+            <input type="radio" name="why_good" id="why_good_work" value="work" /><label class="btn btn-radio" for="why_good_work">{{#_}}Near where I work{{/_}}</label><br/>
+            <input type="radio" name="why_good" id="why_good_useful" value="useful" /><label class="btn btn-radio" for="why_good_useful">{{#_}}Otherwise useful to me{{/_}}</label><br/>
+            <input type="radio" name="why_good" id="why_good_other" value="other" /><label class="btn btn-radio" for="why_good_other">{{#_}}Other{{/_}}</label>
           </div>
         </div>
       </div>
       <div class="survey-field survey-field-why_bad" style="display: none;">
         <label class="survey-label survey-label-why_bad" for="survey-why_bad">
-          (If No) We'd love to hear more about that.  Is it mostly because:
+          {{#_}}We'd love to hear more about that.  Is it mostly because:{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-why_bad">
           <div id="survey-why_bad" class="radio-group">
-            <input type="radio" name="why_bad" id="why_bad_nouse" value="nouse" /><label class="btn btn-radio" for="why_bad_nouse">I would not use this station</label><br/>
-            <input type="radio" name="why_bad" id="why_bad_intheway" value="intheway" /><label class="btn btn-radio" for="why_bad_intheway">The station is in the way of other activities here</label><br/>
-            <input type="radio" name="why_bad" id="why_bad_unsafe" value="unsafe" /><label class="btn btn-radio" for="why_bad_unsafe">I would feel unsafe using this station</label><br/>
-            <input type="radio" name="why_bad" id="why_bad_other" value="other" /><label class="btn btn-radio" for="why_bad_other">Other</label>
+            <input type="radio" name="why_bad" id="why_bad_nouse" value="nouse" /><label class="btn btn-radio" for="why_bad_nouse">{{#_}}I would not use this station{{/_}}</label><br/>
+            <input type="radio" name="why_bad" id="why_bad_intheway" value="intheway" /><label class="btn btn-radio" for="why_bad_intheway">{{#_}}The station is in the way of other activities here{{/_}}</label><br/>
+            <input type="radio" name="why_bad" id="why_bad_unsafe" value="unsafe" /><label class="btn btn-radio" for="why_bad_unsafe">{{#_}}I would feel unsafe using this station{{/_}}</label><br/>
+            <input type="radio" name="why_bad" id="why_bad_other" value="other" /><label class="btn btn-radio" for="why_bad_other">{{#_}}Other{{/_}}</label>
           </div>
         </div>
       </div>
       <div class="survey-field survey-field-safety">
         <label class="survey-label survey-label-safety" for="survey-safety">
-          How safe would you feel using this station at night?
+          {{#_}}How safe would you feel using this station at night?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-safety">
           <div id="survey-safety" class="radio-group">
-            <input type="radio" name="safety" id="safety_verysafe" required value="verysafe" /><label class="btn btn-radio" for="safety_verysafe">Very safe</label><br/>
-            <input type="radio" name="safety" id="safety_safe" required value="safe" /><label class="btn btn-radio" for="safety_safe">Somewhat safe</label><br/>
-            <input type="radio" name="safety" id="safety_unsafe" required value="unsafe" /><label class="btn btn-radio" for="safety_unsafe">Somewhat unsafe</label><br/>
-            <input type="radio" name="safety" id="safety_veryunsafe" required value="veryunsafe" /><label class="btn btn-radio" for="safety_veryunsafe">Very unsafe</label>
+            <input type="radio" name="safety" id="safety_verysafe" required value="verysafe" /><label class="btn btn-radio" for="safety_verysafe">{{#_}}Very safe{{/_}}</label><br/>
+            <input type="radio" name="safety" id="safety_safe" required value="safe" /><label class="btn btn-radio" for="safety_safe">{{#_}}Somewhat safe{{/_}}</label><br/>
+            <input type="radio" name="safety" id="safety_unsafe" required value="unsafe" /><label class="btn btn-radio" for="safety_unsafe">{{#_}}Somewhat unsafe{{/_}}</label><br/>
+            <input type="radio" name="safety" id="safety_veryunsafe" required value="veryunsafe" /><label class="btn btn-radio" for="safety_veryunsafe">{{#_}}Very unsafe{{/_}}</label>
           </div>
         </div>
       </div>
       <div class="survey-field survey-field-comments">
         <label class="survey-label survey-label-comments" for="survey-comments">
-          Do you have any other comments?
+          {{#_}}Do you have any other comments?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-comments">
-          <textarea id="survey-comments" name="comments" placeholder="Comment..."></textarea>
+          <textarea id="survey-comments" name="comments" placeholder="{{#_}}Comment...{{/_}}"></textarea>
         </div>
       </div>
       <br/>
       <div class="survey-field survey-field-submitter_age">
         <label class="survey-label survey-label-submitter_age" for="survey-submitter_age">
-          Thanks! 3 quick questions about yourself.  What is your age? (optional)
+          {{#_}}Thanks! 3 quick questions about yourself.  What is your age?{{/_}} {{#_}}(optional){{/_}}
         </label>
         <div class="survey-widgets survey-widgets-submitter_age">
-          <input id="survey-submitter_age" name="submitter_age" type="text" placeholder="Age" size="30">
+          <input id="survey-submitter_age" name="submitter_age" type="text" placeholder="{{#_}}Age{{/_}}" size="30">
         </div>
       </div>
       <br/>
       <div class="survey-field survey-field-submitter_gender">
         <label class="survey-label survey-label-submitter_gender" for="survey-submitter_gender">
-          What is your gender?
+          {{#_}}What is your gender?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-submitter_gender">
           <div id="survey-submitter_gender" class="radio-group">
-            <input type="radio" name="submitter_gender" id="submitter_gender_m" required value="m"><label class="btn btn-radio" for="submitter_gender_m">Male</label>
-            <input type="radio" name="submitter_gender" id="submitter_gender_f" required value="f"><label class="btn btn-radio" for="submitter_gender_f">Female</label>
-            <input type="radio" name="submitter_gender" id="submitter_gender_o" required value="o"><label class="btn btn-radio" for="submitter_gender_o">Other</label>
+            <input type="radio" name="submitter_gender" id="submitter_gender_m" required value="m"><label class="btn btn-radio" for="submitter_gender_m">{{#_}}Male{{/_}}</label>
+            <input type="radio" name="submitter_gender" id="submitter_gender_f" required value="f"><label class="btn btn-radio" for="submitter_gender_f">{{#_}}Female{{/_}}</label>
+            <input type="radio" name="submitter_gender" id="submitter_gender_o" required value="o"><label class="btn btn-radio" for="submitter_gender_o">{{#_}}Other{{/_}}</label>
           </div>
         </div>
       </div>
       <div class="survey-field survey-field-submitter_race">
         <label class="survey-label survey-label-submitter_race" for="survey-submitter_race">
-          What is your race/ethnicity?
+          {{#_}}What is your race/ethnicity?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-submitter_race">
           <div id="survey-submitter_race" class="radio-group">
-            <input type="radio" name="submitter_race" id="submitter_race_latino" required value="latino" /><label class="btn btn-radio" for="submitter_race_latino">Hispanic/Latino</label>
-            <input type="radio" name="submitter_race" id="submitter_race_black" required value="black" /><label class="btn btn-radio" for="submitter_race_black">Black/African American</label>
-            <input type="radio" name="submitter_race" id="submitter_race_white" required value="white" /><label class="btn btn-radio" for="submitter_race_white">White</label>
-            <input type="radio" name="submitter_race" id="submitter_race_nativeamerican" required value="nativeamerican" /><label class="btn btn-radio" for="submitter_race_nativeamerican">Native American</label>
-            <input type="radio" name="submitter_race" id="submitter_race_asian" required value="asian" /><label class="btn btn-radio" for="submitter_race_asian">Asian/Pacific Islander</label>
-            <input type="radio" name="submitter_race" id="submitter_race_other" required value="other" /><label class="btn btn-radio" for="submitter_race_other">Other</label>
+            <input type="radio" name="submitter_race" id="submitter_race_latino" required value="latino" /><label class="btn btn-radio" for="submitter_race_latino">{{#_}}Hispanic/Latino{{/_}}</label>
+            <input type="radio" name="submitter_race" id="submitter_race_black" required value="black" /><label class="btn btn-radio" for="submitter_race_black">{{#_}}Black/African American{{/_}}</label>
+            <input type="radio" name="submitter_race" id="submitter_race_white" required value="white" /><label class="btn btn-radio" for="submitter_race_white">{{#_}}White{{/_}}</label>
+            <input type="radio" name="submitter_race" id="submitter_race_nativeamerican" required value="nativeamerican" /><label class="btn btn-radio" for="submitter_race_nativeamerican">{{#_}}Native American{{/_}}</label>
+            <input type="radio" name="submitter_race" id="submitter_race_asian" required value="asian" /><label class="btn btn-radio" for="submitter_race_asian">{{#_}}Asian/Pacific Islander{{/_}}</label>
+            <input type="radio" name="submitter_race" id="submitter_race_other" required value="other" /><label class="btn btn-radio" for="submitter_race_other">{{#_}}Other{{/_}}</label>
           </div>
         </div>
       </div>
@@ -144,7 +144,7 @@
     <input name="commit" type="submit" value="{{ survey_config.submit_btn_text }}" class="btn btn-primary btn-large submit-btn">
 
     {{#is_authenticated}}
-      <p class="signed-in-as"><img src="{{ current_user "avatar_url" }}" class="avatar" /> {{ current_user "name" }}. <a class="" href="/users/logout/">Log Out</a></p>
+      <p class="signed-in-as"><img src="{{ current_user "avatar_url" }}" class="avatar" /> {{ current_user "name" }}. <a class="" href="/users/logout/">{{#_}}Log Out{{/_}}</a></p>
     {{^}}
     {{/is_authenticated}}
 
