@@ -61,31 +61,31 @@
 {% block includes %}
 <script>
   (function(NS, $) {
-    $(document).on('change', '#survey-good_spot', function(evt) {
+    $(document).on('change', 'input[name="good_spot"]', function(evt) {
       var val = $(this).val(),
           $yesField = $('.survey-field-why_good'),
-          $yesInput = $('#survey-why_good'),
+          $yesInput = $('input[name="why_good"]'),
           $noField = $('.survey-field-why_bad'),
-          $noInput = $('#survey-why_bad');
+          $noInput = $('input[name="why_bad"]');
 
       if (val === 'yes') {
         $yesField.show();
         $yesInput.attr('required', true);
 
         $noField.hide()
-        $noInput.removeAttr('required').val('');
+        $noInput.removeAttr('required').val('').prop('checked', false);
       } else if (val === 'no') {
         $yesField.hide();
-        $yesInput.removeAttr('required').val('');
+        $yesInput.removeAttr('required').val('').prop('checked', false);
 
         $noField.show();
         $noInput.attr('required', true);
       } else {
         $yesField.hide();
-        $yesInput.removeAttr('required').val('');
+        $yesInput.removeAttr('required').val('').prop('checked', false);
 
         $noField.hide();
-        $noInput.removeAttr('required').val('');
+        $noInput.removeAttr('required').val('').prop('checked', false);
       }
     });
   }(Shareabouts, jQuery));
