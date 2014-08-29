@@ -27,32 +27,33 @@ body, select, input, textarea {
 .btn:link {
   text-transform: uppercase;
   font-weight: bold;
-/*  border-radius: 3px;*/
+  border-radius: 8px;
   font-family: "Arial Narrow", "Helvetica Neue", Arial, Helvetica, sans-serif;
   background-color: #3979D4;
   color: #fff;
 /*  border: 0;*/
+  border-color: transparent;
 }
 .btn:hover, .button:hover, button:hover {
   background-color: #287AED;
 }
 .btn-primary, .btn-primary:visited, .btn-primary:link {
-  background-color: #00aaff;
+  background-color: #3979D4;
   color: #fff;
   font-weight: 700;
 }
 .btn-primary:hover {
-  background-color: #007fbf;
+  background-color: #287AED;
 }
 .btn-secondary,
 .btn-secondary:visited,
 .btn-secondary:link {
-  background-color: #ccc;
-  color: #007fbf;
+  background-color: #fff;
+  color: #3979D4;
 }
 .btn-secondary:hover {
-  background-color: #007fbf;
-  color: #fff;
+  background-color: #fff;
+  color: #444;
 }
 .btn-disabled,
 .btn-disabled:visited,
@@ -122,15 +123,15 @@ textarea:focus {
 /* Navigation Button */
 #nav-btn {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; /* Careful changin' this! */
-  background: #6f6f6f;
-  color: #bbb;
-  text-shadow: -1px 1px 1px rgba(0,0,0,0.25);
+  background: #4475BA;
+  color: #eee;
+  text-shadow: none;
 }
 
 /* User Menu */
 #sign-in-btn {
-  color: #a3c7d9;
-  font-weight: 700;
+  color: #fff;
+  font-weight: bold;
 }
 #sign-in-btn:hover {
   color: #fff;
@@ -203,7 +204,7 @@ a.close-btn:hover {
 .user-support label {
   /*background: transparent url(images/heart-empty.png) left center no-repeat scroll;*/
 /*  padding-left: 22px;*/
-  color: #4475BA;
+  color: #fff;
 }
 .user-support input[type=checkbox]:checked ~ label {
   /*background-image: url(images/heart.png);*/
@@ -295,11 +296,11 @@ input.geocode-address-field {
 }
 #geocode-address-bar .error {
   line-height: 1.75;
-  background-color: #F30000;
-  box-shadow: 2px 2px 0 #F30000, 2px -2px 0 #F30000, -2px 2px 0 #F30000, -2px -2px 0 #F30000;
+  background-color: #F26161;
+  box-shadow: 2px 2px 0 #F26161, 2px -2px 0 #F26161, -2px 2px 0 #F26161, -2px -2px 0 #F26161;
 }
 #geocode-address-bar .error + form {
-  box-shadow: 2px 2px 0 #F30000, 2px -2px 0 #F30000, -2px 2px 0 #F30000, -2px -2px 0 #F30000;
+  box-shadow: 2px 2px 0 #F26161, 2px -2px 0 #F26161, -2px 2px 0 #F26161, -2px -2px 0 #F26161;
 }
 #geocode-address-bar .error.is-hidden + form {
   box-shadow: none;
@@ -377,12 +378,12 @@ a.shareabouts-logo:hover {
   .list-toggle-btn:visited,
   .list-toggle-btn:link {
     min-width: 11.5em;
-    background-color: #ccc;
-    color: #007fbf;
+    background-color: #fff;
+    color: #3979D4;
   }
   .list-toggle-btn:hover {
-    background-color: #007fbf;
-    color: #fff;
+    background-color: #fff;
+    color: #444;
   }
   .show-the-map:before {
     content: '\27A4';
@@ -398,10 +399,10 @@ a.shareabouts-logo:hover {
   .show-the-list:before {
     content: '\2630';
     margin: 0 0.375em;
-    text-shadow: -0.25em 0 0 #ccc, -0.25em -1px 0 #ccc, -0.25em 1px 0 #ccc, -0.375em 0 0 #007fbf;
+    text-shadow: -0.25em 0 0 #fff, -0.25em -1px 0 #fff, -0.25em 1px 0 #fff, -0.375em 0 0 #3979D4;
   }
   .list-toggle-btn:hover .show-the-list:before {
-    text-shadow: -0.25em 0 0 #007fbf, -0.25em -1px 0 #007fbf, -0.25em 1px 0 #007fbf, -0.375em 0 0 #fff;
+    text-shadow: -0.25em 0 0 #fff, -0.25em -1px 0 #fff, -0.25em 1px 0 #fff, -0.375em 0 0 #444;
   }
 }
 
