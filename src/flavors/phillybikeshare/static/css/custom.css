@@ -70,7 +70,11 @@ body, select, input, textarea {
 
 /* Forms */
 label {
-  font-family: inherit;
+  font-family: "Arial Narrow", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.375em;
+  text-transform: none;
+  color: inherit;
 }
 input[type=date],
 input[type=datetime],
@@ -98,6 +102,30 @@ textarea:focus {
 .form-submitted textarea:invalid,
 .form-submitted select:invalid {
   outline: 2px solid #b2182b;
+}
+
+.radio-group {
+  margin-bottom: 1.5em;
+}
+.radio-group input {
+  display: none;
+}
+.radio-group label {
+  font-size: 1em;
+  margin: 0 0.125em 0.25em 0;
+}
+.btn-radio,
+.btn-radio:visited,
+.btn-radio:link {
+  background-color: #888;
+  color: #fff;
+  text-align: left;
+}
+:checked + .btn-radio,
+.btn-radio.checked,
+.btn-radio:hover {
+  background-color: #4475BA;
+  color: #fff;
 }
 
 
@@ -244,6 +272,10 @@ a.close-btn:hover {
 }
 
 /* Surveys */
+a.reply-link {
+   float: none; 
+   position: relative; 
+}
 .response-body {
 /*  border-top-color: #a8a8a8;*/
 /*  border-right-color: #c8c8c8;*/
