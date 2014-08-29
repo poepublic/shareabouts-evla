@@ -75,7 +75,7 @@ label {
   text-transform: none;
   color: inherit;
 }
-#content label {
+.place-detail label {
   font-size: 1.375em;
 }
 input[type=date],
