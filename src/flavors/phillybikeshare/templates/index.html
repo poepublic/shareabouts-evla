@@ -58,4 +58,35 @@
   Analytics, custom JS, and such go here
  -->
 {% block includes %}
+<script>
+  (function(NS, $) {
+    $(document).on('change', '#survey-good_spot', function(evt) {
+      var val = $(this).val(),
+          $yesField = $('.survey-field-why_good'),
+          $yesInput = $('#survey-why_good'),
+          $noField = $('.survey-field-why_bad'),
+          $noInput = $('#survey-why_bad');
+
+      if (val === 'yes') {
+        $yesField.show();
+        $yesInput.attr('required', true);
+
+        $noField.hide()
+        $noInput.removeAttr('required').val('');
+      } else if (val === 'no') {
+        $yesField.hide();
+        $yesInput.removeAttr('required').val('');
+
+        $noField.show();
+        $noInput.attr('required', true);
+      } else {
+        $yesField.hide();
+        $yesInput.removeAttr('required').val('');
+
+        $noField.hide();
+        $noInput.removeAttr('required').val('');
+      }
+    });
+  }(Shareabouts, jQuery));
+</script>
 {% endblock %}

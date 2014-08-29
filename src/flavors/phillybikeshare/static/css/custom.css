@@ -332,6 +332,13 @@ a.shareabouts-logo:hover {
   border-bottom: 1px solid #ccc;
 }
 
+/* =Survey Form */
+
+.survey-field-why_good,
+.survey-field-why_bad {
+  display: none;
+}
+
 
 /* =Media Queries
 -------------------------------------------------------------- */
