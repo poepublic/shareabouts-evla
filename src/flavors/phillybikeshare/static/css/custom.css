@@ -273,8 +273,8 @@ a.close-btn:hover {
 
 /* Surveys */
 a.reply-link {
-   float: none; 
-   position: relative; 
+   float: none;
+   position: relative;
 }
 .response-body {
 /*  border-top-color: #a8a8a8;*/
@@ -354,7 +354,9 @@ input.geocode-address-field {
 #geocode-address-bar .error.is-hidden + form {
   box-shadow: none;
 }
-
+.geocode-spinner {
+  background-color: #325587;
+}
 
 /* =Footer
 -------------------------------------------------------------- */
