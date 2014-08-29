@@ -233,7 +233,7 @@ survey:
           value: _(Comment...)
     - prompt: _(Thanks! 3 quick questions about yourself.  What is your age?)
       type: text
-      name: submitter_age
+      name: private-submitter_age
       optional: true
       attrs:
         - key: placeholder
@@ -251,7 +251,7 @@ survey:
           value: f
         - label: _(Other)
           value: o
-      name: submitter_gender
+      name: private-submitter_gender
       attrs:
         - key: required
     - prompt: _(What is your race/ethnicity?)
@@ -271,7 +271,7 @@ survey:
           value: asian
         - label: _(Other)
           value: other
-      name: submitter_race
+      name: private-submitter_race
       attrs:
         - key: required
 
