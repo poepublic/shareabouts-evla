@@ -1,40 +1,6 @@
-{{#survey_config.show_responses}}
-<p><a href="#reply" class="reply-link btn btn-large btn-block">{{ survey_config.form_link_text }}</a></p>
-
-<ol class="responses unstyled-list">
-  {{#responses}}
-  <li>
-    <article data-response-id="{{ id }}" class="response">
-      <header class="response-header clearfix">
-        {{#_}}<strong class="response-submitter">
-          {{#if submitter}}
-            <img src="{{ submitter.avatar_url }}" class="avatar" /> {{ submitter.name }}
-          {{^}}
-            <!-- TODO: FIXME: don't hardcode image URL -->
-            <img src="/static/css/images/user-50.png" class="avatar" /> {{ submitter_name }}
-          {{/if}}
-        </strong>
-        <span class="response-date">
-          {{#_}}around {{ pretty_created_datetime }}{{/_}}
-        </span>
-        {{/_}}
-      </header>
-
-      <div class="response-body">
-
-        {{#items}}
-        <div class="response-item response-item-{{ name }}">
-          <span class="response-label response-label-{{ name }}">{{ label }}</span>
-          <p class="response-value response-value-{{ name }}">{{nlToBr value }}</p>
-        </div>
-        {{/items}}
-
-      </div>
-    </article>
-  </li>
-  {{/responses}}
-</ol>
-{{/survey_config.show_responses}}
+<p style="text-transform:uppercase;text-align:center;font-family:inherit;font-size:1.75em;font-weight:bold;padding:0.5em;margin-bottom:0.75em;background-color:#FFFACD;border-radius:10px;border:1px solid #eee;">{{ responses.length }}
+{{# has_single_response }}{{ survey_config.response_name }}{{/ has_single_response }}
+{{^ has_single_response }}{{ survey_config.response_plural_name }}{{/ has_single_response }}</p>
 
 <div id="reply">
   <br />
