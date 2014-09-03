@@ -61,12 +61,12 @@
 {% block includes %}
 <script>
   (function(NS, $) {
-    $(document).on('change', 'input[name="good_spot"]', function(evt) {
+    $(document).on('change', 'input[name="private-good_spot"]', function(evt) {
       var val = $(this).val(),
           $yesField = $('.survey-field-why_good'),
-          $yesInput = $('input[name="why_good"]'),
+          $yesInput = $('input[name="private-why_good"]'),
           $noField = $('.survey-field-why_bad'),
-          $noInput = $('input[name="why_bad"]');
+          $noInput = $('input[name="private-why_bad"]');
 
       if (val === 'yes') {
         $yesField.show();

@@ -178,7 +178,7 @@ survey:
           value: 'yes'
         - label: _(No)
           value: 'no'
-      name: good_spot
+      name: private-good_spot
       optional: false
       attrs:
         - key: required
@@ -197,7 +197,7 @@ survey:
           value: useful
         - label: _(Other)
           value: other
-      name: why_good
+      name: private-why_good
       attrs:
         - key: required
     - prompt: _((If No) We'd love to hear more about that.  Is it mostly because:)
@@ -213,7 +213,7 @@ survey:
           value: unsafe
         - label: _(Other)
           value: other
-      name: why_bad
+      name: private-why_bad
       attrs:
         - key: required
     - prompt: _(How safe would you feel using this station at night?)
@@ -229,12 +229,12 @@ survey:
           value: unsafe
         - label: _(Very unsafe)
           value: veryunsafe
-      name: safety
+      name: private-safety
       attrs:
         - key: required
     - prompt: _(Do you have any other comments?)
       type: textarea
-      name: comments
+      name: private-comments
       attrs:
         - key: placeholder
           value: _(Comment...)
