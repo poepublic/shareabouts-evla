@@ -62,7 +62,7 @@
       </div>
       <div class="survey-field survey-field-comments">
         <label class="survey-label survey-label-comments" for="survey-comments">
-          {{#_}}Do you have any other comments?{{/_}}
+          {{#_}}Do you have any other comments?{{/_}} <small>{{#_}}(optional){{/_}}</small>
         </label>
         <div class="survey-widgets survey-widgets-comments">
           <textarea id="survey-comments" name="private-comments" placeholder="{{#_}}Comment...{{/_}}"></textarea>
@@ -71,37 +71,41 @@
       <br/>
       <div class="survey-field survey-field-submitter_age">
         <label class="survey-label survey-label-submitter_age" for="survey-submitter_age">
-          {{#_}}Thanks! 3 quick questions about yourself.  What is your age?{{/_}} {{#_}}(optional){{/_}}
+          {{#_}}Thanks! 3 quick questions about yourself.  What is your age?{{/_}} <small>{{#_}}(optional){{/_}}</small>
         </label>
         <div class="survey-widgets survey-widgets-submitter_age">
-          <input id="survey-submitter_age" name="private-submitter_age" type="text" placeholder="{{#_}}Age{{/_}}" size="30">
+          <input id="survey-submitter_age" name="private-submitter_age" type="text" placeholder="{{#_}}Age{{/_}}" size="30" value="{{ private-submitter_age }}">
         </div>
       </div>
       <br/>
       <div class="survey-field survey-field-submitter_gender">
         <label class="survey-label survey-label-submitter_gender" for="survey-submitter_gender">
-          {{#_}}What is your gender?{{/_}}
+          {{#_}}What is your gender?{{/_}} <small>{{#_}}(optional){{/_}}</small>
         </label>
         <div class="survey-widgets survey-widgets-submitter_gender">
           <div id="survey-submitter_gender" class="radio-group">
-            <input type="radio" name="private-submitter_gender" id="submitter_gender_m" required value="m"><label class="btn btn-radio" for="submitter_gender_m">{{#_}}Male{{/_}}</label>
-            <input type="radio" name="private-submitter_gender" id="submitter_gender_f" required value="f"><label class="btn btn-radio" for="submitter_gender_f">{{#_}}Female{{/_}}</label>
-            <input type="radio" name="private-submitter_gender" id="submitter_gender_o" required value="o"><label class="btn btn-radio" for="submitter_gender_o">{{#_}}Other{{/_}}</label>
+            {{#select private-submitter_gender}}
+            <input type="radio" name="private-submitter_gender" id="submitter_gender_m" value="m"><label class="btn btn-radio" for="submitter_gender_m">{{#_}}Male{{/_}}</label>
+            <input type="radio" name="private-submitter_gender" id="submitter_gender_f" value="f"><label class="btn btn-radio" for="submitter_gender_f">{{#_}}Female{{/_}}</label>
+            <input type="radio" name="private-submitter_gender" id="submitter_gender_o" value="o"><label class="btn btn-radio" for="submitter_gender_o">{{#_}}Other{{/_}}</label>
+            {{/select}}
           </div>
         </div>
       </div>
       <div class="survey-field survey-field-submitter_race">
         <label class="survey-label survey-label-submitter_race" for="survey-submitter_race">
-          {{#_}}What is your race/ethnicity?{{/_}}
+          {{#_}}What is your race/ethnicity?{{/_}} <small>{{#_}}(optional){{/_}}</small>
         </label>
         <div class="survey-widgets survey-widgets-submitter_race">
           <div id="survey-submitter_race" class="radio-group">
-            <input type="radio" name="private-submitter_race" id="submitter_race_latino" required value="latino" /><label class="btn btn-radio" for="submitter_race_latino">{{#_}}Hispanic/Latino{{/_}}</label>
-            <input type="radio" name="private-submitter_race" id="submitter_race_black" required value="black" /><label class="btn btn-radio" for="submitter_race_black">{{#_}}Black/African American{{/_}}</label>
-            <input type="radio" name="private-submitter_race" id="submitter_race_white" required value="white" /><label class="btn btn-radio" for="submitter_race_white">{{#_}}White{{/_}}</label>
-            <input type="radio" name="private-submitter_race" id="submitter_race_nativeamerican" required value="nativeamerican" /><label class="btn btn-radio" for="submitter_race_nativeamerican">{{#_}}Native American{{/_}}</label>
-            <input type="radio" name="private-submitter_race" id="submitter_race_asian" required value="asian" /><label class="btn btn-radio" for="submitter_race_asian">{{#_}}Asian/Pacific Islander{{/_}}</label>
-            <input type="radio" name="private-submitter_race" id="submitter_race_other" required value="other" /><label class="btn btn-radio" for="submitter_race_other">{{#_}}Other{{/_}}</label>
+            {{#select private-submitter_race}}
+            <input type="radio" name="private-submitter_race" id="submitter_race_latino" value="latino" /><label class="btn btn-radio" for="submitter_race_latino">{{#_}}Hispanic/Latino{{/_}}</label>
+            <input type="radio" name="private-submitter_race" id="submitter_race_black" value="black" /><label class="btn btn-radio" for="submitter_race_black">{{#_}}Black/African American{{/_}}</label>
+            <input type="radio" name="private-submitter_race" id="submitter_race_white" value="white" /><label class="btn btn-radio" for="submitter_race_white">{{#_}}White{{/_}}</label>
+            <input type="radio" name="private-submitter_race" id="submitter_race_nativeamerican" value="nativeamerican" /><label class="btn btn-radio" for="submitter_race_nativeamerican">{{#_}}Native American{{/_}}</label>
+            <input type="radio" name="private-submitter_race" id="submitter_race_asian" value="asian" /><label class="btn btn-radio" for="submitter_race_asian">{{#_}}Asian/Pacific Islander{{/_}}</label>
+            <input type="radio" name="private-submitter_race" id="submitter_race_other" value="other" /><label class="btn btn-radio" for="submitter_race_other">{{#_}}Other{{/_}}</label>
+            {{/select}}
           </div>
         </div>
       </div>

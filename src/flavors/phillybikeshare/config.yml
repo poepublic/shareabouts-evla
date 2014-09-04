@@ -242,6 +242,7 @@ survey:
       type: text
       name: private-submitter_age
       optional: true
+      sticky: true
       attrs:
         - key: placeholder
           value: _(Age)
@@ -259,8 +260,7 @@ survey:
         - label: _(Other)
           value: o
       name: private-submitter_gender
-      attrs:
-        - key: required
+      sticky: true
     - prompt: _(What is your race/ethnicity?)
       type: select
       options:
@@ -279,8 +279,7 @@ survey:
         - label: _(Other)
           value: other
       name: private-submitter_race
-      attrs:
-        - key: required
+      sticky: true
 
 
 support:
