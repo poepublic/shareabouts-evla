@@ -334,6 +334,9 @@ pages:
     slug: about
     name: about
     # start_page: true
+  - title: _(Criteria)
+    slug: criteria
+    name: criteria
 
 notifications:
   on_new_place: true
