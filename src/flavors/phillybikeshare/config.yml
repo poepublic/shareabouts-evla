@@ -183,6 +183,7 @@ survey:
 
   # Response config
   show_responses: true
+  single_submission: true
   response_name: _(survey)
   response_plural_name: _(surveys)
   action_text: _(surveyed)
