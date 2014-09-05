@@ -1,6 +1,5 @@
 <p style="text-transform:uppercase;text-align:center;font-family:inherit;font-size:1.75em;font-weight:bold;padding:0.5em;margin-bottom:0.75em;background-color:#FFFACD;border-radius:10px;border:1px solid #eee;">{{ responses.length }}
-{{# has_single_response }}{{ survey_config.response_name }}{{/ has_single_response }}
-{{^ has_single_response }}{{ survey_config.response_plural_name }}{{/ has_single_response }}</p>
+{{# has_single_response }} person {{/ has_single_response }}{{^ has_single_response }} people {{/ has_single_response }}responded! What&nbsp;do you think?</p>
 
 {{#if survey_config.single_submission}}
   {{^if user_submitted}}
