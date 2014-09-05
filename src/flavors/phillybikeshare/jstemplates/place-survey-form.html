@@ -79,10 +79,11 @@
           <textarea id="survey-alt_suggestion" name="private-alt_suggestion"></textarea>
         </div>
       </div>
-      <br/>
+
+      <h4 class="survey-label">{{#_}}Thanks! 3 quick questions about yourself. These are optional.{{/_}}</h4>
       <div class="survey-field survey-field-submitter_age">
         <label class="survey-label survey-label-submitter_age" for="survey-submitter_age">
-          {{#_}}Thanks! 3 quick questions about yourself. What is your age?{{/_}} <small>{{#_}}(optional){{/_}}</small>
+          {{#_}}What is your age?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-submitter_age">
           <input id="survey-submitter_age" name="private-submitter_age" type="text" placeholder="{{#_}}Age{{/_}}" size="30" value="{{ private-submitter_age }}">
@@ -91,7 +92,7 @@
       <br/>
       <div class="survey-field survey-field-submitter_gender">
         <label class="survey-label survey-label-submitter_gender" for="survey-submitter_gender">
-          {{#_}}What is your gender?{{/_}} <small>{{#_}}(optional){{/_}}</small>
+          {{#_}}What is your gender?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-submitter_gender">
           <div id="survey-submitter_gender" class="radio-group">
@@ -105,7 +106,7 @@
       </div>
       <div class="survey-field survey-field-submitter_race">
         <label class="survey-label survey-label-submitter_race" for="survey-submitter_race">
-          {{#_}}What is your race/ethnicity?{{/_}} <small>{{#_}}(optional){{/_}}</small>
+          {{#_}}What is your race/ethnicity?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-submitter_race">
           <div id="survey-submitter_race" class="radio-group">
