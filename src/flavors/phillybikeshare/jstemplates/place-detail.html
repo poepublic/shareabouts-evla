@@ -4,7 +4,7 @@
   <h1>{{#if location_name }}{{ location_name }}{{^}}{{>location-string location }}{{/if}}</h1>
   <!-- <p>Bike share station under consideration at this site; give us your feedback.</p> -->
   <!-- <p>Bike share station under consideration at this site in consultation with property owner; give us your feedback.</p> -->
-  <p>{{#is location_type 'C' }}Bike share station in consideration in this general area but space is tight; please help us find the best location. <small><a href="#"><strong>Site Criteria</strong></a></small>{{^}}{{#is location_type 'B' }}Bike share station under consideration at this site in consultation with property owner.{{^}}{{#is location_type 'A' }}Bike share station under consideration at this site.{{^}}{{/is}}{{/is}}{{/is}}</p>
+  <p>{{#is location_type 'C' }}Bike share station in consideration in this general area but space is tight; please help us find the best location. <small><a href="/page/criteria"><strong>Site Criteria</strong></a></small>{{^}}{{#is location_type 'B' }}Bike share station under consideration at this site in consultation with property owner.{{^}}{{#is location_type 'A' }}Bike share station under consideration at this site.{{^}}{{/is}}{{/is}}{{/is}}</p>
 </header>
 
 <section class="place-items">
