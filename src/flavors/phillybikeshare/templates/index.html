@@ -50,9 +50,6 @@
  -->
 {% block colophon %}
 <p id="powered-by">{% blocktrans %}Powered by <a href="http://shareabouts.org/" class="shareabouts-logo" target="_blank">Shareabouts</a>, <span class="nobreak">a project of <a href="http://openplans.org/" class="openplans-logo" target="_blank">OpenPlans</a></span>{% endblocktrans %}</p>
-{% if config.map.geocoding_enabled %}
-<p id="mapquest-attribution">| {% blocktrans %}Geocoding Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">{% endblocktrans %}.</p>
-{% endif %}
 {% endblock %}
 
 <!--

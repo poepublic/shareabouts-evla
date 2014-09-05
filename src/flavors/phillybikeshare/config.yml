@@ -57,20 +57,44 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  landmark:
-    label: _(Landmark)
+  A:
+    label: _(station)
     rules:
       - condition: '{{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
         icon:
           iconUrl: /static/css/images/map-icon-inservice-legend.png
           iconSize: [19, 25]
           iconAnchor: [10, 25]
 
       - condition: '{{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
+        icon:
+          iconUrl: /static/css/images/map-icon-inservice.png
+          iconSize: [40, 52]
+          iconAnchor: [20, 52]
+  B:
+    label: _(station)
+    rules:
+      - condition: '{{layer.focused}} === false'
+        icon:
+          iconUrl: /static/css/images/map-icon-inservice-legend.png
+          iconSize: [19, 25]
+          iconAnchor: [10, 25]
 
+      - condition: '{{layer.focused}} === true'
+        icon:
+          iconUrl: /static/css/images/map-icon-inservice.png
+          iconSize: [40, 52]
+          iconAnchor: [20, 52]
+  C:
+    label: _(station)
+    rules:
+      - condition: '{{layer.focused}} === false'
+        icon:
+          iconUrl: /static/css/images/map-icon-inservice-legend.png
+          iconSize: [19, 25]
+          iconAnchor: [10, 25]
+
+      - condition: '{{layer.focused}} === true'
         icon:
           iconUrl: /static/css/images/map-icon-inservice.png
           iconSize: [40, 52]
@@ -307,7 +331,7 @@ support:
 pages:
   - title: _(About)
     slug: about
-    name: overview
+    name: about
     # start_page: true
 
 notifications:
