@@ -169,7 +169,7 @@ survey:
   form_link_text: _(Fill out the survey)
   submit_btn_text: _(Submit)
   items:
-    - prompt: _(Do you think this is a good spot for a bike share station?)
+    - prompt: _(Is this a good spot for a bike share station?)
       type: select
       options:
         - label: _(Y/N)
@@ -179,65 +179,79 @@ survey:
         - label: _(No)
           value: 'no'
       name: private-good_spot
-      optional: false
       attrs:
         - key: required
-    - prompt: _((If Yes) Great! Tell us why?)
+    - prompt: _(Great! What’s your biggest reason?)
       type: select
       options:
         - label: _(Choose one...)
           value: ''
-        - label: _(Near where I live)
+        - label: _(Near home)
           value: live
-        - label: _(Near a transit stop or station that I use)
+        - label: _(Near transit stop)
           value: transit
-        - label: _(Near where I work)
-          value: work
-        - label: _(Otherwise useful to me)
-          value: useful
+        - label: _(Near job)
+          value: job
+        - label: _(Near shopping)
+          value: shopping
+        - label: _(Important for community)
+          value: community
         - label: _(Other)
           value: other
       name: private-why_good
       attrs:
         - key: required
-    - prompt: _((If No) We'd love to hear more about that.  Is it mostly because:)
+    - prompt: _(What’s your biggest reason why not?)
       type: select
       options:
         - label: _(Choose one...)
           value: ''
-        - label: _(I would not use this station)
-          value: nouse
-        - label: _(The station is in the way of other activities here)
+        - label: _(Wouldn’t use bike share)
+          value: nousebikeshare
+        - label: _(Is in the way)
           value: intheway
-        - label: _(I would feel unsafe using this station)
+        - label: _(No safe place to ride)
           value: unsafe
+        - label: _(Not useful for me)
+          value: nouse
         - label: _(Other)
           value: other
       name: private-why_bad
       attrs:
         - key: required
-    - prompt: _(How safe would you feel using this station at night?)
+    - prompt: _(How comfortable would you feel using this station at night?)
       type: select
       options:
         - label: _(Choose one...)
           value: ''
-        - label: _(Very safe)
-          value: verysafe
-        - label: _(Somewhat safe)
-          value: safe
-        - label: _(Somewhat unsafe)
-          value: unsafe
-        - label: _(Very unsafe)
-          value: veryunsafe
+        - label: _(Very comfortable)
+          value: verycomfortable
+        - label: _(Somewhat comfortable)
+          value: comfortable
+        - label: _(Neutral)
+          value: neutral
+        - label: _(Somewhat uncomfortable)
+          value: uncomfortable
+        - label: _(Very uncomfortable)
+          value: veryuncomfortable
       name: private-safety
       attrs:
         - key: required
-    - prompt: _(Do you have any other comments?)
-      type: textarea
-      name: private-comments
+    - prompt: _(Are there any better spots for stations in the immediate area?)
+      type: select
+      options:
+        - label: _(Y/N)
+          value: ''
+        - label: _(Yes)
+          value: 'yes'
+        - label: _(No)
+          value: 'no'
+      name: private-alt_spot
       attrs:
-        - key: placeholder
-          value: _(Comment...)
+        - key: required
+    - prompt: _(Where would you suggest a station? Why?)
+      type: textarea
+      name: private-alt_suggestion
     - prompt: _(Thanks! 3 quick questions about yourself.  What is your age?)
       type: text
       name: private-submitter_age

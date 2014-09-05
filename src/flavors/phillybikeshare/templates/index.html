@@ -61,6 +61,34 @@
 {% block includes %}
 <script>
   (function(NS, $) {
+    function updateConditionQuestionVisibility(val, $yesField, $yesInput, $noField, $noInput) {
+      if (val === 'yes') {
+        $yesField.show();
+        $yesInput.attr('required', true);
+
+        if ($noField) {
+          $noField.hide()
+          $noInput.removeAttr('required').val('').prop('checked', false);
+        }
+      } else if (val === 'no') {
+        $yesField.hide();
+        $yesInput.removeAttr('required').val('').prop('checked', false);
+
+        if ($noField) {
+          $noField.show();
+          $noInput.attr('required', true);
+        }
+      } else {
+        $yesField.hide();
+        $yesInput.removeAttr('required').val('').prop('checked', false);
+
+        if ($noField) {
+          $noField.hide();
+          $noInput.removeAttr('required').val('').prop('checked', false);
+        }
+      }
+    }
+
     $(document).on('change', 'input[name="private-good_spot"]', function(evt) {
       var val = $(this).val(),
           $yesField = $('.survey-field-why_good'),
@@ -68,25 +96,15 @@
           $noField = $('.survey-field-why_bad'),
           $noInput = $('input[name="private-why_bad"]');
 
-      if (val === 'yes') {
-        $yesField.show();
-        $yesInput.attr('required', true);
+      updateConditionQuestionVisibility(val, $yesField, $yesInput, $noField, $noInput);
+    });
 
-        $noField.hide()
-        $noInput.removeAttr('required').val('').prop('checked', false);
-      } else if (val === 'no') {
-        $yesField.hide();
-        $yesInput.removeAttr('required').val('').prop('checked', false);
+    $(document).on('change', 'input[name="private-alt_spot"]', function(evt) {
+      var val = $(this).val(),
+          $yesField = $('.survey-field-alt_suggestion'),
+          $yesInput = $('textarea[name="private-alt_suggestion"]');
 
-        $noField.show();
-        $noInput.attr('required', true);
-      } else {
-        $yesField.hide();
-        $yesInput.removeAttr('required').val('').prop('checked', false);
-
-        $noField.hide();
-        $noInput.removeAttr('required').val('').prop('checked', false);
-      }
+      updateConditionQuestionVisibility(val, $yesField, $yesInput);
     });
 
     // Fix the reply button action

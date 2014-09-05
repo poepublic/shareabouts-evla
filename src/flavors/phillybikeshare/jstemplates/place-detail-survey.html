@@ -11,7 +11,7 @@
     <fieldset>
       <div class="survey-field survey-field-good_spot">
         <label class="survey-label survey-label-good_spot" for="survey-good_spot">
-          {{#_}}Do you think this is a good spot for a bike share station?{{/_}}
+          {{#_}}Is this a good spot for a bike share station?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-good_spot">
           <div id="survey-good_spot" class="radio-group">
@@ -22,56 +22,71 @@
       </div>
       <div class="survey-field survey-field-why_good" style="display: none;">
         <label class="survey-label survey-label-why_good" for="survey-why_good">
-          {{#_}}Great! Tell us why?{{/_}}
+          {{#_}}Great! What’s your biggest reason?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-why_good">
           <div id="survey-why_good" class="radio-group">
-            <input type="radio" name="private-why_good" id="why_good_live" value="live" /><label class="btn btn-radio" for="why_good_live">{{#_}}Near where I live{{/_}}</label><br/>
-            <input type="radio" name="private-why_good" id="why_good_transit" value="transit" /><label class="btn btn-radio" for="why_good_transit">{{#_}}Near a transit stop or station that I use{{/_}}</label><br/>
-            <input type="radio" name="private-why_good" id="why_good_work" value="work" /><label class="btn btn-radio" for="why_good_work">{{#_}}Near where I work{{/_}}</label><br/>
-            <input type="radio" name="private-why_good" id="why_good_useful" value="useful" /><label class="btn btn-radio" for="why_good_useful">{{#_}}Otherwise useful to me{{/_}}</label><br/>
+            <input type="radio" name="private-why_good" id="why_good_live" value="live" /><label class="btn btn-radio" for="why_good_live">{{#_}}Near home{{/_}}</label><br/>
+            <input type="radio" name="private-why_good" id="why_good_transit" value="transit" /><label class="btn btn-radio" for="why_good_transit">{{#_}}Near transit stop{{/_}}</label><br/>
+            <input type="radio" name="private-why_good" id="why_good_work" value="job" /><label class="btn btn-radio" for="why_good_work">{{#_}}Near job{{/_}}</label><br/>
+            <input type="radio" name="private-why_good" id="why_good_shopping" value="shopping" /><label class="btn btn-radio" for="why_good_shopping">{{#_}}Near shopping{{/_}}</label><br/>
+            <input type="radio" name="private-why_good" id="why_good_community" value="community" /><label class="btn btn-radio" for="why_good_community">{{#_}}Important for community{{/_}}</label><br/>
             <input type="radio" name="private-why_good" id="why_good_other" value="other" /><label class="btn btn-radio" for="why_good_other">{{#_}}Other{{/_}}</label>
           </div>
         </div>
       </div>
       <div class="survey-field survey-field-why_bad" style="display: none;">
         <label class="survey-label survey-label-why_bad" for="survey-why_bad">
-          {{#_}}We'd love to hear more about that.  Is it mostly because:{{/_}}
+          {{#_}}What’s your biggest reason why not?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-why_bad">
           <div id="survey-why_bad" class="radio-group">
-            <input type="radio" name="private-why_bad" id="why_bad_nouse" value="nouse" /><label class="btn btn-radio" for="why_bad_nouse">{{#_}}I would not use this station{{/_}}</label><br/>
-            <input type="radio" name="private-why_bad" id="why_bad_intheway" value="intheway" /><label class="btn btn-radio" for="why_bad_intheway">{{#_}}The station is in the way of other activities here{{/_}}</label><br/>
-            <input type="radio" name="private-why_bad" id="why_bad_unsafe" value="unsafe" /><label class="btn btn-radio" for="why_bad_unsafe">{{#_}}I would feel unsafe using this station{{/_}}</label><br/>
+            <input type="radio" name="private-why_bad" id="why_bad_nousebikeshare" value="nousebikeshare" /><label class="btn btn-radio" for="why_bad_nousebikeshare">{{#_}}Wouldn’t use bike share{{/_}}</label><br/>
+            <input type="radio" name="private-why_bad" id="why_bad_intheway" value="intheway" /><label class="btn btn-radio" for="why_bad_intheway">{{#_}}Is in the way{{/_}}</label><br/>
+            <input type="radio" name="private-why_bad" id="why_bad_unsafe" value="unsafe" /><label class="btn btn-radio" for="why_bad_unsafe">{{#_}}No safe place to ride{{/_}}</label><br/>
+            <input type="radio" name="private-why_bad" id="why_bad_nouse" value="nouse" /><label class="btn btn-radio" for="why_bad_nouse">{{#_}}Not useful for me{{/_}}</label><br/>
             <input type="radio" name="private-why_bad" id="why_bad_other" value="other" /><label class="btn btn-radio" for="why_bad_other">{{#_}}Other{{/_}}</label>
           </div>
         </div>
       </div>
       <div class="survey-field survey-field-safety">
         <label class="survey-label survey-label-safety" for="survey-safety">
-          {{#_}}How safe would you feel using this station at night?{{/_}}
+          {{#_}}How comfortable would you feel using this station at night?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-safety">
           <div id="survey-safety" class="radio-group">
-            <input type="radio" name="private-safety" id="safety_verysafe" required value="verysafe" /><label class="btn btn-radio" for="safety_verysafe">{{#_}}Very safe{{/_}}</label><br/>
-            <input type="radio" name="private-safety" id="safety_safe" required value="safe" /><label class="btn btn-radio" for="safety_safe">{{#_}}Somewhat safe{{/_}}</label><br/>
-            <input type="radio" name="private-safety" id="safety_unsafe" required value="unsafe" /><label class="btn btn-radio" for="safety_unsafe">{{#_}}Somewhat unsafe{{/_}}</label><br/>
-            <input type="radio" name="private-safety" id="safety_veryunsafe" required value="veryunsafe" /><label class="btn btn-radio" for="safety_veryunsafe">{{#_}}Very unsafe{{/_}}</label>
+            <input type="radio" name="private-safety" id="safety_verysafe" required value="verycomfortable" /><label class="btn btn-radio" for="safety_verysafe">{{#_}}Very comfortable{{/_}}</label><br/>
+            <input type="radio" name="private-safety" id="safety_safe" required value="comfortable" /><label class="btn btn-radio" for="safety_safe">{{#_}}Somewhat comfortable{{/_}}</label><br/>
+            <input type="radio" name="private-safety" id="safety_neutral" required value="neutral" /><label class="btn btn-radio" for="safety_neutral">{{#_}}Neutral{{/_}}</label><br/>
+            <input type="radio" name="private-safety" id="safety_unsafe" required value="uncomfortable" /><label class="btn btn-radio" for="safety_unsafe">{{#_}}Somewhat uncomfortable{{/_}}</label><br/>
+            <input type="radio" name="private-safety" id="safety_veryunsafe" required value="veryuncomfortable" /><label class="btn btn-radio" for="safety_veryunsafe">{{#_}}Very uncomfortable{{/_}}</label>
           </div>
         </div>
       </div>
-      <div class="survey-field survey-field-comments">
-        <label class="survey-label survey-label-comments" for="survey-comments">
-          {{#_}}Do you have any other comments?{{/_}} <small>{{#_}}(optional){{/_}}</small>
+      <div class="survey-field survey-field-alt_spot">
+        <label class="survey-label survey-label-alt_spot" for="survey-alt_spot">
+          {{#_}}Are there any better spots for stations in the immediate area?{{/_}}
         </label>
-        <div class="survey-widgets survey-widgets-comments">
-          <textarea id="survey-comments" name="private-comments" placeholder="{{#_}}Comment...{{/_}}"></textarea>
+        <div class="survey-widgets survey-widgets-alt_spot">
+          <div id="survey-alt_spot" class="radio-group">
+            <input type="radio" name="private-alt_spot" id="alt_spot_yes" required value="yes" /><label class="btn btn-radio" for="alt_spot_yes">{{#_}}Yes{{/_}}</label>
+            <input type="radio" name="private-alt_spot" id="alt_spot_no" required value="no" /><label class="btn btn-radio" for="alt_spot_no">{{#_}}No{{/_}}</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="survey-field survey-field-alt_suggestion">
+        <label class="survey-label survey-label-alt_suggestion" for="survey-alt_suggestion">
+          {{#_}}Where would you suggest a station? Why?{{/_}}
+        </label>
+        <div class="survey-widgets survey-widgets-alt_suggestion">
+          <textarea id="survey-alt_suggestion" name="private-alt_suggestion"></textarea>
         </div>
       </div>
       <br/>
       <div class="survey-field survey-field-submitter_age">
         <label class="survey-label survey-label-submitter_age" for="survey-submitter_age">
-          {{#_}}Thanks! 3 quick questions about yourself.  What is your age?{{/_}} <small>{{#_}}(optional){{/_}}</small>
+          {{#_}}Thanks! 3 quick questions about yourself. What is your age?{{/_}} <small>{{#_}}(optional){{/_}}</small>
         </label>
         <div class="survey-widgets survey-widgets-submitter_age">
           <input id="survey-submitter_age" name="private-submitter_age" type="text" placeholder="{{#_}}Age{{/_}}" size="30" value="{{ private-submitter_age }}">

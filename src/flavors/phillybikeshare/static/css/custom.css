@@ -114,7 +114,9 @@ textarea:focus {
   margin-bottom: 1.5em;
 }
 .radio-group input {
-  display: none;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
 }
 .radio-group label {
   font-size: 1em;
@@ -393,7 +395,8 @@ a.shareabouts-logo:hover {
 /* =Survey Form */
 
 .survey-field-why_good,
-.survey-field-why_bad {
+.survey-field-why_bad,
+.survey-field-alt_suggestion {
   display: none;
 }
 
