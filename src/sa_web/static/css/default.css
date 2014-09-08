@@ -433,12 +433,12 @@ a.logout-btn {
 -------------------------------------------------------------- */
 #map-container {
   position: relative;
-  background: #a3c7d9;
+  background: #3B65A1;
   z-index: 10;
 }
 
 #map {
-  background: #a3c7d9;
+  background: #3B65A1;
   height: 150px;
 }
 
