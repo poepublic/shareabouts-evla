@@ -121,6 +121,15 @@
           </div>
         </div>
       </div>
+
+      <div class="survey-field survey-field-comments">
+        <label class="survey-label survey-label-comments" for="survey-comments">
+          {{#_}}Anything else to tell us about bike share?{{/_}}
+        </label>
+        <div class="survey-widgets survey-widgets-comments">
+          <textarea id="survey-comments" name="private-comments" placeholder="{{#_}}Comment...{{/_}}"></textarea>
+        </div>
+      </div>
     </fieldset>
 
     <input name="commit" type="submit" value="{{ survey_config.submit_btn_text }}" class="btn btn-primary btn-large submit-btn">
