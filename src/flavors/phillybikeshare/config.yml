@@ -206,7 +206,7 @@ survey:
       name: private-good_spot
       attrs:
         - key: required
-    - prompt: _(Great! What’s your biggest reason?)
+    - prompt: _(Great! What's your biggest reason?)
       type: select
       options:
         - label: _(Choose one...)
@@ -226,12 +226,12 @@ survey:
       name: private-why_good
       attrs:
         - key: required
-    - prompt: _(What’s your biggest reason why not?)
+    - prompt: _(What's your biggest reason why not?)
       type: select
       options:
         - label: _(Choose one...)
           value: ''
-        - label: _(Wouldn’t use bike share)
+        - label: _(Wouldn't use bike share)
           value: nousebikeshare
         - label: _(Is in the way)
           value: intheway
