@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-29 18:29-0400\n"
+"POT-Creation-Date: 2014-09-09 16:20-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,196 +17,328 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: _config.translations.py:1
 msgid "Enter an address..."
 msgstr ""
 
+#: _config.translations.py:2
 msgid ""
 "Shareabouts is a mapping tool to gather crowd sourced public input. Use it "
 "to collect suggested locations and comments in a social, engaging process."
 msgstr ""
 
+#: _config.translations.py:3 _config.translations.py:59
+#: _config.translations.py:81
 msgid "Someone"
 msgstr ""
 
+#: _config.translations.py:4
 msgid "support"
 msgstr ""
 
+#: _config.translations.py:5
 msgid "Support"
 msgstr ""
 
+#: _config.translations.py:6
 msgid "supports"
 msgstr ""
 
+#: _config.translations.py:7
 msgid "surveys"
 msgstr ""
 
+#: _config.translations.py:8
 msgid "surveyed"
 msgstr ""
 
+#: _config.translations.py:9 _config.translations.py:58
 msgid "Fill out the survey"
 msgstr ""
 
-msgid "Do you think this is a good spot for a bike share station?"
+#: _config.translations.py:10 jstemplates/place-survey-form.html:13
+msgid "Is this a good spot for a bike share station?"
 msgstr ""
 
+#: _config.translations.py:11 _config.translations.py:37
 msgid "Y/N"
 msgstr ""
 
+#: _config.translations.py:12 _config.translations.py:38
+#: jstemplates/place-survey-form.html:38
 msgid "Yes"
 msgstr ""
 
+#: _config.translations.py:13 _config.translations.py:39
+#: jstemplates/place-survey-form.html:23
 msgid "No"
 msgstr ""
 
-msgid "(If Yes) Great! Tell us why?"
+#: _config.translations.py:14 jstemplates/place-survey-form.html:8
+msgid "Great! What's your biggest reason?"
 msgstr ""
 
+#: _config.translations.py:15 _config.translations.py:23
+#: _config.translations.py:30 _config.translations.py:44
+#: _config.translations.py:49
 msgid "Choose one..."
 msgstr ""
 
-msgid "Near where I live"
+#: _config.translations.py:16 jstemplates/place-survey-form.html:17
+msgid "Near home"
 msgstr ""
 
-msgid "Near a transit stop or station that I use"
+#: _config.translations.py:17 jstemplates/place-survey-form.html:20
+msgid "Near transit stop"
 msgstr ""
 
-msgid "Near where I work"
+#: _config.translations.py:18 jstemplates/place-survey-form.html:18
+msgid "Near job"
 msgstr ""
 
-msgid "Otherwise useful to me"
+#: _config.translations.py:19 jstemplates/place-survey-form.html:19
+msgid "Near shopping"
 msgstr ""
 
+#: _config.translations.py:20 jstemplates/place-survey-form.html:11
+msgid "Important for community"
+msgstr ""
+
+#: _config.translations.py:21 _config.translations.py:28
+#: _config.translations.py:47 _config.translations.py:55
+#: jstemplates/place-survey-form.html:25
 msgid "Other"
 msgstr ""
 
-msgid "(If No) We'd love to hear more about that.  Is it mostly because:"
+#: _config.translations.py:22 jstemplates/place-survey-form.html:34
+msgid "What's your biggest reason why not?"
 msgstr ""
 
-msgid "I would not use this station"
+#: _config.translations.py:24 jstemplates/place-survey-form.html:37
+msgid "Wouldn't use bike share"
 msgstr ""
 
-msgid "The station is in the way of other activities here"
+#: _config.translations.py:25 jstemplates/place-survey-form.html:12
+msgid "Is in the way"
 msgstr ""
 
-msgid "I would feel unsafe using this station"
+#: _config.translations.py:26 jstemplates/place-survey-form.html:22
+msgid "No safe place to ride"
 msgstr ""
 
-msgid "How safe would you feel using this station at night?"
+#: _config.translations.py:27 jstemplates/place-survey-form.html:24
+msgid "Not useful for me"
 msgstr ""
 
-msgid "Very safe"
+#: _config.translations.py:29 jstemplates/place-survey-form.html:10
+msgid "How comfortable would you feel using this station at night?"
 msgstr ""
 
-msgid "Somewhat safe"
+#: _config.translations.py:31 jstemplates/place-survey-form.html:29
+msgid "Very comfortable"
 msgstr ""
 
-msgid "Somewhat unsafe"
+#: _config.translations.py:32 jstemplates/place-survey-form.html:26
+msgid "Somewhat comfortable"
 msgstr ""
 
-msgid "Very unsafe"
+#: _config.translations.py:33 jstemplates/place-survey-form.html:21
+msgid "Neutral"
 msgstr ""
 
-msgid "Do you have any other comments?"
+#: _config.translations.py:34 jstemplates/place-survey-form.html:27
+msgid "Somewhat uncomfortable"
 msgstr ""
 
-msgid "Comment..."
+#: _config.translations.py:35 jstemplates/place-survey-form.html:30
+msgid "Very uncomfortable"
 msgstr ""
 
-msgid "Thanks! 3 quick questions about yourself.  What is your age?"
+#: _config.translations.py:36 jstemplates/place-survey-form.html:3
+msgid "Are there any better spots for stations in the immediate area?"
 msgstr ""
 
+#: _config.translations.py:40 jstemplates/place-survey-form.html:35
+msgid "Where would you suggest a station? Why?"
+msgstr ""
+
+#: _config.translations.py:41 jstemplates/place-survey-form.html:1
 msgid "Age"
 msgstr ""
 
+#: _config.translations.py:42
+msgid "Thanks! 3 quick questions about yourself.  What is your age?"
+msgstr ""
+
+#: _config.translations.py:43 jstemplates/place-survey-form.html:32
 msgid "What is your gender?"
 msgstr ""
 
+#: _config.translations.py:45 jstemplates/place-survey-form.html:15
 msgid "Male"
 msgstr ""
 
+#: _config.translations.py:46 jstemplates/place-survey-form.html:7
 msgid "Female"
 msgstr ""
 
+#: _config.translations.py:48 jstemplates/place-survey-form.html:33
 msgid "What is your race/ethnicity?"
 msgstr ""
 
+#: _config.translations.py:50 jstemplates/place-survey-form.html:9
 msgid "Hispanic/Latino"
 msgstr ""
 
+#: _config.translations.py:51 jstemplates/place-survey-form.html:5
 msgid "Black/African American"
 msgstr ""
 
+#: _config.translations.py:52 jstemplates/place-survey-form.html:36
 msgid "White"
 msgstr ""
 
+#: _config.translations.py:53 jstemplates/place-survey-form.html:16
 msgid "Native American"
 msgstr ""
 
+#: _config.translations.py:54 jstemplates/place-survey-form.html:4
 msgid "Asian/Pacific Islander"
 msgstr ""
 
+#: _config.translations.py:56 _config.translations.py:61
 msgid "Submit"
 msgstr ""
 
+#: _config.translations.py:57
 msgid "survey"
 msgstr ""
 
+#: _config.translations.py:60
 msgid "Show the Map"
 msgstr ""
 
+#: _config.translations.py:62
 msgid "Tell us more..."
 msgstr ""
 
+#: _config.translations.py:63
 msgid "Your Name"
 msgstr ""
 
+#: _config.translations.py:64
 msgid "Name"
 msgstr ""
 
+#: _config.translations.py:65
 msgid "Your Email"
 msgstr ""
 
+#: _config.translations.py:66
 msgid "Email address"
 msgstr ""
 
+#: _config.translations.py:67 _config.translations.py:68
 msgid "Location Name"
 msgstr ""
 
+#: _config.translations.py:69
 msgid "Location Type"
 msgstr ""
 
+#: _config.translations.py:70
 msgid "Choose One"
 msgstr ""
 
+#: _config.translations.py:71
 msgid "Landmark"
 msgstr ""
 
+#: _config.translations.py:72
 msgid "Park"
 msgstr ""
 
+#: _config.translations.py:73
 msgid "School"
 msgstr ""
 
+#: _config.translations.py:74
 msgid "Description"
 msgstr ""
 
+#: _config.translations.py:75
 msgid "Description..."
 msgstr ""
 
+#: _config.translations.py:76
 msgid "Image"
 msgstr ""
 
+#: _config.translations.py:77
 msgid "Add an Image"
 msgstr ""
 
+#: _config.translations.py:78
 msgid "Add a Place"
 msgstr ""
 
+#: _config.translations.py:79
 msgid "created"
 msgstr ""
 
+#: _config.translations.py:80
 msgid "List All Places"
 msgstr ""
 
+#: _config.translations.py:82 _config.translations.py:83
+#: _config.translations.py:84
+msgid "station"
+msgstr ""
+
+#: _config.translations.py:85
 msgid "About"
+msgstr ""
+
+#: _config.translations.py:86
+msgid "Criteria"
+msgstr ""
+
+#: jstemplates/place-detail-promotion-bar.html:1
+msgid "Recommend on Facebook"
+msgstr ""
+
+#: jstemplates/place-detail-promotion-bar.html:2
+msgid "Tweet This"
+msgstr ""
+
+#: jstemplates/place-survey-form.html:2
+msgid "Anything else to tell us about bike share?"
+msgstr ""
+
+#: jstemplates/place-survey-form.html:6
+msgid "Comment..."
+msgstr ""
+
+#: jstemplates/place-survey-form.html:14
+msgid "Log Out"
+msgstr ""
+
+#: jstemplates/place-survey-form.html:28
+msgid "Thanks! 3 quick questions about yourself. These are optional."
+msgstr ""
+
+#: jstemplates/place-survey-form.html:31
+msgid "What is your age?"
+msgstr ""
+
+#: jstemplates/place-survey-response.html:1
+msgid "Thanks for your input!"
+msgstr ""
+
+#: templates/index.html:53
+msgid ""
+"Powered by <a href=\"http://shareabouts.org/\" class=\"shareabouts-logo\" "
+"target=\"_blank\">Shareabouts</a>, <span class=\"nobreak\">a project of <a "
+"href=\"http://openplans.org/\" class=\"openplans-logo\" target=\"_blank"
+"\">OpenPlans</a></span>"
 msgstr ""
