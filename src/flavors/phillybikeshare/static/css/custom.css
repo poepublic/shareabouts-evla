@@ -104,10 +104,10 @@ textarea:focus {
   outline: 2px solid #007fbf;
 }
 
-.form-submitted input:invalid,
-.form-submitted textarea:invalid,
-.form-submitted select:invalid {
-  outline: 2px solid #b2182b;
+.form-submitted input:invalid ~ label,
+.form-submitted textarea:invalid ~ label,
+.form-submitted select:invalid ~ label {
+  box-shadow: 0px 0px 2px 2px #b2182b;
 }
 
 .radio-group {
@@ -120,7 +120,7 @@ textarea:focus {
 }
 .radio-group label {
   font-size: 1em;
-  margin: 0 0.125em 0.25em 0;
+  margin: 0 0.125em 0.4em 0;
 }
 .btn-radio,
 .btn-radio:visited,
