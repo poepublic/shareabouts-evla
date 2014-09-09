@@ -109,7 +109,6 @@ textarea:focus {
 .form-submitted .gatekeeper-invalid ~ label {
   border: 2px solid #b2182b;
 }
-
 .form-submitted .gatekeeper-invalid {
   outline: none;
 }
@@ -127,7 +126,7 @@ textarea:focus {
 .radio-group input {
   opacity: 0;
   width: 1px;
-  height: 1px;
+  height: 2em;
   position: absolute;
   top: -2em;
 }
