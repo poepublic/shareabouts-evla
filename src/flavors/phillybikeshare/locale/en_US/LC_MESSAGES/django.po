@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-10 10:48-0400\n"
+"POT-Creation-Date: 2014-09-10 12:06-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,7 +65,7 @@ msgid "Y/N"
 msgstr ""
 
 #: _config.translations.py:12 _config.translations.py:38
-#: jstemplates/place-survey-form.html:38
+#: jstemplates/place-survey-form.html:39
 msgid "Yes"
 msgstr ""
 
@@ -110,11 +110,11 @@ msgstr ""
 msgid "Other"
 msgstr ""
 
-#: _config.translations.py:22 jstemplates/place-survey-form.html:34
+#: _config.translations.py:22 jstemplates/place-survey-form.html:35
 msgid "What's your biggest reason why not?"
 msgstr ""
 
-#: _config.translations.py:24 jstemplates/place-survey-form.html:37
+#: _config.translations.py:24 jstemplates/place-survey-form.html:38
 msgid "Wouldn't use bike share"
 msgstr ""
 
@@ -134,11 +134,11 @@ msgstr ""
 msgid "How comfortable would you feel using this station at night?"
 msgstr ""
 
-#: _config.translations.py:31 jstemplates/place-survey-form.html:29
+#: _config.translations.py:31 jstemplates/place-survey-form.html:30
 msgid "Very comfortable"
 msgstr ""
 
-#: _config.translations.py:32 jstemplates/place-survey-form.html:26
+#: _config.translations.py:32 jstemplates/place-survey-form.html:27
 msgid "Somewhat comfortable"
 msgstr ""
 
@@ -146,11 +146,11 @@ msgstr ""
 msgid "Neutral"
 msgstr ""
 
-#: _config.translations.py:34 jstemplates/place-survey-form.html:27
+#: _config.translations.py:34 jstemplates/place-survey-form.html:28
 msgid "Somewhat uncomfortable"
 msgstr ""
 
-#: _config.translations.py:35 jstemplates/place-survey-form.html:30
+#: _config.translations.py:35 jstemplates/place-survey-form.html:31
 msgid "Very uncomfortable"
 msgstr ""
 
@@ -158,7 +158,7 @@ msgstr ""
 msgid "Are there any better spots for stations in the immediate area?"
 msgstr ""
 
-#: _config.translations.py:40 jstemplates/place-survey-form.html:35
+#: _config.translations.py:40 jstemplates/place-survey-form.html:36
 msgid "Where would you suggest a station? Why?"
 msgstr ""
 
@@ -170,7 +170,7 @@ msgstr ""
 msgid "Thanks! 3 quick questions about yourself.  What is your age?"
 msgstr ""
 
-#: _config.translations.py:43 jstemplates/place-survey-form.html:32
+#: _config.translations.py:43 jstemplates/place-survey-form.html:33
 msgid "What is your gender?"
 msgstr ""
 
@@ -182,7 +182,7 @@ msgstr ""
 msgid "Female"
 msgstr ""
 
-#: _config.translations.py:48 jstemplates/place-survey-form.html:33
+#: _config.translations.py:48 jstemplates/place-survey-form.html:34
 msgid "What is your race/ethnicity?"
 msgstr ""
 
@@ -194,7 +194,7 @@ msgstr ""
 msgid "Black/African American"
 msgstr ""
 
-#: _config.translations.py:52 jstemplates/place-survey-form.html:36
+#: _config.translations.py:52 jstemplates/place-survey-form.html:37
 msgid "White"
 msgstr ""
 
@@ -359,11 +359,15 @@ msgstr ""
 msgid "Log Out"
 msgstr ""
 
-#: jstemplates/place-survey-form.html:28
+#: jstemplates/place-survey-form.html:26
+msgid "Please select one of these options."
+msgstr ""
+
+#: jstemplates/place-survey-form.html:29
 msgid "Thanks! 3 quick questions about yourself. These are optional."
 msgstr ""
 
-#: jstemplates/place-survey-form.html:31
+#: jstemplates/place-survey-form.html:32
 msgid "What is your age?"
 msgstr ""
 

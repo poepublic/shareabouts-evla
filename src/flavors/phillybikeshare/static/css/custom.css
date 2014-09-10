@@ -109,6 +109,9 @@ textarea:focus {
 .form-submitted .gatekeeper-invalid ~ label {
   border: 2px solid #b2182b;
 }
+.form-submitted .gatekeeper-invalid ~ .validation-message {
+  display: block;
+}
 .form-submitted .gatekeeper-invalid {
   outline: none;
 }
@@ -117,6 +120,31 @@ textarea:focus {
 .form-submitted textarea:invalid ~ label,
 .form-submitted select:invalid ~ label {
   box-shadow: 0px 0px 2px 2px #b2182b;
+}
+
+.survey-label {
+  margin-bottom: 1.1em;
+  display: inline-block;
+}
+
+.validation-message {
+  text-transform:uppercase;
+  padding: 0.4em;
+  background-color: rgba(178, 24, 43, 0.1);
+  border-radius:10px;
+  color: #b2182b;
+  font-size:0.6em;
+
+  position: absolute;
+  top: -2.5em;
+
+  display:none;
+}
+
+.form-submitted input:invalid ~ .validation-message,
+.form-submitted textarea:invalid ~ .validation-message,
+.form-submitted select:invalid ~ .validation-message {
+  display: block;
 }
 
 .radio-group {

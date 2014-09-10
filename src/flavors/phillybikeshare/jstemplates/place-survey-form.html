@@ -1,6 +1,6 @@
 <div id="reply">
   <br />
-  <form id="new_response" class="new_response clearfix" action="#" method="post">
+  <form id="new_response" class="new_response clearfix" action="#" method="post" novalidate>
     <input type="hidden" name="visible" value="on">
     <input type="hidden" name="user_token" value="{{{ user_token }}}">
 
@@ -13,6 +13,8 @@
           <div id="survey-good_spot" class="radio-group">
             <input type="radio" name="private-good_spot" id="good_spot_yes" required value="yes" /><label class="btn btn-radio" for="good_spot_yes">{{#_}}Yes{{/_}}</label>
             <input type="radio" name="private-good_spot" id="good_spot_no" required value="no" /><label class="btn btn-radio" for="good_spot_no">{{#_}}No{{/_}}</label>
+
+            <div class="validation-message">{{#_}}Please select one of these options.{{/_}}</div>
           </div>
         </div>
       </div>
@@ -28,6 +30,8 @@
             <input type="radio" name="private-why_good" id="why_good_shopping" value="shopping" /><label class="btn btn-radio" for="why_good_shopping">{{#_}}Near shopping{{/_}}</label><br/>
             <input type="radio" name="private-why_good" id="why_good_community" value="community" /><label class="btn btn-radio" for="why_good_community">{{#_}}Important for community{{/_}}</label><br/>
             <input type="radio" name="private-why_good" id="why_good_other" value="other" /><label class="btn btn-radio" for="why_good_other">{{#_}}Other{{/_}}</label>
+
+            <div class="validation-message">{{#_}}Please select one of these options.{{/_}}</div>
           </div>
         </div>
       </div>
@@ -42,6 +46,8 @@
             <input type="radio" name="private-why_bad" id="why_bad_unsafe" value="unsafe" /><label class="btn btn-radio" for="why_bad_unsafe">{{#_}}No safe place to ride{{/_}}</label><br/>
             <input type="radio" name="private-why_bad" id="why_bad_nouse" value="nouse" /><label class="btn btn-radio" for="why_bad_nouse">{{#_}}Not useful for me{{/_}}</label><br/>
             <input type="radio" name="private-why_bad" id="why_bad_other" value="other" /><label class="btn btn-radio" for="why_bad_other">{{#_}}Other{{/_}}</label>
+
+            <div class="validation-message">{{#_}}Please select one of these options.{{/_}}</div>
           </div>
         </div>
       </div>
@@ -56,6 +62,8 @@
             <input type="radio" name="private-safety" id="safety_neutral" required value="neutral" /><label class="btn btn-radio" for="safety_neutral">{{#_}}Neutral{{/_}}</label><br/>
             <input type="radio" name="private-safety" id="safety_unsafe" required value="uncomfortable" /><label class="btn btn-radio" for="safety_unsafe">{{#_}}Somewhat uncomfortable{{/_}}</label><br/>
             <input type="radio" name="private-safety" id="safety_veryunsafe" required value="veryuncomfortable" /><label class="btn btn-radio" for="safety_veryunsafe">{{#_}}Very uncomfortable{{/_}}</label>
+
+            <div class="validation-message">{{#_}}Please select one of these options.{{/_}}</div>
           </div>
         </div>
       </div>
@@ -67,6 +75,8 @@
           <div id="survey-alt_spot" class="radio-group">
             <input type="radio" name="private-alt_spot" id="alt_spot_yes" required value="yes" /><label class="btn btn-radio" for="alt_spot_yes">{{#_}}Yes{{/_}}</label>
             <input type="radio" name="private-alt_spot" id="alt_spot_no" required value="no" /><label class="btn btn-radio" for="alt_spot_no">{{#_}}No{{/_}}</label>
+
+            <div class="validation-message">{{#_}}Please select one of these options.{{/_}}</div>
           </div>
         </div>
       </div>
