@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-09 16:20-0400\n"
+"POT-Creation-Date: 2014-09-10 10:48-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -309,6 +309,42 @@ msgstr ""
 
 #: jstemplates/place-detail-promotion-bar.html:2
 msgid "Tweet This"
+msgstr ""
+
+#: jstemplates/place-detail-survey.html:1
+msgid "What&nbsp;do&nbsp;you&nbsp;think?"
+msgstr ""
+
+#: jstemplates/place-detail-survey.html:2
+msgid "people"
+msgstr ""
+
+#: jstemplates/place-detail-survey.html:3
+msgid "person"
+msgstr ""
+
+#: jstemplates/place-detail-survey.html:4
+msgid "responded!"
+msgstr ""
+
+#: jstemplates/place-detail.html:1
+msgid ""
+"Bike share station in consideration in this general area but space is tight; "
+"please help us find the best location."
+msgstr ""
+
+#: jstemplates/place-detail.html:2
+msgid ""
+"Bike share station under consideration at this site in consultation with "
+"property owner."
+msgstr ""
+
+#: jstemplates/place-detail.html:3
+msgid "Bike share station under consideration at this site."
+msgstr ""
+
+#: jstemplates/place-detail.html:4
+msgid "Site Criteria"
 msgstr ""
 
 #: jstemplates/place-survey-form.html:2
