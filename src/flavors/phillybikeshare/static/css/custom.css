@@ -154,9 +154,9 @@ textarea:focus {
 .radio-group input {
   opacity: 0;
   width: 1px;
-  height: 2em;
+  height: 5em;
   position: absolute;
-  top: -2em;
+  top: -5em;
 }
 .radio-group label {
   font-size: 1em;

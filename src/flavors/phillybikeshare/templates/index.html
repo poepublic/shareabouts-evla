@@ -146,6 +146,29 @@
 
       return util_geocode.call(this, location, bounds, options);
     };
+
+    Gatekeeper.validate = function(form) {
+      // Get invalid elements from the form
+      var invalidEls = Gatekeeper.getInvalidFormEls(form),
+          layout = NS.Util.getPageLayout();
+
+      // Indicate that this form has been submitted
+      $(form).addClass('form-submitted');
+
+      if (invalidEls && invalidEls.length > 0) {
+        // Focus on the first invalid element
+        invalidEls[0].focus();
+        if (invalidEls[0].select) { invalidEls[0].select(); }
+
+        if (layout === 'mobile') {
+          invalidEls[0].scrollIntoView();
+        }
+
+        return false;
+      }
+      return true;
+    };
+
   }(Shareabouts, jQuery));
 </script>
 {% endblock %}
