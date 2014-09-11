@@ -260,6 +260,10 @@ a.logout-btn {
 /*  background-color: rgba(242, 206, 206, 0.8);*/
 }
 
+#map {
+  background-color: #EBE2D9;
+}
+
 
 /* =Progress Bars
 -------------------------------------------------------------- */
