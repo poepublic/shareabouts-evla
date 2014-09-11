@@ -1,14 +1,18 @@
-<p style="text-transform:uppercase;text-align:center;font-family:inherit;font-size:1.75em;font-weight:bold;padding:0.5em;margin-bottom:0.75em;background-color:#FFFACD;border-radius:10px;border:1px solid #eee;">
-  {{#is responses.length 0 }}
-    {{#_}}What do you think?{{/_}}
-  {{^ }}
-    {{ responses.length }}
-    {{# has_single_response }} {{#_}}person{{/_}} {{/ has_single_response }}
-    {{^ has_single_response }} {{#_}}people{{/_}} {{/ has_single_response }}{{#_}}responded!{{/_}}
-    <br>
-    {{#_}}What do you think?{{/_}}
-  {{/is }}
-</p>
+{{#if survey_config.single_submission}}
+  {{^if user_submitted}}
+  <p style="text-transform:uppercase;text-align:center;font-family:inherit;font-size:1.75em;font-weight:bold;padding:0.5em;margin-bottom:0.75em;background-color:#FFFACD;border-radius:10px;border:1px solid #eee;">
+    {{#is responses.length 0 }}
+      {{#_}}What do you think?{{/_}}
+    {{^ }}
+      {{ responses.length }}
+      {{# has_single_response }} {{#_}}person{{/_}} {{/ has_single_response }}
+      {{^ has_single_response }} {{#_}}people{{/_}} {{/ has_single_response }}{{#_}}responded!{{/_}}
+      <br>
+      {{#_}}What do you think?{{/_}}
+    {{/is }}
+  </p>
+  {{/if}}
+{{/if}}
 
 {{#if survey_config.single_submission}}
   {{^if user_submitted}}
