@@ -169,6 +169,13 @@
       return true;
     };
 
+
+    var originalOnMarkerClick = Shareabouts.LayerView.prototype.onMarkerClick;
+    NS.LayerView.prototype.onMarkerClick = function(evt) {
+      originalOnMarkerClick.apply(this, arguments);
+      this.map.setView(evt.latlng, 17);
+    }
+
   }(Shareabouts, jQuery));
 </script>
 {% endblock %}
