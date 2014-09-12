@@ -330,13 +330,24 @@ support:
   anonymous_name: _(Someone)
 
 pages:
-  - title: _(About)
-    slug: about
-    name: about
-    start_page: true
-  - title: _(Criteria)
-    slug: criteria
-    name: criteria
+  - title: _(About ⌄)
+    pages:
+    - title: _(About)
+      slug: about
+      name: about
+      start_page: true
+    - title: _(About Bike Share)
+      slug: bikeshare
+      name: bikeshare
+    - title: _(About This Map)
+      slug: thismap
+      name: thismap
+    - title: _(Location Criteria)
+      slug: criteria
+      name: criteria
+    - title: _(Also Look For...)
+      slug: also
+      name: also
 
 notifications:
   on_new_place: true
