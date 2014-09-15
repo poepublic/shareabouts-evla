@@ -40,10 +40,11 @@ map:
       lng: -75.1636075
     zoom: 14
     minZoom: 12
-    maxZoom: 17
+    maxZoom: 19
   layers:
-    - url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
+    - url: http://{s}.tiles.mapbox.com/v3/openplans.jgp5g7f0/{z}/{x}/{y}.png
       attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
+    - url: http://{s}.tiles.mapbox.com/v3/openplans.PhillyBikeShare/{z}/{x}/{y}.png
 #    - url: /static/data/philadelphia.geojson
 #      type: json
 #      rules:
