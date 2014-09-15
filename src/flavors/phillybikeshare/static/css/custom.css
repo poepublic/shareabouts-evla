@@ -79,9 +79,6 @@ label {
   text-transform: none;
   color: inherit;
 }
-.place-detail label {
-  font-size: 1.375em;
-}
 input[type=date],
 input[type=datetime],
 input[type=datetime-local],
@@ -123,8 +120,12 @@ textarea:focus {
 }
 
 .survey-label {
-  margin-bottom: 1.1em;
+  margin-bottom: 1em;
   display: inline-block;
+}
+label.survey-label {
+  font-size: 1.125em;
+  margin-bottom: 0.5em;
 }
 
 .validation-message {
@@ -159,7 +160,7 @@ textarea:focus {
   top: -5em;
 }
 .radio-group label {
-  font-size: 1em;
+  font-size: 0.875em;
   margin: 0 0.125em 0.4em 0;
 }
 .btn-radio,
