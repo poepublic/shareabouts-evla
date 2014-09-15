@@ -4,9 +4,11 @@
     {{#is responses.length 0 }}
       {{#_}}What do you think?{{/_}}
     {{^ }}
-      {{ responses.length }}
-      {{# has_single_response }} {{#_}}person{{/_}} {{/ has_single_response }}
-      {{^ has_single_response }} {{#_}}people{{/_}} {{/ has_single_response }}{{#_}}responded!{{/_}}
+      {{#_}}
+        {{ responses.length }}
+        {{# has_single_response }} person {{/ has_single_response }}
+        {{^ has_single_response }} people {{/ has_single_response }}responded!
+      {{/_}}
       <br>
       {{#_}}What do you think?{{/_}}
     {{/is }}
