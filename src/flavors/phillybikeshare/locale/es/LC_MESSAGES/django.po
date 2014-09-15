@@ -1,21 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Frank Hebbert <frank@openplans.org>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Shareabouts Philly Bike Share\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-12 17:32-0400\n"
+"POT-Creation-Date: 2014-09-15 19:21-0400\n"
 "PO-Revision-Date: 2014-09-15 22:22+0000\n"
 "Last-Translator: Frank Hebbert <frank@openplans.org>\n"
-"Language-Team: Spanish (Mexico) (http://www.transifex.com/projects/p/shareabouts-philly-bike-share/language/es_MX/)\n"
+"Language-Team: Spanish (Mexico) (http://www.transifex.com/projects/p/"
+"shareabouts-philly-bike-share/language/es_MX/)\n"
+"Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_MX\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: _config.translations.py:1
@@ -26,10 +27,13 @@ msgstr "Ingrese una dirección..."
 msgid ""
 "Shareabouts is a mapping tool to gather crowd sourced public input. Use it "
 "to collect suggested locations and comments in a social, engaging process."
-msgstr "Shareabouts es una herramienta de mapas para recolectar opiniones públicas tomadas de multitudes. Utilízala para recolectar ubicaciones y comentarios sugeridos en un proceso participativo y social."
+msgstr ""
+"Shareabouts es una herramienta de mapas para recolectar opiniones públicas "
+"tomadas de multitudes. Utilízala para recolectar ubicaciones y comentarios "
+"sugeridos en un proceso participativo y social."
 
 #: _config.translations.py:3 _config.translations.py:59
-#: _config.translations.py:81
+#: _config.translations.py:83
 msgid "Someone"
 msgstr "Alguien"
 
@@ -57,7 +61,7 @@ msgstr "encuestado"
 msgid "Fill out the survey"
 msgstr "Llenar la encuesta"
 
-#: _config.translations.py:10 jstemplates/place-survey-form.html:13
+#: _config.translations.py:10 jstemplates/place-survey-form.html:14
 msgid "Is this a good spot for a bike share station?"
 msgstr "¿Es un buen sitio para colocar una estación de bike share?"
 
@@ -66,16 +70,16 @@ msgid "Y/N"
 msgstr "S/N"
 
 #: _config.translations.py:12 _config.translations.py:38
-#: jstemplates/place-survey-form.html:39
+#: jstemplates/place-survey-form.html:42
 msgid "Yes"
 msgstr "Sí"
 
 #: _config.translations.py:13 _config.translations.py:39
-#: jstemplates/place-survey-form.html:23
+#: jstemplates/place-survey-form.html:24
 msgid "No"
 msgstr "No"
 
-#: _config.translations.py:14 jstemplates/place-survey-form.html:8
+#: _config.translations.py:14 jstemplates/place-survey-form.html:9
 msgid "Great! What's your biggest reason?"
 msgstr "¡Excelente! ¿Cuál es la razón más importante?"
 
@@ -85,73 +89,73 @@ msgstr "¡Excelente! ¿Cuál es la razón más importante?"
 msgid "Choose one..."
 msgstr "Selecciona una..."
 
-#: _config.translations.py:16 jstemplates/place-survey-form.html:17
+#: _config.translations.py:16 jstemplates/place-survey-form.html:18
 msgid "Near home"
 msgstr "Cerca de la casa"
 
-#: _config.translations.py:17 jstemplates/place-survey-form.html:20
+#: _config.translations.py:17 jstemplates/place-survey-form.html:21
 msgid "Near transit stop"
 msgstr "Cerca de parada de tránsito"
 
-#: _config.translations.py:18 jstemplates/place-survey-form.html:18
+#: _config.translations.py:18 jstemplates/place-survey-form.html:19
 msgid "Near job"
 msgstr "Cerca del trabajo"
 
-#: _config.translations.py:19 jstemplates/place-survey-form.html:19
+#: _config.translations.py:19 jstemplates/place-survey-form.html:20
 msgid "Near shopping"
 msgstr "Cerca de tiendas"
 
-#: _config.translations.py:20 jstemplates/place-survey-form.html:11
+#: _config.translations.py:20 jstemplates/place-survey-form.html:12
 msgid "Important for community"
 msgstr "Importante para la comunidad"
 
 #: _config.translations.py:21 _config.translations.py:28
 #: _config.translations.py:47 _config.translations.py:55
-#: jstemplates/place-survey-form.html:25
+#: jstemplates/place-survey-form.html:26
 msgid "Other"
 msgstr "Otro"
 
-#: _config.translations.py:22 jstemplates/place-survey-form.html:35
+#: _config.translations.py:22 jstemplates/place-survey-form.html:37
 msgid "What's your biggest reason why not?"
 msgstr "¿Por qué no? Seleccione la razón mas importante."
 
-#: _config.translations.py:24 jstemplates/place-survey-form.html:38
+#: _config.translations.py:24 jstemplates/place-survey-form.html:41
 msgid "Wouldn't use bike share"
 msgstr "No utilizaría un servicio de bike share"
 
-#: _config.translations.py:25 jstemplates/place-survey-form.html:12
+#: _config.translations.py:25 jstemplates/place-survey-form.html:13
 msgid "Is in the way"
 msgstr "Está en el camino"
 
-#: _config.translations.py:26 jstemplates/place-survey-form.html:22
+#: _config.translations.py:26 jstemplates/place-survey-form.html:23
 msgid "No safe place to ride"
 msgstr "No es un lugar seguro para andar en bicicleta"
 
-#: _config.translations.py:27 jstemplates/place-survey-form.html:24
+#: _config.translations.py:27 jstemplates/place-survey-form.html:25
 msgid "Not useful for me"
 msgstr "No es útil para mí"
 
-#: _config.translations.py:29 jstemplates/place-survey-form.html:10
+#: _config.translations.py:29 jstemplates/place-survey-form.html:11
 msgid "How comfortable would you feel using this station at night?"
 msgstr "¿Qué tan cómodo estarías usando esta estación de noche?"
 
-#: _config.translations.py:31 jstemplates/place-survey-form.html:30
+#: _config.translations.py:31 jstemplates/place-survey-form.html:32
 msgid "Very comfortable"
 msgstr "Muy cómodo"
 
-#: _config.translations.py:32 jstemplates/place-survey-form.html:27
+#: _config.translations.py:32 jstemplates/place-survey-form.html:29
 msgid "Somewhat comfortable"
 msgstr "Algo cómodo"
 
-#: _config.translations.py:33 jstemplates/place-survey-form.html:21
+#: _config.translations.py:33 jstemplates/place-survey-form.html:22
 msgid "Neutral"
 msgstr "Neutro"
 
-#: _config.translations.py:34 jstemplates/place-survey-form.html:28
+#: _config.translations.py:34 jstemplates/place-survey-form.html:30
 msgid "Somewhat uncomfortable"
 msgstr "Un poco incómodo"
 
-#: _config.translations.py:35 jstemplates/place-survey-form.html:31
+#: _config.translations.py:35 jstemplates/place-survey-form.html:33
 msgid "Very uncomfortable"
 msgstr "Muy incómodo"
 
@@ -159,7 +163,7 @@ msgstr "Muy incómodo"
 msgid "Are there any better spots for stations in the immediate area?"
 msgstr "¿Hay algún sitio mejor para colocar estaciones en las inmediaciones?"
 
-#: _config.translations.py:40 jstemplates/place-survey-form.html:36
+#: _config.translations.py:40 jstemplates/place-survey-form.html:38
 msgid "Where would you suggest a station? Why?"
 msgstr "¿Dónde sugerirías poner una estación? ¿Por qué?"
 
@@ -171,23 +175,23 @@ msgstr "Edad"
 msgid "Thanks! 3 quick questions about yourself.  What is your age?"
 msgstr "¡Gracias! 3 preguntas rápidas sobre ti mismo. ¿Qué edad tienes?"
 
-#: _config.translations.py:43 jstemplates/place-survey-form.html:33
+#: _config.translations.py:43 jstemplates/place-survey-form.html:35
 msgid "What is your gender?"
 msgstr "¿Cuál es tu sexo?"
 
-#: _config.translations.py:45 jstemplates/place-survey-form.html:15
+#: _config.translations.py:45 jstemplates/place-survey-form.html:16
 msgid "Male"
 msgstr "Masculino"
 
-#: _config.translations.py:46 jstemplates/place-survey-form.html:7
+#: _config.translations.py:46 jstemplates/place-survey-form.html:8
 msgid "Female"
 msgstr "Femenino"
 
-#: _config.translations.py:48 jstemplates/place-survey-form.html:34
+#: _config.translations.py:48 jstemplates/place-survey-form.html:36
 msgid "What is your race/ethnicity?"
 msgstr "¿Cuál es tu raza/grupo étnico?"
 
-#: _config.translations.py:50 jstemplates/place-survey-form.html:9
+#: _config.translations.py:50 jstemplates/place-survey-form.html:10
 msgid "Hispanic/Latino"
 msgstr "Hispano/latino"
 
@@ -195,11 +199,11 @@ msgstr "Hispano/latino"
 msgid "Black/African American"
 msgstr "Negro/Africano"
 
-#: _config.translations.py:52 jstemplates/place-survey-form.html:37
+#: _config.translations.py:52 jstemplates/place-survey-form.html:39
 msgid "White"
 msgstr "Blanco"
 
-#: _config.translations.py:53 jstemplates/place-survey-form.html:16
+#: _config.translations.py:53 jstemplates/place-survey-form.html:17
 msgid "Native American"
 msgstr "Nativo americano"
 
@@ -239,86 +243,183 @@ msgstr "Tu e-mail"
 msgid "Email address"
 msgstr "Dirección de e-mail"
 
-#: _config.translations.py:67 _config.translations.py:68
+#: _config.translations.py:67
+#, fuzzy
+msgid "Your Phone"
+msgstr "Tu nombre"
+
+#: _config.translations.py:68 jstemplates/place-survey-form.html:27
+msgid "Phone"
+msgstr ""
+
+#: _config.translations.py:69 _config.translations.py:70
 msgid "Location Name"
 msgstr "Nombre del sitio"
 
-#: _config.translations.py:69
+#: _config.translations.py:71
 msgid "Location Type"
 msgstr "Tipo de ubicación"
 
-#: _config.translations.py:70
+#: _config.translations.py:72
 msgid "Choose One"
 msgstr "Escoge uno"
 
-#: _config.translations.py:71
+#: _config.translations.py:73
 msgid "Landmark"
 msgstr "Hito"
 
-#: _config.translations.py:72
+#: _config.translations.py:74
 msgid "Park"
 msgstr "Parque"
 
-#: _config.translations.py:73
+#: _config.translations.py:75
 msgid "School"
 msgstr "Escuela"
 
-#: _config.translations.py:74
+#: _config.translations.py:76
 msgid "Description"
 msgstr "Descripción"
 
-#: _config.translations.py:75
+#: _config.translations.py:77
 msgid "Description..."
 msgstr "Descripción..."
 
-#: _config.translations.py:76
+#: _config.translations.py:78
 msgid "Image"
 msgstr "Imagen"
 
-#: _config.translations.py:77
+#: _config.translations.py:79
 msgid "Add an Image"
 msgstr "Añadir una imagen"
 
-#: _config.translations.py:78
+#: _config.translations.py:80
 msgid "Add a Place"
 msgstr "Añadir un lugar"
 
-#: _config.translations.py:79
+#: _config.translations.py:81
 msgid "created"
 msgstr "creado"
 
-#: _config.translations.py:80
+#: _config.translations.py:82
 msgid "List All Places"
 msgstr "Enumerar todos los lugares"
 
-#: _config.translations.py:82 _config.translations.py:83
-#: _config.translations.py:84
+#: _config.translations.py:84 _config.translations.py:85
+#: _config.translations.py:86
 msgid "station"
 msgstr "estación"
 
-#: _config.translations.py:85
-msgid "About"
-msgstr "Acerca de"
+#: _config.translations.py:87
+msgid "Welcome"
+msgstr ""
 
-#: _config.translations.py:86 jstemplates/pages/bikeshare.html:1
+#: _config.translations.py:88 jstemplates/pages/bikeshare.html:1
 msgid "About Bike Share"
 msgstr "Sobre Bike Share"
 
-#: _config.translations.py:87 jstemplates/pages/thismap.html:1
+#: _config.translations.py:89 jstemplates/pages/thismap.html:1
 msgid "About This Map"
 msgstr "Sobre este mapa"
 
-#: _config.translations.py:88
-msgid "Learn more..."
-msgstr "Saber más..."
-
-#: _config.translations.py:89 jstemplates/pages/criteria.html:2
+#: _config.translations.py:90 jstemplates/pages/criteria.html:2
 msgid "Location Criteria"
 msgstr "Criterios de ubicación"
 
-#: _config.translations.py:90
+#: _config.translations.py:91
 msgid "Also Look For..."
 msgstr "Busca también..."
+
+#: jstemplates/place-detail-promotion-bar.html:1
+msgid "Recommend on Facebook"
+msgstr "Recomendar en Facebook"
+
+#: jstemplates/place-detail-promotion-bar.html:2
+msgid "Tweet This"
+msgstr "Enviar un tweet con esto"
+
+#: jstemplates/place-detail-survey.html:1
+msgid ""
+"\n"
+"        {{ responses.length }}\n"
+"        {{# has_single_response }} person {{/ has_single_response }}\n"
+"        {{^ has_single_response }} people {{/ has_single_response }}"
+"responded!\n"
+"      "
+msgstr ""
+"\n"
+"        ¡{{ responses.length }}\n"
+"        {{# has_single_response }} persona {{/ has_single_response }}\n"
+"        {{^ has_single_response }} personas {{/ has_single_response }}"
+"respondieron!\n"
+"      "
+
+#: jstemplates/place-detail-survey.html:6
+msgid "What do you think?"
+msgstr "¿Qué piensas?"
+
+#: jstemplates/place-detail.html:1
+msgid ""
+"Bike share station under consideration at this site in consultation with "
+"property owner."
+msgstr ""
+"Se está considerando una estación de bike share en este sitio con ayuda del "
+"propietario."
+
+#: jstemplates/place-detail.html:2
+msgid "Bike share station under consideration at this site."
+msgstr "Estación de bike share considerándose en este sitio."
+
+#: jstemplates/place-detail.html:3
+msgid ""
+"HELP!! Bike share station under consideration in this general area but space "
+"is tight; please help us find a good spot."
+msgstr ""
+"Estación de bike share en consideración en este ámbito, pero el espacio es "
+"reducido; ayúdanos a encontrar la mejor ubicación."
+
+#: jstemplates/place-detail.html:4
+msgid "Site Criteria"
+msgstr "Criterios del sitio"
+
+#: jstemplates/place-survey-form.html:2
+msgid "Anything else to tell us about bike share?"
+msgstr "¿Algo más para contarnos sobre bike share?"
+
+#: jstemplates/place-survey-form.html:6
+msgid "Comment..."
+msgstr "Comentar..."
+
+#: jstemplates/place-survey-form.html:7
+#, fuzzy
+msgid "Email"
+msgstr "Tu e-mail"
+
+#: jstemplates/place-survey-form.html:15
+msgid "Log Out"
+msgstr "Cerrar sesión"
+
+#: jstemplates/place-survey-form.html:28
+msgid "Please select one of these options."
+msgstr "Seleccione una de estas opciones."
+
+#: jstemplates/place-survey-form.html:31
+msgid "Thanks! 3 quick questions about yourself. These are optional."
+msgstr ""
+"¡Gracias! 3 preguntas rápidas acerca de ti mismo. Éstas son opcionales."
+
+#: jstemplates/place-survey-form.html:34
+msgid "What is your age?"
+msgstr "¿Qué edad tienes?"
+
+#: jstemplates/place-survey-form.html:40
+msgid ""
+"Would you like to receive future text or email updates about bike share? If "
+"so, provide a cell phone number or email address."
+msgstr ""
+
+#: jstemplates/place-survey-response.html:1
+msgid "Thanks for your input!"
+msgstr "¡Gracias por su opinión!"
 
 #: jstemplates/pages/about.html:1
 msgid "Bike share is coming to Philadelphia!"
@@ -328,19 +429,27 @@ msgstr "¡Bike share va a llegar a Philadelphia!"
 msgid ""
 "Click any potential location <img src=\"/static/css/images/map-icon-"
 "inservice-legend.png\"> to get started!"
-msgstr "¡Haz clic en cualquier sitio potencial <img src=\"/static/css/images/map-icon-inservice-legend.png\"> para empezar!"
+msgstr ""
+"¡Haz clic en cualquier sitio potencial <img src=\"/static/css/images/map-"
+"icon-inservice-legend.png\"> para empezar!"
 
 #: jstemplates/pages/about.html:3
 msgid ""
 "The City needs your help to identify 60 station locations to launch the "
 "program in Spring 2015. Tell us what you think about the possible locations "
 "<img src=\"/static/css/images/map-icon-inservice-legend.png\"> on this map."
-msgstr "La ciudad necesita tu ayuda para identificar 60 sitios de estación para lanzar el programa en primavera de 2015. Dinos lo que piensas sobre las posibles ubicaciones <img src=\"/static/css/images/map-icon-inservice-legend.png\"> en este mapa."
+msgstr ""
+"La ciudad necesita tu ayuda para identificar 60 sitios de estación para "
+"lanzar el programa en primavera de 2015. Dinos lo que piensas sobre las "
+"posibles ubicaciones <img src=\"/static/css/images/map-icon-inservice-legend."
+"png\"> en este mapa."
 
 #: jstemplates/pages/about.html:4
 msgid ""
 "The comment period will be open until <strong>October 20, 2014</strong>."
-msgstr "El periodo de comentarios estará abierto hasta el <strong> 20 de octubre de 2014</strong>."
+msgstr ""
+"El periodo de comentarios estará abierto hasta el <strong> 20 de octubre de "
+"2014</strong>."
 
 #: jstemplates/pages/also.html:1
 msgid "Also look for..."
@@ -350,28 +459,42 @@ msgstr "Busca también"
 msgid ""
 "Keep your eyes out for temporary bike share artwork on the sidewalks "
 "(above). These \"medallions\" were designed with the Mural Arts Program and "
-"mark possible bike share locations. When you find one, text us your comments"
-" to the number on the medallion."
-msgstr "Sigue atento a trabajos artísticos sobre bike share en aceras (arriba). Estos \"medallones\" fueron diseñados con el Programa de Artes Murales y marcan posibles ubicaciones de bicicletas compartidas. Cuando encuentres una, envíanos tus comentarios en un mensaje de texto al número del medallón."
+"mark possible bike share locations. When you find one, text us your comments "
+"to the number on the medallion."
+msgstr ""
+"Sigue atento a trabajos artísticos sobre bike share en aceras (arriba). "
+"Estos \"medallones\" fueron diseñados con el Programa de Artes Murales y "
+"marcan posibles ubicaciones de bicicletas compartidas. Cuando encuentres "
+"una, envíanos tus comentarios en un mensaje de texto al número del medallón."
 
 #: jstemplates/pages/also.html:3
 msgid ""
 "This website and these medallions mark the beginning of a public outreach "
-"process to help the City plan bike share in Philadelphia. Later in the fall,"
-" we will be reporting on what we've heard through this process online and at"
-" community meetings, which will be another opportunity for the public to "
+"process to help the City plan bike share in Philadelphia. Later in the fall, "
+"we will be reporting on what we've heard through this process online and at "
+"community meetings, which will be another opportunity for the public to "
 "comment on proposed stations before we launch in spring 2015. Look for "
 "announcements about these meetings on "
-msgstr "Este sitio web y estos medallones marcan el inicio de un proceso de consulta pública para ayudar a la ciudad a planear el sistema de bike share en Filadelfia. Después en el otoño, reportaremos lo que hemos recabado en este proceso en línea y en nuestras reuniones con la comunidad, lo que será otra oportunidad para que el público comente sobre las estaciones propuestas antes del lanzamiento en la primavera de 2015. Sigue pendiente de anuncios sobre estas reuniones en"
+msgstr ""
+"Este sitio web y estos medallones marcan el inicio de un proceso de consulta "
+"pública para ayudar a la ciudad a planear el sistema de bike share en "
+"Filadelfia. Después en el otoño, reportaremos lo que hemos recabado en este "
+"proceso en línea y en nuestras reuniones con la comunidad, lo que será otra "
+"oportunidad para que el público comente sobre las estaciones propuestas "
+"antes del lanzamiento en la primavera de 2015. Sigue pendiente de anuncios "
+"sobre estas reuniones en"
 
 #: jstemplates/pages/bikeshare.html:2
 msgid ""
-"All bicycles and stations will be owned by the City of Philadelphia and will"
-" be cleaned and maintained by the company <a "
-"href=\"http://bicycletransitsystems.com/\" target=\"_blank\">Bicycle Transit"
-" Systems</a>, the City's chosen bike share operator. For more information, "
-"visit "
-msgstr "Todas las estaciones de bicicletas serán propiedad de la Ciudad de Filadelfia y serán limpiadas y conservadas por la compañía  <a href=\"http://bicycletransitsystems.com/\" target=\"_blank\">Bicycle Transit Systems</a>, el operador de bike share elegido por la ciudad. Para más información, visita"
+"All bicycles and stations will be owned by the City of Philadelphia and will "
+"be cleaned and maintained by the company <a href=\"http://"
+"bicycletransitsystems.com/\" target=\"_blank\">Bicycle Transit Systems</a>, "
+"the City's chosen bike share operator. For more information, visit "
+msgstr ""
+"Todas las estaciones de bicicletas serán propiedad de la Ciudad de "
+"Filadelfia y serán limpiadas y conservadas por la compañía  <a href=\"http://"
+"bicycletransitsystems.com/\" target=\"_blank\">Bicycle Transit Systems</a>, "
+"el operador de bike share elegido por la ciudad. Para más información, visita"
 
 #: jstemplates/pages/bikeshare.html:3
 msgid ""
@@ -379,32 +502,48 @@ msgid ""
 "Philadelphia will join Chicago, Washington DC, Boston, New York City, and "
 "more than 30 other cities across North America in offering this new form of "
 "affordable, convenient transportation."
-msgstr "Bike share es transporte público en tu horario. En la primavera de 2015, Filadelfia se unirá a Chicago, Washington DC, Boston, Nueva York, y más de 30 ciudades más a lo largo de Norteamérica en ofrecer esta nueva forma de transporte asequible y conveniente."
+msgstr ""
+"Bike share es transporte público en tu horario. En la primavera de 2015, "
+"Filadelfia se unirá a Chicago, Washington DC, Boston, Nueva York, y más de "
+"30 ciudades más a lo largo de Norteamérica en ofrecer esta nueva forma de "
+"transporte asequible y conveniente."
 
 #: jstemplates/pages/bikeshare.html:4
 msgid ""
 "With bike share, members and walk-up users will be able to check out bikes "
-"from one of 60 stations, take a 30-minute trip for work, school, errands, or"
-" fun, and then return the bike to any other station in the system. Pricing "
-"is still in development. Bikes will feature easily adjustable seats, front "
-"and rear LED lights, baskets, and bells."
-msgstr "Con bike share, los miembros y usuarios ocasionales podrán tomar bicicletas de una de las 60 estaciones, dar un paseo de 30 minutos al trabajo, escuela, mandados o por diversión, y luego devolver la bicicleta a cualquier otra estación del sistema. Los precios aún están por determinarse. Las bicicletas contarán con asientos fácilmente ajustables, luces LED al frente y atrás, canastas y campanas."
+"from one of 60 stations, take a 30-minute trip for work, school, errands, or "
+"fun, and then return the bike to any other station in the system. Pricing is "
+"still in development. Bikes will feature easily adjustable seats, front and "
+"rear LED lights, baskets, and bells."
+msgstr ""
+"Con bike share, los miembros y usuarios ocasionales podrán tomar bicicletas "
+"de una de las 60 estaciones, dar un paseo de 30 minutos al trabajo, escuela, "
+"mandados o por diversión, y luego devolver la bicicleta a cualquier otra "
+"estación del sistema. Los precios aún están por determinarse. Las bicicletas "
+"contarán con asientos fácilmente ajustables, luces LED al frente y atrás, "
+"canastas y campanas."
 
 #: jstemplates/pages/criteria.html:1
 msgid ""
 "If on a sidewalk, the sidewalk must be at least 13' wide to maintain clear "
 "space for pedestrians."
-msgstr "Si está en una acera, la acera debe tener al menos 13' de ancho para que se mantenga un espacio libre para peatones."
+msgstr ""
+"Si está en una acera, la acera debe tener al menos 13' de ancho para que se "
+"mantenga un espacio libre para peatones."
 
 #: jstemplates/pages/criteria.html:3
 msgid "Most stations will be around 60 feet long and hold 20 bikes."
-msgstr "La mayoría de estaciones serán de 60 pies de largo y acogerán 20 bicicletas."
+msgstr ""
+"La mayoría de estaciones serán de 60 pies de largo y acogerán 20 bicicletas."
 
 #: jstemplates/pages/criteria.html:4
 msgid ""
-"NOTE: this image shows only a kiosk and two bike docks. Actual stations will"
-" have one kiosk but as many as 20 docks (stretching around 60 feet)."
-msgstr "NOTA: esta imagen muestra solo un kiosco y dos estaciones de bicicletas. Las estaciones reales tendrán un kiosco pero hasta 20 estaciones (a lo largo de 60 pies)."
+"NOTE: this image shows only a kiosk and two bike docks. Actual stations will "
+"have one kiosk but as many as 20 docks (stretching around 60 feet)."
+msgstr ""
+"NOTA: esta imagen muestra solo un kiosco y dos estaciones de bicicletas. Las "
+"estaciones reales tendrán un kiosco pero hasta 20 estaciones (a lo largo de "
+"60 pies)."
 
 #: jstemplates/pages/criteria.html:5
 msgid "Site Requirements"
@@ -418,7 +557,9 @@ msgstr "Básicos de la estación"
 msgid ""
 "Stations are 6.5 feet wide and can be between 45 and 75 feet long (that's "
 "about the length of 3 to 5 mid-sized cars, nose to tail)."
-msgstr "Las estaciones tienen 6,5 pies de ancho y pueden tener entre 45 y 75  pies de largo (más o menos la longitud de 3 a 5 coches de tamaño medio pegados)."
+msgstr ""
+"Las estaciones tienen 6,5 pies de ancho y pueden tener entre 45 y 75  pies "
+"de largo (más o menos la longitud de 3 a 5 coches de tamaño medio pegados)."
 
 #: jstemplates/pages/criteria.html:8
 msgid "Stations are solar powered and wireless connected."
@@ -428,7 +569,9 @@ msgstr "Las estaciones tienen energía solar y están conectadas sin cables."
 msgid ""
 "Stations must be placed on hard surfaces (e.g., concrete, asphalt, brick, "
 "pavers). No grass or landscaped areas."
-msgstr "Las estaciones deben colocarse en superficies sólidas (p.ej. concreto, asfalto, adoquines de ladrillo). No en césped ni áreas verdes."
+msgstr ""
+"Las estaciones deben colocarse en superficies sólidas (p.ej. concreto, "
+"asfalto, adoquines de ladrillo). No en césped ni áreas verdes."
 
 #: jstemplates/pages/criteria.html:10
 msgid "Stations must be visible and accessible from the sidewalk."
@@ -454,15 +597,21 @@ msgstr "Empleo, comida, destinos culturales y de recreo"
 msgid ""
 "Later in the fall, we will be reporting on what we've heard through this "
 "process online and at community meetings, which will be another opportunity "
-"for the public to comment on proposed stations before bike share launches in"
-" Spring 2015."
-msgstr "Más avanzado el otoño, informaremos sobre lo que hemos escuchado durante este proceso en línea y en las reuniones de la comunidad, lo que será una nueva oportunidad para que el público comente sobre las estaciones propuestas antes de que bike share sea lanzada en la primavera de 2015."
+"for the public to comment on proposed stations before bike share launches in "
+"Spring 2015."
+msgstr ""
+"Más avanzado el otoño, informaremos sobre lo que hemos escuchado durante "
+"este proceso en línea y en las reuniones de la comunidad, lo que será una "
+"nueva oportunidad para que el público comente sobre las estaciones "
+"propuestas antes de que bike share sea lanzada en la primavera de 2015."
 
 #: jstemplates/pages/thismap.html:6
 msgid ""
 "Meetings with stakeholders such as Philadelphia Parks & Recreation, SEPTA, "
 "universities, property owners, and community groups"
-msgstr "Las reuniones con los interesados como Parques y Recreación de Filadelfia, SEPTA, universidades, dueños de propiedades y grupos comunitarios."
+msgstr ""
+"Las reuniones con los interesados como Parques y Recreación de Filadelfia, "
+"SEPTA, universidades, dueños de propiedades y grupos comunitarios."
 
 #: jstemplates/pages/thismap.html:7
 msgid "Population density"
@@ -474,9 +623,11 @@ msgstr "Visitas al sitio"
 
 #: jstemplates/pages/thismap.html:9
 msgid ""
-"The possible locations shown on the map were identified based on a number of"
-" factors including:"
-msgstr "Las ubicaciones posibles mostradas en el mapa se identificaron en base a un número de factores:"
+"The possible locations shown on the map were identified based on a number of "
+"factors including:"
+msgstr ""
+"Las ubicaciones posibles mostradas en el mapa se identificaron en base a un "
+"número de factores:"
 
 #: jstemplates/pages/thismap.html:10
 msgid ""
@@ -485,14 +636,24 @@ msgid ""
 "identify 60 station locations for program launch next spring. The map shows "
 "almost 100 potential station locations. Please comment on these possible "
 "locations and share other feedback by October 20, 2014."
-msgstr "Este sitio web marca el inicio de un proceso de participación pública para ayudar a la ciudad de Filadelfia a planear el sistema de bicicletas compartidas. La ciudad necesita de tu ayuda para identificar 60 ubicaciones para el lanzamiento del programa la próxima primavera. El mapa muestra casi 100 posibles ubicaciones de estaciones. Por favor comenta sobre estas posibles ubicaciones y comparte tu opinión a más tardar el 20 de octubre de 2014."
+msgstr ""
+"Este sitio web marca el inicio de un proceso de participación pública para "
+"ayudar a la ciudad de Filadelfia a planear el sistema de bicicletas "
+"compartidas. La ciudad necesita de tu ayuda para identificar 60 ubicaciones "
+"para el lanzamiento del programa la próxima primavera. El mapa muestra casi "
+"100 posibles ubicaciones de estaciones. Por favor comenta sobre estas "
+"posibles ubicaciones y comparte tu opinión a más tardar el 20 de octubre de "
+"2014."
 
 #: jstemplates/pages/thismap.html:11
 msgid ""
 "Thousands of bike share suggestions made over the past year by "
 "Philadelphians via a crowd-sourced bike share map run by a local bike share "
 "advocacy organization"
-msgstr "Miles de sugerencias de bike share el año pasado de habitantes de Philadelphia a través de un mapa de bike share dirigida por una organización de defensa local."
+msgstr ""
+"Miles de sugerencias de bike share el año pasado de habitantes de "
+"Philadelphia a través de un mapa de bike share dirigida por una organización "
+"de defensa local."
 
 #: jstemplates/pages/thismap.html:12
 msgid "What's Next?"
@@ -502,82 +663,29 @@ msgstr "¿Qué es lo siguiente?"
 msgid "Why are these stations in consideration?"
 msgstr "¿Por qué están estas estaciones en consideración?"
 
-#: jstemplates/place-detail-promotion-bar.html:1
-msgid "Recommend on Facebook"
-msgstr "Recomendar en Facebook"
-
-#: jstemplates/place-detail-promotion-bar.html:2
-msgid "Tweet This"
-msgstr "Enviar un tweet con esto"
-
-#: jstemplates/place-detail-survey.html:1
-msgid "What do you think?"
-msgstr "¿Qué piensas?"
-
-#: jstemplates/place-detail-survey.html:2
-msgid "people"
-msgstr "personas"
-
-#: jstemplates/place-detail-survey.html:3
-msgid "person"
-msgstr "persona"
-
-#: jstemplates/place-detail-survey.html:4
-msgid "responded!"
-msgstr "¡respondieron!"
-
-#: jstemplates/place-detail.html:1
-msgid ""
-"HELP!! Bike share station under consideration in this general area but space is tight;"
-" please help us find a good spot."
-msgstr "Estación de bike share en consideración en este ámbito, pero el espacio es reducido; ayúdanos a encontrar la mejor ubicación."
-
-#: jstemplates/place-detail.html:2
-msgid ""
-"Bike share station under consideration at this site in consultation with "
-"property owner."
-msgstr "Se está considerando una estación de bike share en este sitio con ayuda del propietario."
-
-#: jstemplates/place-detail.html:3
-msgid "Bike share station under consideration at this site."
-msgstr "Estación de bike share considerándose en este sitio."
-
-#: jstemplates/place-detail.html:4
-msgid "Site Criteria"
-msgstr "Criterios del sitio"
-
-#: jstemplates/place-survey-form.html:2
-msgid "Anything else to tell us about bike share?"
-msgstr "¿Algo más para contarnos sobre bike share?"
-
-#: jstemplates/place-survey-form.html:6
-msgid "Comment..."
-msgstr "Comentar..."
-
-#: jstemplates/place-survey-form.html:14
-msgid "Log Out"
-msgstr "Cerrar sesión"
-
-#: jstemplates/place-survey-form.html:26
-msgid "Please select one of these options."
-msgstr "Seleccione una de estas opciones."
-
-#: jstemplates/place-survey-form.html:29
-msgid "Thanks! 3 quick questions about yourself. These are optional."
-msgstr "¡Gracias! 3 preguntas rápidas acerca de ti mismo. Éstas son opcionales."
-
-#: jstemplates/place-survey-form.html:32
-msgid "What is your age?"
-msgstr "¿Qué edad tienes?"
-
-#: jstemplates/place-survey-response.html:1
-msgid "Thanks for your input!"
-msgstr "¡Gracias por su opinión!"
-
-#: templates/index.html:53
+#: templates/index.html:54
 msgid ""
 "Powered by <a href=\"http://shareabouts.org/\" class=\"shareabouts-logo\" "
 "target=\"_blank\">Shareabouts</a>, <span class=\"nobreak\">a project of <a "
-"href=\"http://openplans.org/\" class=\"openplans-logo\" "
-"target=\"_blank\">OpenPlans</a></span>"
-msgstr "Impulsado por  <a href=\"http://shareabouts.org/\" class=\"shareabouts-logo\" target=\"_blank\">Shareabouts</a>, <span class=\"nobreak\">un proyecto de <a href=\"http://openplans.org/\" class=\"openplans-logo\" target=\"_blank\">OpenPlans</a></span>"
+"href=\"http://openplans.org/\" class=\"openplans-logo\" target=\"_blank"
+"\">OpenPlans</a></span>"
+msgstr ""
+"Impulsado por  <a href=\"http://shareabouts.org/\" class=\"shareabouts-logo"
+"\" target=\"_blank\">Shareabouts</a>, <span class=\"nobreak\">un proyecto de "
+"<a href=\"http://openplans.org/\" class=\"openplans-logo\" target=\"_blank"
+"\">OpenPlans</a></span>"
+
+#~ msgid "About"
+#~ msgstr "Acerca de"
+
+#~ msgid "Learn more..."
+#~ msgstr "Saber más..."
+
+#~ msgid "people"
+#~ msgstr "personas"
+
+#~ msgid "person"
+#~ msgstr "persona"
+
+#~ msgid "responded!"
+#~ msgstr "¡respondieron!"
