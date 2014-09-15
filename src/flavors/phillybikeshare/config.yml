@@ -335,14 +335,12 @@ pages:
     slug: about
     name: about
     start_page: true
-  - title: _(Learn more...)
-    pages:
-    - title: _(About Bike Share)
-      slug: bikeshare
-      name: bikeshare
-    - title: _(About This Map)
-      slug: thismap
-      name: thismap
+  - title: _(About Bike Share)
+    slug: bikeshare
+    name: bikeshare
+  - title: _(About This Map)
+    slug: thismap
+    name: thismap
   - title: _(Location Criteria)
     slug: criteria
     name: criteria
