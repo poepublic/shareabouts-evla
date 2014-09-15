@@ -187,8 +187,7 @@ textarea:focus {
 #site-title {
   color: #eee;
   font-family: "Arial Narrow", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-weight: normal;
   text-shadow: none;
   float: left;
   margin-right: 10em;
@@ -209,15 +208,22 @@ textarea:focus {
   color: #fff;
 }
 
+#site-title-text {
+  font-size: 0.75em;
+  display: inline-block;
+  position: relative;
+  top: -0.125em;
+  color: #9ad2e3;
+}
 #site-logo {
-  max-height: 2em;
+  display: none;
 }
 
 /* Navigation Button */
 #nav-btn {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; /* Careful changin' this! */
   background: #4475BA;
-  color: #eee;
+  color: #5c9cf3;
   text-shadow: none;
 }
 
@@ -458,8 +464,19 @@ a.shareabouts-logo:hover {
 }
 
 @media only screen and (min-width: 60em) {
+  #site-header {
+    padding-left: 10px;
+  }
   #site-title {
     width: auto;
+  }
+  #site-title-text {
+    display: none;
+  }
+  #site-logo {
+    display: block;
+    max-height: 2.625em;
+    margin-top: -0.125em;
   }
   .access li:hover > ul,
   .access li:hover > form > ul {
