@@ -527,8 +527,8 @@ msgstr "¡respondido!"
 
 #: jstemplates/place-detail.html:1
 msgid ""
-"Bike share station in consideration in this general area but space is tight;"
-" please help us find the best location."
+"HELP!! Bike share station under consideration in this general area but space is tight;"
+" please help us find a good spot."
 msgstr "Estación de bike share en consideración en este ámbito, pero el espacio es reducido; ayúdanos a encontrar la mejor ubicación."
 
 #: jstemplates/place-detail.html:2
