@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-10 12:06-0400\n"
+"POT-Creation-Date: 2014-09-12 17:32-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -299,8 +299,205 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: _config.translations.py:86
-msgid "Criteria"
+#: _config.translations.py:86 jstemplates/pages/bikeshare.html:1
+msgid "About Bike Share"
+msgstr ""
+
+#: _config.translations.py:87 jstemplates/pages/thismap.html:1
+msgid "About This Map"
+msgstr ""
+
+#: _config.translations.py:88
+msgid "Learn more..."
+msgstr ""
+
+#: _config.translations.py:89 jstemplates/pages/criteria.html:2
+msgid "Location Criteria"
+msgstr ""
+
+#: _config.translations.py:90
+msgid "Also Look For..."
+msgstr ""
+
+#: jstemplates/pages/about.html:1
+msgid "Bike share is coming to Philadelphia!"
+msgstr ""
+
+#: jstemplates/pages/about.html:2
+msgid ""
+"Click any potential location <img src=\"/static/css/images/map-icon-"
+"inservice-legend.png\"> to get started!"
+msgstr ""
+
+#: jstemplates/pages/about.html:3
+msgid ""
+"The City needs your help to identify 60 station locations to launch the "
+"program in Spring 2015. Tell us what you think about the possible locations "
+"<img src=\"/static/css/images/map-icon-inservice-legend.png\"> on this map."
+msgstr ""
+
+#: jstemplates/pages/about.html:4
+msgid ""
+"The comment period will be open until <strong>October 20, 2014</strong>."
+msgstr ""
+
+#: jstemplates/pages/also.html:1
+msgid "Also look for..."
+msgstr ""
+
+#: jstemplates/pages/also.html:2
+msgid ""
+"Keep your eyes out for temporary bike share artwork on the sidewalks "
+"(above). These \"medallions\" were designed with the Mural Arts Program and "
+"mark possible bike share locations. When you find one, text us your comments "
+"to the number on the medallion."
+msgstr ""
+
+#: jstemplates/pages/also.html:3
+msgid ""
+"This website and these medallions mark the beginning of a public outreach "
+"process to help the City plan bike share in Philadelphia. Later in the fall, "
+"we will be reporting on what we've heard through this process online and at "
+"community meetings, which will be another opportunity for the public to "
+"comment on proposed stations before we launch in spring 2015. Look for "
+"announcements about these meetings on "
+msgstr ""
+
+#: jstemplates/pages/bikeshare.html:2
+msgid ""
+"All bicycles and stations will be owned by the City of Philadelphia and will "
+"be cleaned and maintained by the company <a href=\"http://"
+"bicycletransitsystems.com/\" target=\"_blank\">Bicycle Transit Systems</a>, "
+"the City's chosen bike share operator. For more information, visit "
+msgstr ""
+
+#: jstemplates/pages/bikeshare.html:3
+msgid ""
+"Bike share is public transportation on your schedule. In spring 2015, "
+"Philadelphia will join Chicago, Washington DC, Boston, New York City, and "
+"more than 30 other cities across North America in offering this new form of "
+"affordable, convenient transportation."
+msgstr ""
+
+#: jstemplates/pages/bikeshare.html:4
+msgid ""
+"With bike share, members and walk-up users will be able to check out bikes "
+"from one of 60 stations, take a 30-minute trip for work, school, errands, or "
+"fun, and then return the bike to any other station in the system. Pricing is "
+"still in development. Bikes will feature easily adjustable seats, front and "
+"rear LED lights, baskets, and bells."
+msgstr ""
+
+#: jstemplates/pages/criteria.html:1
+msgid ""
+"If on a sidewalk, the sidewalk must be at least 13' wide to maintain clear "
+"space for pedestrians."
+msgstr ""
+
+#: jstemplates/pages/criteria.html:3
+msgid "Most stations will be around 60 feet long and hold 20 bikes."
+msgstr ""
+
+#: jstemplates/pages/criteria.html:4
+msgid ""
+"NOTE: this image shows only a kiosk and two bike docks. Actual stations will "
+"have one kiosk but as many as 20 docks (stretching around 60 feet)."
+msgstr ""
+
+#: jstemplates/pages/criteria.html:5
+msgid "Site Requirements"
+msgstr ""
+
+#: jstemplates/pages/criteria.html:6
+msgid "Station Basics"
+msgstr ""
+
+#: jstemplates/pages/criteria.html:7
+msgid ""
+"Stations are 6.5 feet wide and can be between 45 and 75 feet long (that's "
+"about the length of 3 to 5 mid-sized cars, nose to tail)."
+msgstr ""
+
+#: jstemplates/pages/criteria.html:8
+msgid "Stations are solar powered and wireless connected."
+msgstr ""
+
+#: jstemplates/pages/criteria.html:9
+msgid ""
+"Stations must be placed on hard surfaces (e.g., concrete, asphalt, brick, "
+"pavers). No grass or landscaped areas."
+msgstr ""
+
+#: jstemplates/pages/criteria.html:10
+msgid "Stations must be visible and accessible from the sidewalk."
+msgstr ""
+
+#: jstemplates/pages/criteria.html:11
+msgid "Stations should receive sunlight for around 6 hours a day."
+msgstr ""
+
+#: jstemplates/pages/thismap.html:2
+msgid "Available space"
+msgstr ""
+
+#: jstemplates/pages/thismap.html:3
+msgid "Bike lanes"
+msgstr ""
+
+#: jstemplates/pages/thismap.html:4
+msgid "Employment, shopping, cultural, and recreational destinations"
+msgstr ""
+
+#: jstemplates/pages/thismap.html:5
+msgid ""
+"Later in the fall, we will be reporting on what we've heard through this "
+"process online and at community meetings, which will be another opportunity "
+"for the public to comment on proposed stations before bike share launches in "
+"Spring 2015."
+msgstr ""
+
+#: jstemplates/pages/thismap.html:6
+msgid ""
+"Meetings with stakeholders such as Philadelphia Parks & Recreation, SEPTA, "
+"universities, property owners, and community groups"
+msgstr ""
+
+#: jstemplates/pages/thismap.html:7
+msgid "Population density"
+msgstr ""
+
+#: jstemplates/pages/thismap.html:8
+msgid "Site visits"
+msgstr ""
+
+#: jstemplates/pages/thismap.html:9
+msgid ""
+"The possible locations shown on the map were identified based on a number of "
+"factors including:"
+msgstr ""
+
+#: jstemplates/pages/thismap.html:10
+msgid ""
+"This website marks the beginning of a public outreach process to help the "
+"City of Philadelphia plan for bike share. The City needs your help to "
+"identify 60 station locations for program launch next spring. The map shows "
+"almost 100 potential station locations. Please comment on these possible "
+"locations and share other feedback by October 20, 2014."
+msgstr ""
+
+#: jstemplates/pages/thismap.html:11
+msgid ""
+"Thousands of bike share suggestions made over the past year by "
+"Philadelphians via a crowd-sourced bike share map run by a local bike share "
+"advocacy organization"
+msgstr ""
+
+#: jstemplates/pages/thismap.html:12
+msgid "What's Next?"
+msgstr ""
+
+#: jstemplates/pages/thismap.html:13
+msgid "Why are these stations in consideration?"
 msgstr ""
 
 #: jstemplates/place-detail-promotion-bar.html:1
@@ -312,7 +509,7 @@ msgid "Tweet This"
 msgstr ""
 
 #: jstemplates/place-detail-survey.html:1
-msgid "What&nbsp;do&nbsp;you&nbsp;think?"
+msgid "What do you think?"
 msgstr ""
 
 #: jstemplates/place-detail-survey.html:2

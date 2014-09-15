@@ -45,6 +45,8 @@ map:
     - url: http://{s}.tiles.mapbox.com/v3/openplans.jgp5g7f0/{z}/{x}/{y}.png
       attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
     - url: http://{s}.tiles.mapbox.com/v3/openplans.PhillyBikeShare/{z}/{x}/{y}.png
+      detectRetina: true
+
 #    - url: /static/data/philadelphia.geojson
 #      type: json
 #      rules:
@@ -138,6 +140,15 @@ place:
       attrs:
         - key: placeholder
           value: _(Email address)
+        - key: size
+          value: 30
+    - prompt: _(Your Phone)
+      type: text
+      name: private-submitter_phone
+      optional: true
+      attrs:
+        - key: placeholder
+          value: _(Phone)
         - key: size
           value: 30
     - prompt: _(Location Name)
@@ -335,14 +346,12 @@ pages:
     slug: about
     name: about
     start_page: true
-  - title: _(Learn more... ⌄)
-    pages:
-    - title: _(About Bike Share)
-      slug: bikeshare
-      name: bikeshare
-    - title: _(About This Map)
-      slug: thismap
-      name: thismap
+  - title: _(About Bike Share)
+    slug: bikeshare
+    name: bikeshare
+  - title: _(About This Map)
+    slug: thismap
+    name: thismap
   - title: _(Location Criteria)
     slug: criteria
     name: criteria
