@@ -87,6 +87,17 @@
         </label>
         <div class="survey-widgets survey-widgets-alt_suggestion">
           <textarea id="survey-alt_suggestion" name="private-alt_suggestion"></textarea>
+          <br/>
+        </div>
+      </div>
+
+      <div class="survey-field survey-field-comments">
+        <label class="survey-label survey-label-comments" for="survey-comments">
+          {{#_}}Anything else to tell us about bike share?{{/_}}
+        </label>
+        <div class="survey-widgets survey-widgets-comments">
+          <textarea id="survey-comments" name="private-comments" placeholder="{{#_}}Comment...{{/_}}"></textarea>
+          <br/>
         </div>
       </div>
 
@@ -129,15 +140,6 @@
             <input type="radio" name="private-submitter_race" id="submitter_race_other" value="other" /><label class="btn btn-radio" for="submitter_race_other">{{#_}}Other{{/_}}</label>
             {{/select}}
           </div>
-        </div>
-      </div>
-
-      <div class="survey-field survey-field-comments">
-        <label class="survey-label survey-label-comments" for="survey-comments">
-          {{#_}}Anything else to tell us about bike share?{{/_}}
-        </label>
-        <div class="survey-widgets survey-widgets-comments">
-          <textarea id="survey-comments" name="private-comments" placeholder="{{#_}}Comment...{{/_}}"></textarea>
         </div>
       </div>
     </fieldset>
