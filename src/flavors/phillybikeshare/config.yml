@@ -140,6 +140,15 @@ place:
           value: _(Email address)
         - key: size
           value: 30
+    - prompt: _(Your Phone)
+      type: text
+      name: private-submitter_phone
+      optional: true
+      attrs:
+        - key: placeholder
+          value: _(Phone)
+        - key: size
+          value: 30
     - prompt: _(Location Name)
       type: text
       name: name

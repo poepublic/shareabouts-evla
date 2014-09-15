@@ -144,6 +144,26 @@
       </div>
     </fieldset>
 
+    <h4 class="survey-label">{{#_}}Would you like to receive future text or email updates about bike share? If so, provide a cell phone number or email address.{{/_}}</h4>
+    <div class="survey-field survey-field-submitter_phone">
+      <label class="survey-label survey-label-submitter_phone" for="survey-submitter_phone">
+        {{#_}}Phone{{/_}}
+      </label>
+      <div class="survey-widgets survey-widgets-submitter_phone">
+        <input id="survey-submitter_phone" name="private-submitter_phone" type="tel" placeholder="{{#_}}Phone{{/_}}" size="30" value="{{ private-submitter_phone }}">
+      </div>
+    </div>
+    <br/>
+    <div class="survey-field survey-field-submitter_email">
+      <label class="survey-label survey-label-submitter_email" for="survey-submitter_email">
+        {{#_}}Email{{/_}}
+      </label>
+      <div class="survey-widgets survey-widgets-submitter_email">
+        <input id="survey-submitter_email" name="private-submitter_email" type="email" placeholder="{{#_}}Email{{/_}}" size="30" value="{{ private-submitter_email }}">
+      </div>
+    </div>
+    <br/>
+
     <input name="commit" type="submit" value="{{ survey_config.submit_btn_text }}" class="btn btn-primary btn-large submit-btn">
 
     {{#is_authenticated}}

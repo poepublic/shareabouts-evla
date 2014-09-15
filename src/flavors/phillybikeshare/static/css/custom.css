@@ -120,25 +120,23 @@ textarea:focus {
 }
 
 .survey-label {
-  margin-bottom: 1em;
+  margin-bottom: 1.125em;
   display: inline-block;
 }
 label.survey-label {
   font-size: 1.125em;
-  margin-bottom: 0.5em;
 }
 
 .validation-message {
   text-transform:uppercase;
-  padding: 0.4em;
+  padding: 0 0.4em;
   background-color: rgba(178, 24, 43, 0.1);
-  border-radius:10px;
+  border-radius: 2px;
   color: #b2182b;
   font-size:0.6em;
-
+  line-height: 1.5;
   position: absolute;
-  top: -2.5em;
-
+  top: -2.25em;
   display:none;
 }
 
