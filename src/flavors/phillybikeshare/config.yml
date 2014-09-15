@@ -342,7 +342,7 @@ support:
   anonymous_name: _(Someone)
 
 pages:
-  - title: _(About)
+  - title: _(Welcome)
     slug: about
     name: about
     start_page: true
