@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Frank Hebbert <frank@openplans.org>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Shareabouts Philly Bike Share\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-12 17:32-0400\n"
-"PO-Revision-Date: 2014-09-13 06:20+0000\n"
+"PO-Revision-Date: 2014-09-15 22:22+0000\n"
 "Last-Translator: Frank Hebbert <frank@openplans.org>\n"
 "Language-Team: Spanish (Mexico) (http://www.transifex.com/projects/p/shareabouts-philly-bike-share/language/es_MX/)\n"
 "MIME-Version: 1.0\n"
@@ -58,7 +59,7 @@ msgstr "Llenar la encuesta"
 
 #: _config.translations.py:10 jstemplates/place-survey-form.html:13
 msgid "Is this a good spot for a bike share station?"
-msgstr "¿Esta es una buena ubicación para colocar una estación de bicicletas compartidas?"
+msgstr "¿Es un buen sitio para colocar una estación de bike share?"
 
 #: _config.translations.py:11 _config.translations.py:37
 msgid "Y/N"
@@ -76,7 +77,7 @@ msgstr "No"
 
 #: _config.translations.py:14 jstemplates/place-survey-form.html:8
 msgid "Great! What's your biggest reason?"
-msgstr "¡Excelente! ¿Cuál es tu razón más importante?"
+msgstr "¡Excelente! ¿Cuál es la razón más importante?"
 
 #: _config.translations.py:15 _config.translations.py:23
 #: _config.translations.py:30 _config.translations.py:44
@@ -112,11 +113,11 @@ msgstr "Otro"
 
 #: _config.translations.py:22 jstemplates/place-survey-form.html:35
 msgid "What's your biggest reason why not?"
-msgstr "¿Cuál es su razón más importante para no hacerlo?"
+msgstr "¿Por qué no? Seleccione la razón mas importante."
 
 #: _config.translations.py:24 jstemplates/place-survey-form.html:38
 msgid "Wouldn't use bike share"
-msgstr "No utilizaría un servicio de bicicletas compartidas"
+msgstr "No utilizaría un servicio de bike share"
 
 #: _config.translations.py:25 jstemplates/place-survey-form.html:12
 msgid "Is in the way"
@@ -240,7 +241,7 @@ msgstr "Dirección de e-mail"
 
 #: _config.translations.py:67 _config.translations.py:68
 msgid "Location Name"
-msgstr "Nombre de ubicación"
+msgstr "Nombre del sitio"
 
 #: _config.translations.py:69
 msgid "Location Type"
@@ -301,11 +302,11 @@ msgstr "Acerca de"
 
 #: _config.translations.py:86 jstemplates/pages/bikeshare.html:1
 msgid "About Bike Share"
-msgstr "Acerca de Bike Share"
+msgstr "Sobre Bike Share"
 
 #: _config.translations.py:87 jstemplates/pages/thismap.html:1
 msgid "About This Map"
-msgstr "Acerca de este mapa"
+msgstr "Sobre este mapa"
 
 #: _config.translations.py:88
 msgid "Learn more..."
@@ -327,14 +328,14 @@ msgstr "¡Bike share va a llegar a Philadelphia!"
 msgid ""
 "Click any potential location <img src=\"/static/css/images/map-icon-"
 "inservice-legend.png\"> to get started!"
-msgstr "¡Haz clic en cualquier ubicación potencial <img src=\"/static/css/images/map-icon-inservice-legend.png\"> para empezar!"
+msgstr "¡Haz clic en cualquier sitio potencial <img src=\"/static/css/images/map-icon-inservice-legend.png\"> para empezar!"
 
 #: jstemplates/pages/about.html:3
 msgid ""
 "The City needs your help to identify 60 station locations to launch the "
 "program in Spring 2015. Tell us what you think about the possible locations "
 "<img src=\"/static/css/images/map-icon-inservice-legend.png\"> on this map."
-msgstr "La ciudad necesita tu ayuda para identificar 60 ubicaciones de estación para lanzar el programa en primavera de 2015. Finos lo que piensas sobre las posibles ubicaciones <img src=\"/static/css/images/map-icon-inservice-legend.png\"> en este mapa."
+msgstr "La ciudad necesita tu ayuda para identificar 60 sitios de estación para lanzar el programa en primavera de 2015. Dinos lo que piensas sobre las posibles ubicaciones <img src=\"/static/css/images/map-icon-inservice-legend.png\"> en este mapa."
 
 #: jstemplates/pages/about.html:4
 msgid ""
@@ -351,7 +352,7 @@ msgid ""
 "(above). These \"medallions\" were designed with the Mural Arts Program and "
 "mark possible bike share locations. When you find one, text us your comments"
 " to the number on the medallion."
-msgstr "Sigue atento a trabajos artísticos sobre bicicletas compartidas en aceras (arriba). Estos \"medallones\" fueron diseñados con el Programa de Artes Murales y marcan posibles ubicaciones de bicicletas compartidas. Cuando encuentres una, envíanos tus comentarios en un mensaje de texto al número del medallón."
+msgstr "Sigue atento a trabajos artísticos sobre bike share en aceras (arriba). Estos \"medallones\" fueron diseñados con el Programa de Artes Murales y marcan posibles ubicaciones de bicicletas compartidas. Cuando encuentres una, envíanos tus comentarios en un mensaje de texto al número del medallón."
 
 #: jstemplates/pages/also.html:3
 msgid ""
@@ -361,7 +362,7 @@ msgid ""
 " community meetings, which will be another opportunity for the public to "
 "comment on proposed stations before we launch in spring 2015. Look for "
 "announcements about these meetings on "
-msgstr "Este sitio web y estos medallones marcan el inicio de un proceso de consulta pública para ayudar a la ciudad a planear el sistema de bicicletas compartidas en Filadelfia. Después en el otoño, reportaremos lo que hemos recabado en este proceso en línea y en nuestras reuniones con la comunidad, lo que será otra oportunidad para que el público comente sobre las estaciones propuestas antes del lanzamiento en la primavera de 2015. Sigue pendiente de anuncios sobre estas reuniones en"
+msgstr "Este sitio web y estos medallones marcan el inicio de un proceso de consulta pública para ayudar a la ciudad a planear el sistema de bike share en Filadelfia. Después en el otoño, reportaremos lo que hemos recabado en este proceso en línea y en nuestras reuniones con la comunidad, lo que será otra oportunidad para que el público comente sobre las estaciones propuestas antes del lanzamiento en la primavera de 2015. Sigue pendiente de anuncios sobre estas reuniones en"
 
 #: jstemplates/pages/bikeshare.html:2
 msgid ""
@@ -370,7 +371,7 @@ msgid ""
 "href=\"http://bicycletransitsystems.com/\" target=\"_blank\">Bicycle Transit"
 " Systems</a>, the City's chosen bike share operator. For more information, "
 "visit "
-msgstr "Todas las estaciones de bicicletas serán propiedad de la Ciudad de Filadelfia y serán limpiadas y conservadas por la compañía  <a href=\"http://bicycletransitsystems.com/\" target=\"_blank\">Bicycle Transit Systems</a>, el operador de bicicletas compartidas elegido por la ciudad. Para más información, visita"
+msgstr "Todas las estaciones de bicicletas serán propiedad de la Ciudad de Filadelfia y serán limpiadas y conservadas por la compañía  <a href=\"http://bicycletransitsystems.com/\" target=\"_blank\">Bicycle Transit Systems</a>, el operador de bike share elegido por la ciudad. Para más información, visita"
 
 #: jstemplates/pages/bikeshare.html:3
 msgid ""
@@ -378,7 +379,7 @@ msgid ""
 "Philadelphia will join Chicago, Washington DC, Boston, New York City, and "
 "more than 30 other cities across North America in offering this new form of "
 "affordable, convenient transportation."
-msgstr "Las bicicletas compartidas son transporte público en tu horario. En la primavera de 2015, Filadelfia se unirá a Chicago, Washington DC, Boston, Nueva York, y más de 30 ciudades más a lo largo de Norteamérica en ofrecer esta nueva forma de transporte asequible y conveniente."
+msgstr "Bike share es transporte público en tu horario. En la primavera de 2015, Filadelfia se unirá a Chicago, Washington DC, Boston, Nueva York, y más de 30 ciudades más a lo largo de Norteamérica en ofrecer esta nueva forma de transporte asequible y conveniente."
 
 #: jstemplates/pages/bikeshare.html:4
 msgid ""
@@ -387,7 +388,7 @@ msgid ""
 " fun, and then return the bike to any other station in the system. Pricing "
 "is still in development. Bikes will feature easily adjustable seats, front "
 "and rear LED lights, baskets, and bells."
-msgstr "Con bicicletas compartidas, los miembros y usuarios ocasionales podrán tomar bicicletas de una de las 60 estaciones, dar un paseo de 30 minutos al trabajo, escuela, mandados o por diversión, y luego devolver la bicicleta a cualquier otra estación del sistema. Los precios aún están por determinarse. Las bicicletas contarán con asientos fácilmente ajustables, luces LED al frente y atrás, canastas y campanas."
+msgstr "Con bike share, los miembros y usuarios ocasionales podrán tomar bicicletas de una de las 60 estaciones, dar un paseo de 30 minutos al trabajo, escuela, mandados o por diversión, y luego devolver la bicicleta a cualquier otra estación del sistema. Los precios aún están por determinarse. Las bicicletas contarán con asientos fácilmente ajustables, luces LED al frente y atrás, canastas y campanas."
 
 #: jstemplates/pages/criteria.html:1
 msgid ""
@@ -447,7 +448,7 @@ msgstr "Carriles para bicicleta"
 
 #: jstemplates/pages/thismap.html:4
 msgid "Employment, shopping, cultural, and recreational destinations"
-msgstr "Empleo, comida, cultural y destinos de recreo"
+msgstr "Empleo, comida, destinos culturales y de recreo"
 
 #: jstemplates/pages/thismap.html:5
 msgid ""
@@ -455,7 +456,7 @@ msgid ""
 "process online and at community meetings, which will be another opportunity "
 "for the public to comment on proposed stations before bike share launches in"
 " Spring 2015."
-msgstr "Más avanzado el otoño, informaremos sobre lo que hemos escuchado durante este proceso en línea y en las reuniones de la comunidad, lo que será una nueva oportunidad para que el público comente sobre las estaciones propuestas antes de que bike share sea lanzada\n en la primavera de 2015."
+msgstr "Más avanzado el otoño, informaremos sobre lo que hemos escuchado durante este proceso en línea y en las reuniones de la comunidad, lo que será una nueva oportunidad para que el público comente sobre las estaciones propuestas antes de que bike share sea lanzada en la primavera de 2015."
 
 #: jstemplates/pages/thismap.html:6
 msgid ""
@@ -515,7 +516,7 @@ msgstr "¿Qué piensas?"
 
 #: jstemplates/place-detail-survey.html:2
 msgid "people"
-msgstr "Gente"
+msgstr "personas"
 
 #: jstemplates/place-detail-survey.html:3
 msgid "person"
@@ -523,7 +524,7 @@ msgstr "persona"
 
 #: jstemplates/place-detail-survey.html:4
 msgid "responded!"
-msgstr "¡respondido!"
+msgstr "¡respondieron!"
 
 #: jstemplates/place-detail.html:1
 msgid ""
