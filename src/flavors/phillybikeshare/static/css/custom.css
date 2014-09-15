@@ -219,6 +219,10 @@ label.survey-label {
 #site-logo {
   display: none;
 }
+#site-deadline {
+  display: block;
+  margin-top: -0.25em;
+}
 
 /* Navigation Button */
 #nav-btn {
@@ -470,6 +474,7 @@ a.shareabouts-logo:hover {
   }
   #site-title {
     width: auto;
+    position: relative
   }
   #site-title-text {
     display: none;
@@ -478,6 +483,16 @@ a.shareabouts-logo:hover {
     display: block;
     max-height: 2.625em;
     margin-top: -0.125em;
+  }
+  #site-deadline {
+    position: absolute;
+    top: 0.125em;
+    left: 100%;
+    white-space: nowrap;
+    margin-left: -3.625em;
+  }
+  .access {
+    margin-top: -0.5em;
   }
   .access li:hover > ul,
   .access li:hover > form > ul {
