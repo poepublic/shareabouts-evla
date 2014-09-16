@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-16 10:06-0400\n"
+"POT-Creation-Date: 2014-09-16 10:19-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -332,19 +332,27 @@ msgid "Bike share is coming to Philadelphia!"
 msgstr ""
 
 #: jstemplates/pages/about.html:3
+msgid "Bike trails"
+msgstr ""
+
+#: jstemplates/pages/about.html:4
 msgid ""
 "Click any potential location <img src=\"/static/css/images/map-icon-"
 "inservice-legend.png\"> to get started!"
 msgstr ""
 
-#: jstemplates/pages/about.html:4
+#: jstemplates/pages/about.html:5
+msgid "Rail Stations"
+msgstr ""
+
+#: jstemplates/pages/about.html:6
 msgid ""
 "The City needs your help to identify 60 station locations to launch the "
 "program in Spring 2015. Tell us what you think about the possible locations "
 "<img src=\"/static/css/images/map-icon-inservice-legend.png\"> on this map."
 msgstr ""
 
-#: jstemplates/pages/about.html:5
+#: jstemplates/pages/about.html:7
 msgid ""
 "The comment period will be open until <strong>October 20, 2014</strong>."
 msgstr ""
