@@ -234,6 +234,12 @@ label.survey-label {
 #sign-in-btn {
   color: #fff;
   font-weight: bold;
+  max-width: 4.25em;
+  line-height: 1.25;
+  margin-top: 1em;
+}
+.authed #sign-in-btn {
+  margin-top: 0.125em;
 }
 #sign-in-btn:hover {
   color: #fff;
@@ -498,6 +504,12 @@ a.shareabouts-logo:hover {
     background: #ccc;
     border-color: rgba(0,0,0,0.05);
   }
+  #sign-in-btn {
+    font-size: 0.75em;
+  }
+  .authed #sign-in-btn {
+    margin-top: 0.5em;
+  }
   .sign-in-menu {
     background: #666;
   }
@@ -548,6 +560,10 @@ a.shareabouts-logo:hover {
 @media only screen and (min-width: 80em) {
   .access {
     font-size: 0.875em;
+  }
+  #sign-in-btn {
+    max-width: none;
+    font-size: 1em;
   }
 }
 
