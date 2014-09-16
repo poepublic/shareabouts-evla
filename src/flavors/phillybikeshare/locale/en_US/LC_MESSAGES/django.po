@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-15 19:55-0400\n"
+"POT-Creation-Date: 2014-09-16 10:06-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -323,104 +323,28 @@ msgstr ""
 msgid "Also Look For..."
 msgstr ""
 
-#: jstemplates/place-detail-promotion-bar.html:1
-msgid "Recommend on Facebook"
-msgstr ""
-
-#: jstemplates/place-detail-promotion-bar.html:2
-msgid "Tweet This"
-msgstr ""
-
-#: jstemplates/place-detail-survey.html:1
-msgid ""
-"\n"
-"        {{ responses.length }}\n"
-"        {{# has_single_response }} person {{/ has_single_response }}\n"
-"        {{^ has_single_response }} people {{/ has_single_response }}"
-"responded!\n"
-"      "
-msgstr ""
-
-#: jstemplates/place-detail-survey.html:6
-msgid "What do you think?"
-msgstr ""
-
-#: jstemplates/place-detail.html:1
-msgid ""
-"Bike share station under consideration at this site in consultation with "
-"property owner."
-msgstr ""
-
-#: jstemplates/place-detail.html:2
-msgid "Bike share station under consideration at this site."
-msgstr ""
-
-#: jstemplates/place-detail.html:3
-msgid ""
-"HELP!! Bike share station under consideration in this general area but space "
-"is tight; please help us find a good spot."
-msgstr ""
-
-#: jstemplates/place-detail.html:4
-msgid "Site Criteria"
-msgstr ""
-
-#: jstemplates/place-survey-form.html:2
-msgid "Anything else to tell us about bike share?"
-msgstr ""
-
-#: jstemplates/place-survey-form.html:6
-msgid "Comment..."
-msgstr ""
-
-#: jstemplates/place-survey-form.html:7
-msgid "Email"
-msgstr ""
-
-#: jstemplates/place-survey-form.html:15
-msgid "Log Out"
-msgstr ""
-
-#: jstemplates/place-survey-form.html:28
-msgid "Please select one of these options."
-msgstr ""
-
-#: jstemplates/place-survey-form.html:31
-msgid "Thanks! 3 quick questions about yourself. These are optional."
-msgstr ""
-
-#: jstemplates/place-survey-form.html:34
-msgid "What is your age?"
-msgstr ""
-
-#: jstemplates/place-survey-form.html:40
-msgid ""
-"Would you like to receive future text or email updates about bike share? If "
-"so, provide a cell phone number or email address."
-msgstr ""
-
-#: jstemplates/place-survey-response.html:1
-msgid "Thanks for your input!"
-msgstr ""
-
-#: jstemplates/pages/about.html:1
-msgid "Bike share is coming to Philadelphia!"
+#: jstemplates/pages/about.html:1 jstemplates/pages/thismap.html:3
+msgid "Bike lanes"
 msgstr ""
 
 #: jstemplates/pages/about.html:2
+msgid "Bike share is coming to Philadelphia!"
+msgstr ""
+
+#: jstemplates/pages/about.html:3
 msgid ""
 "Click any potential location <img src=\"/static/css/images/map-icon-"
 "inservice-legend.png\"> to get started!"
 msgstr ""
 
-#: jstemplates/pages/about.html:3
+#: jstemplates/pages/about.html:4
 msgid ""
 "The City needs your help to identify 60 station locations to launch the "
 "program in Spring 2015. Tell us what you think about the possible locations "
 "<img src=\"/static/css/images/map-icon-inservice-legend.png\"> on this map."
 msgstr ""
 
-#: jstemplates/pages/about.html:4
+#: jstemplates/pages/about.html:5
 msgid ""
 "The comment period will be open until <strong>October 20, 2014</strong>."
 msgstr ""
@@ -524,10 +448,6 @@ msgstr ""
 msgid "Available space"
 msgstr ""
 
-#: jstemplates/pages/thismap.html:3
-msgid "Bike lanes"
-msgstr ""
-
 #: jstemplates/pages/thismap.html:4
 msgid "Employment, shopping, cultural, and recreational destinations"
 msgstr ""
@@ -582,6 +502,90 @@ msgstr ""
 
 #: jstemplates/pages/thismap.html:13
 msgid "Why are these stations in consideration?"
+msgstr ""
+
+#: jstemplates/place-detail-promotion-bar.html:1
+msgid "Recommend on Facebook"
+msgstr ""
+
+#: jstemplates/place-detail-promotion-bar.html:2
+msgid "Tweet This"
+msgstr ""
+
+#: jstemplates/place-detail-survey.html:1
+msgid ""
+"\n"
+"        {{ responses.length }}\n"
+"        {{# has_single_response }} person {{/ has_single_response }}\n"
+"        {{^ has_single_response }} people {{/ has_single_response }}"
+"responded!\n"
+"      "
+msgstr ""
+
+#: jstemplates/place-detail-survey.html:6
+msgid "What do you think?"
+msgstr ""
+
+#: jstemplates/place-detail.html:1
+msgid ""
+"Bike share station under consideration at this site in consultation with "
+"property owner."
+msgstr ""
+
+#: jstemplates/place-detail.html:2
+msgid "Bike share station under consideration at this site."
+msgstr ""
+
+#: jstemplates/place-detail.html:3
+msgid ""
+"HELP!! Bike share station under consideration in this general area but space "
+"is tight; please help us find a good spot."
+msgstr ""
+
+#: jstemplates/place-detail.html:4
+msgid "Site Criteria"
+msgstr ""
+
+#: jstemplates/place-survey-form.html:2
+msgid "Anything else to tell us about bike share?"
+msgstr ""
+
+#: jstemplates/place-survey-form.html:6
+msgid "Comment..."
+msgstr ""
+
+#: jstemplates/place-survey-form.html:7
+msgid "Email"
+msgstr ""
+
+#: jstemplates/place-survey-form.html:15
+msgid "Log Out"
+msgstr ""
+
+#: jstemplates/place-survey-form.html:28
+msgid "Please select one of these options."
+msgstr ""
+
+#: jstemplates/place-survey-form.html:31
+msgid "Thanks! 3 quick questions about yourself. These are optional."
+msgstr ""
+
+#: jstemplates/place-survey-form.html:34
+msgid "What is your age?"
+msgstr ""
+
+#: jstemplates/place-survey-form.html:40
+msgid ""
+"Would you like to receive future text or email updates about bike share? If "
+"so, provide a cell phone number or email address."
+msgstr ""
+
+#: jstemplates/place-survey-response.html:1
+msgid "Thanks for your input!"
+msgstr ""
+
+#: templates/index.html:7
+msgid "Submit comments by October 20, 2014!"
 msgstr ""
 
 #: templates/index.html:54
