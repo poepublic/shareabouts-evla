@@ -50,7 +50,8 @@
   This will place content in the colophon below the map
  -->
 {% block colophon %}
-<p class="total-response-indicator"><span class="total-response-count">742</span> Total Responses</p>
+<p class="total-response-indicator hidden"><span class="total-response-count">742</span> Total Responses</p>
+
 <p id="powered-by">{% blocktrans %}Powered by <a href="http://shareabouts.org/" class="shareabouts-logo" target="_blank">Shareabouts</a>, <span class="nobreak">a project of <a href="http://openplans.org/" class="openplans-logo" target="_blank">OpenPlans</a></span>{% endblocktrans %}</p>
 {% endblock %}
 
@@ -60,6 +61,43 @@
 {% block includes %}
 <script>
   (function(NS, $) {
+    function showTotalResponseCount() {
+      $.ajax({
+        url: '/api/surveys?page_size=1',
+        success: function(data) {
+          var responseCount = data.metadata.length;
+          $('.total-response-count').html(responseCount);
+          $('.total-response-indicator').removeClass('hidden');
+        }
+      });
+    };
+
+    function incrementTotalResponseCount() {
+      try {
+        var responseCount = parseInt($('.total-response-count').html());
+        responseCount += 1;
+        $('.total-response-count').html(responseCount);
+      } catch(err) {
+        // Fail silently here; it's no big deal.
+      }
+    };
+
+    var originalSubmissionCreate = Shareabouts.SubmissionCollection.prototype.create;
+    Shareabouts.SubmissionCollection.prototype.create = function(model, options) {
+      var originalSuccess = options.success;
+      options.success = function(model, resp, options) {
+        incrementTotalResponseCount();
+        if (originalSuccess) {
+          originalSuccess.call(this, model, resp, options);
+        }
+      }
+      return originalSubmissionCreate.call(this, model, options);
+    }
+
+    $(function() {
+      showTotalResponseCount();
+    });
+
     function updateConditionQuestionVisibility(val, $yesField, $yesInput, $noField, $noInput) {
       if (val === 'yes') {
         $yesField.show();
