@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-16 10:19-0400\n"
+"POT-Creation-Date: 2014-09-16 16:42-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -597,6 +597,10 @@ msgid "Submit comments by October 20, 2014!"
 msgstr ""
 
 #: templates/index.html:54
+msgid "<span class=\"total-response-count\">0</span> Total Responses"
+msgstr ""
+
+#: templates/index.html:56
 msgid ""
 "Powered by <a href=\"http://shareabouts.org/\" class=\"shareabouts-logo\" "
 "target=\"_blank\">Shareabouts</a>, <span class=\"nobreak\">a project of <a "
