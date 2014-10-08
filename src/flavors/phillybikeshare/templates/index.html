@@ -61,12 +61,19 @@
 {% block includes %}
 <script>
   (function(NS, $) {
+    function commaSeparateNumber(val){
+      while (/(\d+)(\d{3})/.test(val.toString())){
+        val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+      }
+      return val;
+    };
+
     function showTotalResponseCount() {
       $.ajax({
         url: '/api/surveys?page_size=1',
         success: function(data) {
           var responseCount = data.metadata.length;
-          $('.total-response-count').html(responseCount);
+          $('.total-response-count').html(commaSeparateNumber(responseCount));
           $('.total-response-indicator').removeClass('hidden');
         }
       });
@@ -74,9 +81,14 @@
 
     function incrementTotalResponseCount() {
       try {
-        var responseCount = parseInt($('.total-response-count').html());
+        var responseCountString = $('.total-response-count').html(), responseCount;
+        
+        // Remove all the commas and parse as a number...
+        responseCount = parseInt(responseCountString.replace(/,/g, ''));
+        
+        // Increment and add commas back in.
         responseCount += 1;
-        $('.total-response-count').html(responseCount);
+        $('.total-response-count').html(commaSeparateNumber(responseCount));
       } catch(err) {
         // Fail silently here; it's no big deal.
       }
