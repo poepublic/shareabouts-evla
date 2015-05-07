@@ -26,21 +26,24 @@ body, select, input, textarea {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Arial Narrow", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "europa", "Open Sans", "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 h1 {
-  font-family: "europa", "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "europa", "Open Sans", "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 2rem;
   line-height: 1.2em;
   font-weight: 300;
   font-style: normal;
-  color: #78deac;
+  color: #78dda5;
 }
 
-p {
-  font-family: "calluna";
-  font-size: 1rem;
+p,
+label {
+  font-family: "calluna", "Merriweather", "Garamond", serif;
+  font-size: 0.8rem;
   line-height: 1.6em;
   letter-spacing: .4px;
   font-weight: 300;
@@ -53,7 +56,7 @@ p {
 .btn:visited,
 .btn:link {
   text-transform: uppercase;
-  font-family: "aktiv-grotesk-std";
+  font-family: "aktiv-grotesk-std", "Quicksand", "Verdana", sans-serif;
   letter-spacing: 3px;
   font-weight: 400;
   font-style: normal;
@@ -96,7 +99,6 @@ p {
 
 /* Forms */
 label {
-  font-family: "Arial Narrow", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-transform: none;
   color: inherit;
@@ -115,12 +117,12 @@ input[type=url],
 input[type=week],
 textarea {
   outline: 0;
-  border: 0.25em solid #a3c7d9;
+  border: 0.25em solid #b6e4ef;
 }
 input:focus,
 textarea:focus {
-  border: 0.25em solid #007fbf;
-  outline: 2px solid #007fbf;
+  border: 0.25em solid #44cae7;
+  outline: 2px solid #44cae7;
 }
 
 /* Old IE does not like this to be combine with :invalid rules.
@@ -186,14 +188,14 @@ label.survey-label {
 .btn-radio,
 .btn-radio:visited,
 .btn-radio:link {
-  background-color: #888;
-  color: #fff;
+  background-color: #ddd;
+  color: #000;
   text-align: left;
 }
 :checked + .btn-radio,
 .btn-radio.checked,
 .btn-radio:hover {
-  background-color: #4475BA;
+  background-color: #FCC800;
   color: #fff;
 }
 
@@ -449,7 +451,7 @@ input.geocode-address-field {
 -------------------------------------------------------------- */
 
 #colophon {
-  background-color: #bbb;
+  background-color: #999;
 }
 #powered-by {
   color: #fff;
@@ -493,12 +495,18 @@ a.shareabouts-logo:hover {
 
 .access .btn,
 #sign-in-btn,
+.sign-in-menu,
+.auth-btn {
+  font-family: "aktiv-grotesk-std", "Quicksand", "Verdana", sans-serif;
+}
+
+.access .btn,
+#sign-in-btn,
 .auth-btn {
   box-shadow: none;
-  text-transform: uppercase;
-  font-family: "aktiv-grotesk-std";
-  color: rgba(117,117,117,.9);
   letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #757575;
   font-weight: 400;
   font-style: normal;
 }
@@ -506,6 +514,23 @@ a.shareabouts-logo:hover {
 .access .btn:hover,
 #sign-in-btn:hover {
   color: #c9c9c9;
+}
+
+p.responses-summary {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 1.75em;
+  font-weight: bold;
+  padding: 0.5em;
+  margin-bottom: 0.75em;
+  background-color: black;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  color: white;
+  background-image: url(http://static1.squarespace.com/static/546e852de4b065a4ff814411/t/55385f7ce4b027f5e06f129d/1429757820967/bikeshare-bg.jpg?format=600w);
+  background-position: 0px -75px;
+  background-size: cover;
 }
 
 
@@ -545,7 +570,11 @@ a.shareabouts-logo:hover {
     top: 0.125em;
     left: 100%;
     white-space: nowrap;
-    margin-left: -3.625em;
+    margin-left: -4em;
+    font-family: Merriweather;
+    font-style: normal;
+    color: #44cae7;
+    font-size: 0.75em;
   }
   .access,
   .auth-btn,

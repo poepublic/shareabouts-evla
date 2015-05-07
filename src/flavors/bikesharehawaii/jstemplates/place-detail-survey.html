@@ -1,6 +1,6 @@
 {{#if survey_config.single_submission}}
   {{^if user_submitted}}
-  <p style="text-transform:uppercase;text-align:center;font-family:inherit;font-size:1.75em;font-weight:bold;padding:0.5em;margin-bottom:0.75em;background-color:#FFFACD;border-radius:10px;border:1px solid #eee;">
+  <p class="responses-summary">
     {{#is responses.length 0 }}
       {{#unless config.app.closed}}
         {{#_}}What do you think?{{/_}}
