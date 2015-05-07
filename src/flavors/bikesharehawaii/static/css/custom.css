@@ -524,8 +524,8 @@ a.shareabouts-logo:hover {
 @media only screen and (min-width: 60em) {
   #site-header {
     padding-left: 10px;
-    box-shadow: 0 0.325em 3px rgba(0,0,0,0.1);
-    border-bottom: 3px solid #bbb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #ddd;
   }
   #site-title {
     width: auto;
@@ -637,7 +637,8 @@ a.shareabouts-logo:hover {
     box-shadow: -0.325em 0.325em 3px rgba(0,0,0,0.1);
   }
   #colophon {
-    box-shadow: 0 -0.325em 3px rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 3px rgba(0,0,0,0.1);
+    border-top: 1px solid #aaa;
   }
 }
 
