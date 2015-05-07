@@ -81,10 +81,10 @@
     function incrementTotalResponseCount() {
       try {
         var responseCountString = $('.total-response-count').html(), responseCount;
-        
+
         // Remove all the commas and parse as a number...
         responseCount = parseInt(responseCountString.replace(/,/g, ''));
-        
+
         // Increment and add commas back in.
         responseCount += 1;
         $('.total-response-count').html(commaSeparateNumber(responseCount));
