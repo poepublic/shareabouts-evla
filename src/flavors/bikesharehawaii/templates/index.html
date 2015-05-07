@@ -170,8 +170,8 @@
     Shareabouts.Util.MapQuest.geocode = function(location, bounds, options) {
       // If the address/location given is complete in that it already specifies
       // a city in some format that we recognize (see endStrings), pass it on
-      // through. Otherwise, tack on "Philadelphia, PA".
-      var endStrings = [' phila', ' philadelphia', ' pa'],
+      // through. Otherwise, tack on "Hawaii".
+      var endStrings = [' hawaii', ' hi'],
           isComplete = false,
           end, i, locationEndsWith;
 
@@ -192,7 +192,7 @@
 
       // If no ends matched, specify the city.
       if (!isComplete) {
-        location = location + ', Philadelphia, PA';
+        location = location + ', Hawaii';
       }
 
       return util_geocode.call(this, location, bounds, options);
