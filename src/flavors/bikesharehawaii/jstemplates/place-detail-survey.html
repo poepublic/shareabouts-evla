@@ -2,12 +2,19 @@
   {{^if user_submitted}}
   <p style="text-transform:uppercase;text-align:center;font-family:inherit;font-size:1.75em;font-weight:bold;padding:0.5em;margin-bottom:0.75em;background-color:#FFFACD;border-radius:10px;border:1px solid #eee;">
     {{#is responses.length 0 }}
+      {{#unless config.app.closed}}
+        {{#_}}What do you think?{{/_}}
+      {{/unless}}
     {{^ }}
       {{#_}}
         {{ responses.length }}
         {{# has_single_response }} person {{/ has_single_response }}
         {{^ has_single_response }} people {{/ has_single_response }}responded!
       {{/_}}
+      {{#unless config.app.closed}}
+        <br>
+        {{#_}}What do you think?{{/_}}
+      {{/unless}}
     {{/is }}
   </p>
   {{/if}}

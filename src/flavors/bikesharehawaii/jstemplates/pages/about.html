@@ -1,12 +1,12 @@
 <h1>{{#_}}Bike share is coming to Hawaii!{{/_}}</h1>
 
-<p style="line-height:2;">
-  {{#if config.app.closed}}
-    {{#_}}Thanks for your interest in bike share! The commenting period on this map has closed, however please stay tuned for announcements about future public meetings in late November, at which findings will be shared.{{/_}}
-  {{else}}
-    {{#_}}Bikesharing is a transit system that enables its customers to make short trips using a network of publicly accessible bikes.  It will ease traffic, promote fitness, create business for retailers, and reduce our dependence on fossil fuels.{{/_}}
-  {{/if}}
-</p>
+{{#if config.app.closed}}
+  <p style="line-height:2;">{{#_}}Thanks for your interest in bike share! The commenting period on this map has closed, however please stay tuned for announcements about future public meetings in late November, at which findings will be shared.{{/_}}</p>
+{{else}}
+  <p>{{#_}}Bikesharing is a transit system that enables its customers to make short trips using a network of publicly accessible bikes.  It will ease traffic, promote fitness, create business for retailers, and reduce our dependence on fossil fuels.{{/_}}</p>
+  <p><em>{{#_}}The comment period will be open until <strong>October 20, 2014</strong>.{{/_}}</em></p>
+  <h4>{{#_}}Click any potential location <img src="/static/css/images/map-icon-inservice-legend.png"> to get started!{{/_}}</h4>
+{{/if}}
 
 <hr style="margin-bottom:0.5em;" />
 <p style="text-transform:uppercase;font-size:0.75em;margin:0;">
