@@ -8,7 +8,7 @@
 -------------------------------------------------------------- */
 
 body {
-  background-color: #3B65A1;
+  background-color: white;
 }
 
 /* Links */
@@ -29,15 +29,37 @@ h1,h2,h3,h4,h5,h6 {
   font-family: "Arial Narrow", "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  font-family: "europa", "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 2rem;
+  line-height: 1.2em;
+  font-weight: 300;
+  font-style: normal;
+  color: #78deac;
+}
+
+p {
+  font-family: "calluna";
+  font-size: 1rem;
+  line-height: 1.6em;
+  letter-spacing: .4px;
+  font-weight: 300;
+  font-style: normal;
+  color: rgba(31,37,38,.75);
+}
+
 /* Buttons */
 .btn,
 .btn:visited,
 .btn:link {
   text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 8px;
-  font-family: "Arial Narrow", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  background-color: #3979D4;
+  font-family: "aktiv-grotesk-std";
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-style: normal;
+
+  border-radius: 0;
+  background-color: #000;
   color: #fff;
 /*  border: 0;*/
   border-color: transparent;
@@ -181,7 +203,7 @@ label.survey-label {
 
 #site-header {
   color: #eee;
-  background-color: #4475BA;
+  background-color: #fff;
 }
 #site-title {
   color: #eee;
@@ -232,17 +254,15 @@ label.survey-label {
 
 /* User Menu */
 #sign-in-btn {
-  color: #fff;
-  font-weight: bold;
   max-width: 4.25em;
   line-height: 1.25;
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 .authed #sign-in-btn {
   margin-top: 0.125em;
 }
 #sign-in-btn:hover {
-  color: #fff;
+  color: black;
 }
 a.logout-btn {
   color: #a3c7d9;
@@ -429,8 +449,10 @@ input.geocode-address-field {
 -------------------------------------------------------------- */
 
 #colophon {
-  background-color: #3B65A1;
-  color: #ddd;
+  background-color: #bbb;
+}
+#powered-by {
+  color: #fff;
 }
 
 /* Powered By - Please do not change these. */
@@ -461,12 +483,29 @@ a.shareabouts-logo:hover {
 
 .total-response-indicator {
   font-size: 1.25em;
-  color: #fcba0d;
+  color: black;
 }
 .total-response-count {
   font-size: 1.75em;
   font-weight: bold;
   display: block;
+}
+
+.access .btn,
+#sign-in-btn,
+.auth-btn {
+  box-shadow: none;
+  text-transform: uppercase;
+  font-family: "aktiv-grotesk-std";
+  color: rgba(117,117,117,.9);
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.access .btn:hover,
+#sign-in-btn:hover {
+  color: #c9c9c9;
 }
 
 
@@ -485,18 +524,21 @@ a.shareabouts-logo:hover {
 @media only screen and (min-width: 60em) {
   #site-header {
     padding-left: 10px;
+    box-shadow: 0 0.325em 3px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #bbb;
   }
   #site-title {
     width: auto;
-    position: relative
+    position: relative;
+    top: -2px;
   }
   #site-title-text {
     display: none;
   }
   #site-logo {
     display: block;
-    max-height: 2.625em;
-    margin-top: -0.125em;
+    max-height: 2em;
+    margin-top: 0;
   }
   #site-deadline {
     position: absolute;
@@ -505,9 +547,13 @@ a.shareabouts-logo:hover {
     white-space: nowrap;
     margin-left: -3.625em;
   }
-  .access {
+  .access,
+  .auth-btn,
+  #sign-in-btn {
     font-size: 0.75em;
-    margin-top: -0.5em;
+  }
+  .access {
+    margin-top: -1.5em;
   }
   .access li:hover > ul,
   .access li:hover > form > ul {
@@ -515,13 +561,15 @@ a.shareabouts-logo:hover {
     border-color: rgba(0,0,0,0.05);
   }
   #sign-in-btn {
-    font-size: 0.75em;
+    max-width: none;
+    margin-top: 1.25em;
   }
   .authed #sign-in-btn {
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
   }
   .sign-in-menu {
     background: #666;
+    box-shadow: -0.25em 0.25em 3px rgba(0,0,0,0.2);
   }
   .sign-in-menu:before {
     border-bottom-color: #666;
@@ -571,26 +619,29 @@ a.shareabouts-logo:hover {
     bottom: -1em;
     left: -1em;
     margin: 0;
-    background-color: #00275b;
-    color: #5c9cf3;
+    background-color: #000;
+    color: #bbb;
     padding: 0.5em 1em 1.5em 2em;
     border-radius: 0 0.75em 0 0;
     box-shadow: 0.325em -0.325em rgba(0,0,0,0.1);
   }
   .total-response-count {
-    color: #fcba0d;
+    color: #f9cc00;
     font-size: 2em;
+  }
+
+  #content {
+    box-shadow: -0.325em 0 3px rgba(0,0,0,0.1);
+  }
+  a.close-btn {
+    box-shadow: -0.325em 0.325em 3px rgba(0,0,0,0.1);
+  }
+  #colophon {
+    box-shadow: 0 -0.325em 3px rgba(0,0,0,0.1);
   }
 }
 
 @media only screen and (min-width: 80em) {
-  .access {
-    font-size: 0.875em;
-  }
-  #sign-in-btn {
-    max-width: none;
-    font-size: 1em;
-  }
 }
 
 @media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
