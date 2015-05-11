@@ -41,6 +41,7 @@ h1 {
 }
 
 p,
+li,
 label {
   font-family: "calluna", "Merriweather", "Garamond", serif;
   font-size: 0.8rem;
@@ -191,12 +192,15 @@ label.survey-label {
   background-color: #ddd;
   color: #000;
   text-align: left;
+  border: 1px solid #ccc;
+  box-shadow: -0.25em 0.25em 3px rgba(0,0,0,0.08)
 }
 :checked + .btn-radio,
 .btn-radio.checked,
 .btn-radio:hover {
-  background-color: #FCC800;
+  background-color: #fcc800;
   color: #fff;
+  border: 1px solid #db0;
 }
 
 
@@ -516,6 +520,7 @@ a.shareabouts-logo:hover {
   color: #c9c9c9;
 }
 
+.page-about h1,
 p.responses-summary {
   text-transform: uppercase;
   text-align: center;
@@ -531,6 +536,13 @@ p.responses-summary {
   background-image: url(http://static1.squarespace.com/static/546e852de4b065a4ff814411/t/55385f7ce4b027f5e06f129d/1429757820967/bikeshare-bg.jpg?format=600w);
   background-position: 0px -75px;
   background-size: cover;
+}
+
+.page-about h1 {
+  text-transform: none;
+  letter-spacing: 1px;
+  padding-top: 1em;
+  padding-bottom: 3em;
 }
 
 
