@@ -91,22 +91,59 @@ place_types:
   C:
     label: _(station)
     rules:
-      - condition: '{{layer.focused}} === false && {{map.zoom}} <= 16'
+      - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/marker-big-fuzzy-bike.png
-          iconSize: [40, 40]
-          iconAnchor: [20, 20]
-      - condition: '{{layer.focused}} === false && {{map.zoom}} > 16'
-        icon:
-          iconUrl: /static/css/images/marker-big-fuzzy-bike.png
-          iconSize: [60, 60]
-          iconAnchor: [30, 30]
+          iconUrl: /static/css/images/map-icon-inservice-legend.png
+          iconSize: [19, 25]
+          iconAnchor: [10, 25]
 
       - condition: '{{layer.focused}} === true'
         icon:
-          iconUrl: /static/css/images/marker-big-fuzzy-bike.png
-          iconSize: [80, 80]
-          iconAnchor: [40, 40]
+          iconUrl: /static/css/images/map-icon-inservice.png
+          iconSize: [40, 52]
+          iconAnchor: [20, 52]
+  D:
+    label: _(station)
+    rules:
+      - condition: '{{layer.focused}} === false'
+        icon:
+          iconUrl: /static/css/images/map-icon-inservice-legend.png
+          iconSize: [19, 25]
+          iconAnchor: [10, 25]
+
+      - condition: '{{layer.focused}} === true'
+        icon:
+          iconUrl: /static/css/images/map-icon-inservice.png
+          iconSize: [40, 52]
+          iconAnchor: [20, 52]
+  E:
+    label: _(station)
+    rules:
+      - condition: '{{layer.focused}} === false'
+        icon:
+          iconUrl: /static/css/images/map-icon-inservice-legend.png
+          iconSize: [19, 25]
+          iconAnchor: [10, 25]
+
+      - condition: '{{layer.focused}} === true'
+        icon:
+          iconUrl: /static/css/images/map-icon-inservice.png
+          iconSize: [40, 52]
+          iconAnchor: [20, 52]
+  F:
+    label: _(station)
+    rules:
+      - condition: '{{layer.focused}} === false'
+        icon:
+          iconUrl: /static/css/images/map-icon-inservice-legend.png
+          iconSize: [19, 25]
+          iconAnchor: [10, 25]
+
+      - condition: '{{layer.focused}} === true'
+        icon:
+          iconUrl: /static/css/images/map-icon-inservice.png
+          iconSize: [40, 52]
+          iconAnchor: [20, 52]
 
 activity:
   # Optional. Activity is supported by default. Set to false to disable.

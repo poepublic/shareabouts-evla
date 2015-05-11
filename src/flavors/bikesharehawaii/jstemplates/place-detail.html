@@ -5,16 +5,32 @@
   <!-- <p>Bike share station under consideration at this site; give us your feedback.</p> -->
   <!-- <p>Bike share station under consideration at this site in consultation with property owner; give us your feedback.</p> -->
   <p>
+    {{#is location_type 'F' }}
+      {{#_}}On-sidewalk bike share station under consideration at this site.{{/_}}
+    {{/is}}
+
+    {{#is location_type 'E' }}
+      {{#_}}On-sidewalk bike share station under consideration at this site.{{/_}}
+    {{/is}}
+
+    {{#is location_type 'D' }}
+      {{#_}}On-street bike share station under consideration at this site in place of parking.{{/_}}
+    {{/is}}
+
     {{#is location_type 'C' }}
-      {{#_}}HELP!! Bike share station under consideration in this general area but space is tight; please help us find a good spot.{{/_}} <small><a href="/page/criteria"><strong>{{#_}}Site Criteria{{/_}}</strong></a></small>
+      {{#_}}On-street bike share station under consideration at this site in partking restricted area.{{/_}}
     {{/is}}
 
     {{#is location_type 'B' }}
-      {{#_}}Bike share station under consideration at this site in consultation with property owner.{{/_}}
+      {{#_}}Bike share station under consideration at this site.{{/_}}
     {{/is}}
 
     {{#is location_type 'A' }}
       {{#_}}Bike share station under consideration at this site.{{/_}}
+    {{/is}}
+
+    {{#is Feasible '2' }}
+      {{#_}}This site is potentially feasible, but alternative suggestions are welcome!{{/_}}
     {{/is}}
   </p>
 </header>
