@@ -63,6 +63,12 @@
 {% block includes %}
 <script>
   (function(NS, $) {
+    NS.bootstrapped.mapHost = '{{ request.get_host }}';
+
+    Handlebars.registerHelper('host', function() {
+      return NS.bootstrapped.mapHost;
+    });
+
     function commaSeparateNumber(val){
       while (/(\d+)(\d{3})/.test(val.toString())){
         val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
