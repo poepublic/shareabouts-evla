@@ -112,6 +112,16 @@
       showTotalResponseCount();
     });
 
+    function updateOtherQuestionVisibility(val, $otherField, $otherInput) {
+      if (val === 'other') {
+        $otherField.show();
+        $otherInput.attr('required', true);
+      } else if (val) {
+        $otherField.hide();
+        $otherInput.removeAttr('required').val('');
+      }
+    }
+
     function updateConditionQuestionVisibility(val, $yesField, $yesInput, $noField, $noInput) {
       if (val === 'yes') {
         $yesField.show();
@@ -119,11 +129,11 @@
 
         if ($noField) {
           $noField.hide()
-          $noInput.removeAttr('required').val('').prop('checked', false);
+          $noInput.removeAttr('required').prop('checked', false);
         }
       } else if (val === 'no') {
         $yesField.hide();
-        $yesInput.removeAttr('required').val('').prop('checked', false);
+        $yesInput.removeAttr('required').prop('checked', false);
 
         if ($noField) {
           $noField.show();
@@ -131,11 +141,11 @@
         }
       } else {
         $yesField.hide();
-        $yesInput.removeAttr('required').val('').prop('checked', false);
+        $yesInput.removeAttr('required').prop('checked', false);
 
         if ($noField) {
           $noField.hide();
-          $noInput.removeAttr('required').val('').prop('checked', false);
+          $noInput.removeAttr('required').prop('checked', false);
         }
       }
     }
@@ -145,9 +155,31 @@
           $yesField = $('.survey-field-why_good'),
           $yesInput = $('input[name="private-why_good"]'),
           $noField = $('.survey-field-why_bad'),
-          $noInput = $('input[name="private-why_bad"]');
+          $noInput = $('input[name="private-why_bad"]'),
+          $otherYesField = $('.survey-field-why_good_other_reason'),
+          $otherYesInput = $('input[name="private-why_good_other_reason"]'),
+          $otherNoField = $('.survey-field-why_bad_other_reason'),
+          $otherNoInput = $('input[name="private-why_bad_other_reason"]');
 
       updateConditionQuestionVisibility(val, $yesField, $yesInput, $noField, $noInput);
+      updateOtherQuestionVisibility($yesInput.val(), $otherYesField, $otherYesInput);
+      updateOtherQuestionVisibility($noInput.val(), $otherNoField, $otherNoInput);
+    });
+
+    $(document).on('change', 'input[name="private-why_good"]', function(evt) {
+      var val = $(this).val(),
+          $otherField = $('.survey-field-why_good_other_reason'),
+          $otherInput = $('input[name="private-why_good_other_reason"]');
+
+      updateOtherQuestionVisibility(val, $otherField, $otherInput);
+    });
+
+    $(document).on('change', 'input[name="private-why_bad"]', function(evt) {
+      var val = $(this).val(),
+          $otherField = $('.survey-field-why_bad_other_reason'),
+          $otherInput = $('input[name="private-why_bad_other_reason"]');
+
+      updateOtherQuestionVisibility(val, $otherField, $otherInput);
     });
 
     $(document).on('change', 'input[name="private-alt_spot"]', function(evt) {

@@ -33,13 +33,20 @@
             <input type="radio" name="private-why_good" id="why_good_live" value="live" /><label class="btn btn-radio" for="why_good_live">{{#_}}Near home{{/_}}</label><br/>
             <input type="radio" name="private-why_good" id="why_good_transit" value="transit" /><label class="btn btn-radio" for="why_good_transit">{{#_}}Near transit stop{{/_}}</label><br/>
             <input type="radio" name="private-why_good" id="why_good_work" value="job" /><label class="btn btn-radio" for="why_good_work">{{#_}}Near job{{/_}}</label><br/>
-            <input type="radio" name="private-why_good" id="why_good_shopping" value="shopping" /><label class="btn btn-radio" for="why_good_shopping">{{#_}}Near shopping{{/_}}</label><br/>
+            <input type="radio" name="private-why_good" id="why_good_shopping" value="shopping" /><label class="btn btn-radio" for="why_good_shopping">{{#_}}Near shopping/dining{{/_}}</label><br/>
+            <input type="radio" name="private-why_good" id="why_good_recreation" value="recreation" /><label class="btn btn-radio" for="why_good_recreation">{{#_}}Near recreation{{/_}}</label><br/>
             <input type="radio" name="private-why_good" id="why_good_community" value="community" /><label class="btn btn-radio" for="why_good_community">{{#_}}Important for community{{/_}}</label><br/>
             <input type="radio" name="private-why_good" id="why_good_other" value="other" /><label class="btn btn-radio" for="why_good_other">{{#_}}Other{{/_}}</label>
 
             <div class="validation-message">{{#_}}Please select one of these options.{{/_}}</div>
           </div>
         </div>
+      </div>
+      <div class="survey-field survey-field-why_good_other_reason">
+        <div class="survey-widgets survey-widgets-why_good_other_reason">
+          <input id="survey-why_good_other_reason" name="private-why_good_other_reason" type="text" placeholder="{{#_}}please explain{{/_}}" size="30" value="{{ private-why_good_other_reason }}">
+        </div>
+        <br>
       </div>
       <div class="survey-field survey-field-why_bad" style="display: none;">
         <label class="survey-label survey-label-why_bad" for="survey-why_bad">
@@ -57,6 +64,12 @@
           </div>
         </div>
       </div>
+      <div class="survey-field survey-field-why_bad_other_reason">
+        <div class="survey-widgets survey-widgets-why_bad_other_reason">
+          <input id="survey-why_bad_other_reason" name="private-why_bad_other_reason" type="text" placeholder="{{#_}}please explain{{/_}}" size="30" value="{{ private-why_bad_other_reason }}">
+        </div>
+        <br>
+      </div>
       <div class="survey-field survey-field-safety">
         <label class="survey-label survey-label-safety" for="survey-safety">
           {{#_}}How comfortable would you feel using this station at night?{{/_}}
@@ -64,9 +77,9 @@
         <div class="survey-widgets survey-widgets-safety">
           <div id="survey-safety" class="radio-group">
             <input type="radio" name="private-safety" id="safety_verysafe" required value="verycomfortable" /><label class="btn btn-radio" for="safety_verysafe">{{#_}}Very comfortable{{/_}}</label><br/>
-            <input type="radio" name="private-safety" id="safety_safe" required value="comfortable" /><label class="btn btn-radio" for="safety_safe">{{#_}}Somewhat comfortable{{/_}}</label><br/>
+            <input type="radio" name="private-safety" id="safety_safe" required value="comfortable" /><label class="btn btn-radio" for="safety_safe">{{#_}}Comfortable{{/_}}</label><br/>
             <input type="radio" name="private-safety" id="safety_neutral" required value="neutral" /><label class="btn btn-radio" for="safety_neutral">{{#_}}Neutral{{/_}}</label><br/>
-            <input type="radio" name="private-safety" id="safety_unsafe" required value="uncomfortable" /><label class="btn btn-radio" for="safety_unsafe">{{#_}}Somewhat uncomfortable{{/_}}</label><br/>
+            <input type="radio" name="private-safety" id="safety_unsafe" required value="uncomfortable" /><label class="btn btn-radio" for="safety_unsafe">{{#_}}Uncomfortable{{/_}}</label><br/>
             <input type="radio" name="private-safety" id="safety_veryunsafe" required value="veryuncomfortable" /><label class="btn btn-radio" for="safety_veryunsafe">{{#_}}Very uncomfortable{{/_}}</label>
 
             <div class="validation-message">{{#_}}Please select one of these options.{{/_}}</div>

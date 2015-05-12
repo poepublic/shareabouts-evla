@@ -271,8 +271,10 @@ survey:
           value: transit
         - label: _(Near job)
           value: job
-        - label: _(Near shopping)
+        - label: _(Near shopping/dining)
           value: shopping
+        - label: _(Near recreation)
+          value: recreation
         - label: _(Important for community)
           value: community
         - label: _(Other)
@@ -280,6 +282,9 @@ survey:
       name: private-why_good
       attrs:
         - key: required
+    - prompt: _(Please explain)
+      type: text
+      name: private-why_good_other_reason
     - prompt: _(What's your biggest reason why not?)
       type: select
       options:
@@ -298,6 +303,9 @@ survey:
       name: private-why_bad
       attrs:
         - key: required
+    - prompt: _(Please explain)
+      type: text
+      name: private-why_bad_other_reason
     - prompt: _(How comfortable would you feel using this station at night?)
       type: select
       options:
