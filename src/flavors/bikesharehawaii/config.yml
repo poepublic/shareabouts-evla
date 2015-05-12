@@ -340,15 +340,23 @@ survey:
       type: textarea
       name: private-alt_suggestion
     - prompt: _(Thanks! 3 quick questions about yourself.  What is your age?)
-      type: text
+      type: select
+      options:
+        - label: _(Choose one...)
+          value: ''
+        - label: _(<17)
+          value: under17
+        - label: _(17-24)
+          value: 17to24
+        - label: _(25-39)
+          value: 25to39
+        - label: _(40-49)
+          value: 40to49
+        - label: _(50+)
+          value: atleast50
       name: private-submitter_age
       optional: true
       sticky: true
-      attrs:
-        - key: placeholder
-          value: _(Age)
-        - key: size
-          value: 30
     - prompt: _(What is your gender?)
       type: select
       options:
@@ -365,21 +373,47 @@ survey:
     - prompt: _(What is your race/ethnicity?)
       type: select
       options:
-        - label: _(Choose one...)
+        - label: _(Choose all that apply...)
           value: ''
-        - label: _(Hispanic/Latino)
-          value: latino
+        - label: _(Hawaiian)
+          value: hawaiian
         - label: _(Black/African American)
           value: black
-        - label: _(White)
-          value: white
-        - label: _(Native American)
-          value: nativeamerican
-        - label: _(Asian/Pacific Islander)
-          value: asian
+        - label: _(Caucasian)
+          value: caucasian
+        - label: _(Filipino)
+          value: filipino
+        - label: _(Japanese)
+          value: japanese
         - label: _(Other)
           value: other
       name: private-submitter_race
+      sticky: true
+    - prompt: _(What is your annual household income?)
+      type: select
+      options:
+        - label: _(Choose one...)
+          value: ''
+        - label: _(<$20,000)
+          value: under20k
+        - label: _($20,000-$49,999)
+          value: 20to50k
+        - label: _($50,000-$99,999)
+          value: 50to100k
+        - label: _($100,000+)
+          value: atleast100k
+      name: private-submitter_age
+      optional: true
+      sticky: true
+    - prompt: _(Phone number)
+      name: private-submitter_phone
+      type: text
+      optional: true
+      sticky: true
+    - prompt: _(Email)
+      name: private-submitter_email
+      type: text
+      optional: true
       sticky: true
 
 
