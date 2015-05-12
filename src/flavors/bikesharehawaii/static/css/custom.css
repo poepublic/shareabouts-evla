@@ -5,9 +5,9 @@
 
 /*
  * Google Fonts:
- * - aktiv-grotesk-std  (for menus)
- * - europa  (for headers)
- * - calluna  (paragraph text)
+ * - aktiv-grotesk-std --> Quicksand  (for menus)
+ * - europa --> Open Sans  (for headers)
+ * - calluna --> Merriweather  (paragraph text)
  */
 
 /* =Base Styles
@@ -44,6 +44,12 @@ h1 {
   font-weight: 300;
   font-style: normal;
   color: #78dda5;
+}
+
+.survey-demographics,
+.survey-contact {
+  font-family: "Merriweather";
+  font-size: 0.8em;
 }
 
 p,
@@ -155,7 +161,8 @@ textarea:focus {
   display: inline-block;
 }
 label.survey-label {
-  font-size: 1.125em;
+  font-family: "aktiv-grotesk-std", "Quicksand", "Verdana", sans-serif;
+  font-size: 1em;
 }
 
 .validation-message {
