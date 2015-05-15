@@ -69,6 +69,11 @@
       return NS.bootstrapped.mapHost;
     });
 
+    Handlebars.registerHelper('original_path', function() {
+      return '/' + NS.Config.map.options.zoom + '/' + NS.Config.map.options.center.lat + '/' + NS.Config.map.options.center.lng;
+    });
+
+
     function commaSeparateNumber(val){
       while (/(\d+)(\d{3})/.test(val.toString())){
         val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
