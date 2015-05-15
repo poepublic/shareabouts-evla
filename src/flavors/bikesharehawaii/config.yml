@@ -30,9 +30,9 @@ map:
   geolocation_enabled: true
   geolocation_onload: false
 
-  geocoding_enabled: false
-  geocode_field_label: _(Enter an address...)
-  geocode_bounding_box: [39.830159, -75.478821, 40.167331, -74.781189]  # top, left, bottom, right
+  geocoding_enabled: true
+  geocode_field_label: _(Jump to an address...)
+  geocode_bounding_box:  [21.660619, -158.248444, 21.226022, -157.622910]  # top, left, bottom, right
 
   options:
     center:

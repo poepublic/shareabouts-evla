@@ -451,12 +451,22 @@ a.reply-link {
 -------------------------------------------------------------- */
 
 #geocode-address-bar {
-  background-color: #3B65A1;
+  padding-top: 0.5em;
+  background-color: #000;
 }
 input.geocode-address-field {
   border-width: 0;
-  background-color: #325587;
-  color: #fff;
+  background-color: #000;
+  color: #f9cc00;
+  font-family: "Quicksand";
+  font-weight: bold;
+  padding-left: 2.5em;
+}
+.geocode-address-label:before {
+  border: 0.2em solid #f9cc00;
+}
+.geocode-address-label:after {
+  background-color: #f9cc00;
 }
 #geocode-address-bar .error {
   line-height: 1.75;
