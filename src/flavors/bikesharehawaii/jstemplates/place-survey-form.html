@@ -26,17 +26,17 @@
       </div>
       <div class="survey-field survey-field-why_good" style="display: none;">
         <label class="survey-label survey-label-why_good" for="survey-why_good">
-          {{#_}}Great! What's your biggest reason?{{/_}}
+          {{#_}}Great! What are your biggest reasons?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-why_good">
-          <div id="survey-why_good" class="radio-group">
-            <input type="radio" name="private-why_good" id="why_good_live" value="live" /><label class="btn btn-radio" for="why_good_live">{{#_}}Near home{{/_}}</label><br/>
-            <input type="radio" name="private-why_good" id="why_good_transit" value="transit" /><label class="btn btn-radio" for="why_good_transit">{{#_}}Near transit stop{{/_}}</label><br/>
-            <input type="radio" name="private-why_good" id="why_good_work" value="job" /><label class="btn btn-radio" for="why_good_work">{{#_}}Near job{{/_}}</label><br/>
-            <input type="radio" name="private-why_good" id="why_good_shopping" value="shopping" /><label class="btn btn-radio" for="why_good_shopping">{{#_}}Near shopping/dining{{/_}}</label><br/>
-            <input type="radio" name="private-why_good" id="why_good_recreation" value="recreation" /><label class="btn btn-radio" for="why_good_recreation">{{#_}}Near recreation{{/_}}</label><br/>
-            <input type="radio" name="private-why_good" id="why_good_community" value="community" /><label class="btn btn-radio" for="why_good_community">{{#_}}Important for community{{/_}}</label><br/>
-            <input type="radio" name="private-why_good" id="why_good_other" value="other" /><label class="btn btn-radio" for="why_good_other">{{#_}}Other{{/_}}</label>
+          <div id="survey-why_good" class="checkbox-group">
+            <input type="checkbox" name="private-why_good" id="why_good_live" value="live" /><label class="btn btn-checkbox" for="why_good_live">{{#_}}Near home{{/_}}</label><br/>
+            <input type="checkbox" name="private-why_good" id="why_good_transit" value="transit" /><label class="btn btn-checkbox" for="why_good_transit">{{#_}}Near transit stop{{/_}}</label><br/>
+            <input type="checkbox" name="private-why_good" id="why_good_work" value="job" /><label class="btn btn-checkbox" for="why_good_work">{{#_}}Near job{{/_}}</label><br/>
+            <input type="checkbox" name="private-why_good" id="why_good_shopping" value="shopping" /><label class="btn btn-checkbox" for="why_good_shopping">{{#_}}Near shopping/dining{{/_}}</label><br/>
+            <input type="checkbox" name="private-why_good" id="why_good_recreation" value="recreation" /><label class="btn btn-checkbox" for="why_good_recreation">{{#_}}Near recreation{{/_}}</label><br/>
+            <input type="checkbox" name="private-why_good" id="why_good_community" value="community" /><label class="btn btn-checkbox" for="why_good_community">{{#_}}Important for community{{/_}}</label><br/>
+            <input type="checkbox" name="private-why_good" id="why_good_other" value="other" /><label class="btn btn-checkbox" for="why_good_other">{{#_}}Other{{/_}}</label>
 
             <div class="validation-message">{{#_}}Please select one of these options.{{/_}}</div>
           </div>
@@ -50,15 +50,15 @@
       </div>
       <div class="survey-field survey-field-why_bad" style="display: none;">
         <label class="survey-label survey-label-why_bad" for="survey-why_bad">
-          {{#_}}What's your biggest reason why not?{{/_}}
+          {{#_}}What are your biggest reasons why not?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-why_bad">
-          <div id="survey-why_bad" class="radio-group">
-            <input type="radio" name="private-why_bad" id="why_bad_nousebikeshare" value="nousebikeshare" /><label class="btn btn-radio" for="why_bad_nousebikeshare">{{#_}}Wouldn't use bike share{{/_}}</label><br/>
-            <input type="radio" name="private-why_bad" id="why_bad_intheway" value="intheway" /><label class="btn btn-radio" for="why_bad_intheway">{{#_}}Is in the way{{/_}}</label><br/>
-            <input type="radio" name="private-why_bad" id="why_bad_unsafe" value="unsafe" /><label class="btn btn-radio" for="why_bad_unsafe">{{#_}}No safe place to ride{{/_}}</label><br/>
-            <input type="radio" name="private-why_bad" id="why_bad_nouse" value="nouse" /><label class="btn btn-radio" for="why_bad_nouse">{{#_}}Not useful for me{{/_}}</label><br/>
-            <input type="radio" name="private-why_bad" id="why_bad_other" value="other" /><label class="btn btn-radio" for="why_bad_other">{{#_}}Other{{/_}}</label>
+          <div id="survey-why_bad" class="checkbox-group">
+            <input type="checkbox" name="private-why_bad" id="why_bad_nousebikeshare" value="nousebikeshare" /><label class="btn btn-checkbox" for="why_bad_nousebikeshare">{{#_}}Wouldn't use bike share{{/_}}</label><br/>
+            <input type="checkbox" name="private-why_bad" id="why_bad_intheway" value="intheway" /><label class="btn btn-checkbox" for="why_bad_intheway">{{#_}}Is in the way{{/_}}</label><br/>
+            <input type="checkbox" name="private-why_bad" id="why_bad_unsafe" value="unsafe" /><label class="btn btn-checkbox" for="why_bad_unsafe">{{#_}}No safe place to ride{{/_}}</label><br/>
+            <input type="checkbox" name="private-why_bad" id="why_bad_nouse" value="nouse" /><label class="btn btn-checkbox" for="why_bad_nouse">{{#_}}Not useful for me{{/_}}</label><br/>
+            <input type="checkbox" name="private-why_bad" id="why_bad_other" value="other" /><label class="btn btn-checkbox" for="why_bad_other">{{#_}}Other{{/_}}</label>
 
             <div class="validation-message">{{#_}}Please select one of these options.{{/_}}</div>
           </div>
@@ -158,14 +158,14 @@
           {{#_}}What is your race/ethnicity? (select all that apply){{/_}}
         </label>
         <div class="survey-widgets survey-widgets-submitter_race">
-          <div id="survey-submitter_race" class="check-group">
+          <div id="survey-submitter_race" class="checkbox-group">
             {{#select private-submitter_race}}
-            <input type="checkbox" name="private-submitter_race" id="submitter_race_hawaiian" value="hawaiian" /><label class="btn btn-check" for="submitter_race_hawaiian">{{#_}}Hawaiian{{/_}}</label>
-            <input type="checkbox" name="private-submitter_race" id="submitter_race_caucasian" value="caucasian" /><label class="btn btn-check" for="submitter_race_caucasian">{{#_}}Caucasian{{/_}}</label>
-            <input type="checkbox" name="private-submitter_race" id="submitter_race_japanese" value="japanese" /><label class="btn btn-check" for="submitter_race_japanese">{{#_}}Japanese{{/_}}</label>
-            <input type="checkbox" name="private-submitter_race" id="submitter_race_filipino" value="filipino" /><label class="btn btn-check" for="submitter_race_filipino">{{#_}}Filipino{{/_}}</label>
-            <input type="checkbox" name="private-submitter_race" id="submitter_race_black" value="black" /><label class="btn btn-check" for="submitter_race_black">{{#_}}Black/African American{{/_}}</label>
-            <input type="checkbox" name="private-submitter_race" id="submitter_race_other" value="other" /><label class="btn btn-check" for="submitter_race_other">{{#_}}Other{{/_}}</label>
+            <input type="checkbox" name="private-submitter_race" id="submitter_race_hawaiian" value="hawaiian" /><label class="btn btn-checkbox" for="submitter_race_hawaiian">{{#_}}Hawaiian{{/_}}</label>
+            <input type="checkbox" name="private-submitter_race" id="submitter_race_caucasian" value="caucasian" /><label class="btn btn-checkbox" for="submitter_race_caucasian">{{#_}}Caucasian{{/_}}</label>
+            <input type="checkbox" name="private-submitter_race" id="submitter_race_japanese" value="japanese" /><label class="btn btn-checkbox" for="submitter_race_japanese">{{#_}}Japanese{{/_}}</label>
+            <input type="checkbox" name="private-submitter_race" id="submitter_race_filipino" value="filipino" /><label class="btn btn-checkbox" for="submitter_race_filipino">{{#_}}Filipino{{/_}}</label>
+            <input type="checkbox" name="private-submitter_race" id="submitter_race_black" value="black" /><label class="btn btn-checkbox" for="submitter_race_black">{{#_}}Black/African American{{/_}}</label>
+            <input type="checkbox" name="private-submitter_race" id="submitter_race_other" value="other" /><label class="btn btn-checkbox" for="submitter_race_other">{{#_}}Other{{/_}}</label>
             {{/select}}
           </div>
         </div>

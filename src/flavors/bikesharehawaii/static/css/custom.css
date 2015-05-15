@@ -185,12 +185,12 @@ label.survey-label {
 }
 
 .radio-group,
-.check-group {
+.checkbox-group {
   margin-bottom: 1.5em;
   position: relative;
 }
 .radio-group input,
-.check-group input {
+.checkbox-group input {
   opacity: 0;
   width: 1px;
   height: 5em;
@@ -198,16 +198,16 @@ label.survey-label {
   top: -5em;
 }
 .radio-group label,
-.check-group label {
+.checkbox-group label {
   font-size: 0.875em;
   margin: 0 0.125em 0.4em 0;
 }
 .btn-radio,
 .btn-radio:visited,
 .btn-radio:link,
-.btn-check,
-.btn-check:visited,
-.btn-check:link {
+.btn-checkbox,
+.btn-checkbox:visited,
+.btn-checkbox:link {
   background-color: #ddd;
   color: #000;
   text-align: left;
@@ -217,9 +217,9 @@ label.survey-label {
 :checked + .btn-radio,
 .btn-radio.checked,
 .btn-radio:hover,
-:checked + .btn-check,
-.btn-check.checked,
-.btn-check:hover {
+:checked + .btn-checkbox,
+.btn-checkbox.checked,
+.btn-checkbox:hover {
   background-color: #fcc800;
   color: #fff;
   border: 1px solid #db0;
