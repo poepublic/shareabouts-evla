@@ -40,7 +40,7 @@ map:
       lng: -157.8567346
     zoom: 14
     minZoom: 12
-    maxZoom: 19
+    maxZoom: 18
   layers:
     - url: http://{s}.tiles.mapbox.com/v3/openplans.jgp5g7f0/{z}/{x}/{y}.png
       attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
