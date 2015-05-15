@@ -383,6 +383,10 @@ survey:
           value: caucasian
         - label: _(Filipino)
           value: filipino
+        - label: _(Chinese)
+          value: chinese
+        - label: _(Korean)
+          value: korean
         - label: _(Japanese)
           value: japanese
         - label: _(Other)
