@@ -402,7 +402,7 @@ survey:
           value: 50to100k
         - label: _($100,000+)
           value: atleast100k
-      name: private-submitter_age
+      name: private-submitter_income
       optional: true
       sticky: true
     - prompt: _(Phone number)
