@@ -1,26 +1,11 @@
-<h1>{{#_}}Bike share is Coming to Hawaii!{{/_}}</h1>
-
-{{#if config.app.closed}}
-  <p style="line-height:2;">{{#_}}Thanks for your interest in bike share! The commenting period on this map has closed, however please stay tuned for announcements about future public meetings in late November, at which findings will be shared.{{/_}}</p>
-{{else}}
-  <p>{{#_}}Bikesharing is a transit system that enables its customers to make short trips using a network of publicly accessible bikes.  It will ease traffic, promote fitness, create business for retailers, and reduce our dependence on fossil fuels.{{/_}}</p>
-  <p><em>{{#_}}The comment period will be open until <strong>June 30, 2015</strong>.{{/_}}</em></p>
-  <h4>{{#_}}Click any potential location <img src="/static/css/images/map-icon-inservice-legend.png"> to get started!{{/_}}</h4>
-{{/if}}
-
-<hr style="margin-bottom:0.5em;" />
-<p style="text-transform:uppercase;font-size:0.75em;margin:0;">
-  <span style="white-space:nowrap;"><span style="color:#901cd4;"><strong>&mdash;</strong></span> {{#_}}Bike lanes{{/_}}&nbsp;&nbsp;&nbsp;</span>
-  <span style="white-space:nowrap;"><span style="color:#2b9003;"><strong>&mdash;</strong></span> {{#_}}Bike trails{{/_}}</span>
-</p>
-<br/>
-<p style="text-transform:uppercase;font-size:0.8em;margin:0;line-height:200%;">
-  {{#_}}Subway/Regional Rail Stations:{{/_}}</p>
-<p style="text-transform:uppercase;font-size:0.75em;margin:0;">
-  <span style="white-space:nowrap;line-height:200%;"><img src="/static/css/images/rail-01.png" style="position:relative;top:3px;">{{#_}}Broad Street Line{{/_}}&nbsp;&nbsp;&nbsp;</span>
-  <span style="white-space:nowrap;"><img src="/static/css/images/rail-02.png" style="position:relative;top:3px;">{{#_}}Market-Frankford Line{{/_}}&nbsp;&nbsp;&nbsp;</span>
-  <span style="white-space:nowrap;"><img src="/static/css/images/rail-03.png" style="position:relative;top:3px;">{{#_}}Norristown High Speed Line{{/_}}&nbsp;&nbsp;&nbsp;</span>
-  <span style="white-space:nowrap;"><img src="/static/css/images/rail-04.png" style="position:relative;top:3px;">{{#_}}Regional Rail Lines{{/_}}&nbsp;&nbsp;&nbsp;</span>
-  <span style="white-space:nowrap;"><img src="/static/css/images/rail-05.png" style="position:relative;top:3px;">{{#_}}PATCO Line{{/_}}</span>
-</p>
-<hr style="margin-top:0.75em;" />
+<div class="welcome-wrapper">
+  {{#if config.app.closed}}
+    <p style="line-height:2;">{{#_}}Thanks for your interest in bike share! The commenting period on this map has closed, however please stay tuned for announcements about future public meetings in late November, at which findings will be shared.{{/_}}</p>
+  {{else}}
+  <img src="http://static1.squarespace.com/static/546e852de4b065a4ff814411/t/55385f7ce4b027f5e06f129d/1429757820967/bikeshare-bg.jpg?format=600w" class="welcome-decor">
+    <h2>{{#_}}Help us move Hawaii forward!{{/_}}</h2>
+    <p>{{#_}}Vote for your favorite stations and let us know how we can improve upon  them.{{/_}}</p>
+  <!--   <p><em>{{#_}}The comment period will be open until <strong>June 30, 2015</strong>.{{/_}}</em></p>
+    <h4>{{#_}}Click any potential location <img src="/static/css/images/map-icon-inservice-legend.png"> to get started!{{/_}}</h4>
+   -->{{/if}}
+</div>

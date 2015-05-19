@@ -429,11 +429,11 @@ support:
   action_text: supported
   anonymous_name: _(Someone)
 
-# pages:
-#   - title: _(Welcome)
-#     slug: about
-#     name: about
-#     start_page: true
+pages:
+  - title: _(Welcome)
+    slug: about
+    name: about
+    start_page: true
 
 notifications:
   on_new_place: true

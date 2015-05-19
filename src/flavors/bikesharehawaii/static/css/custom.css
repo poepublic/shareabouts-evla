@@ -279,6 +279,9 @@ label.survey-label {
   color: #5c9cf3;
   text-shadow: none;
 }
+#pages-nav-container {
+  display: none;
+}
 
 /* User Menu */
 #sign-in-btn {
@@ -580,8 +583,16 @@ p.responses-summary {
 .page-about h1 {
   text-transform: none;
   letter-spacing: 1px;
-  padding-top: 1em;
-  padding-bottom: 3em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.page-about h2 {
+  font-weight: bold;
+}
+
+.welcome-decor {
+  display: none;
 }
 
 
@@ -719,6 +730,12 @@ p.responses-summary {
   #colophon {
     box-shadow: 0 -2px 3px rgba(0,0,0,0.1);
     border-top: 1px solid #aaa;
+  }
+
+  .welcome-decor {
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #eee;
   }
 }
 
