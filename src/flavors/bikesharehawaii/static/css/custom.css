@@ -46,6 +46,10 @@ h1 {
   color: #78dda5;
 }
 
+.has-pages #site-title {
+  padding-left: 0;
+}
+
 .survey-demographics,
 .survey-contact {
   font-family: "Merriweather";
