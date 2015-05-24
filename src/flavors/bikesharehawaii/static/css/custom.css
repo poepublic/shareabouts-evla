@@ -740,3 +740,54 @@ p.responses-summary {
 
 @media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
 }
+
+.images-carousel {
+  padding: 1em;
+  border: 1px solid #facb00;
+  border: 1px solid #ccc;
+  border-radius: 0.3em;
+  background-color: #ddd;
+  /*box-shadow: inset 0px 2px 2px rgba(0,0,0,0.25);*/
+  margin-bottom: 1em;
+  position: relative;
+
+  display: none;
+}
+
+.images-carousel .images-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.images-carousel .images-container img {
+  width: 50%;
+  margin-right: 1em;
+}
+
+.images-carousel .images-container img:last-child {
+  margin-right: 0;
+}
+
+.images-carousel .scroller {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  padding: 0.5em;
+  font-size: 2em;
+  font-weight: bold;
+  background-color: rgba(255,255,255,0.85);
+}
+
+.images-carousel .left-scroller {
+  left: 0;
+}
+
+.images-carousel .right-scroller {
+  right: 0;
+}
+
+.images-carousel .scroller:hover {
+  cursor: pointer;
+}

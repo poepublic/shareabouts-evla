@@ -211,6 +211,77 @@
       });
     });
 
+    // Show the location images
+    var placeDetailRender = NS.PlaceDetailView.prototype.render;
+    NS.PlaceDetailView.prototype.render = function() {
+      var self = this;
+      var result, place, images, siteid;
+      result = placeDetailRender.call(this);
+
+      place = this.model;
+      images = place.get('images');
+
+      if (images) {
+        NS.showImagesCarousel(self, images);
+      } else {
+        siteid = place.get('Site_ID');
+        $.ajax({
+          url: '/static/images/metadata/' + siteid + '_images.json',
+          success: function(data) {
+            place.set('images', data['images'])
+            NS.showImagesCarousel(self, data['images']);
+          }
+        });
+      }
+
+      return this;
+    };
+
+    NS.showImagesCarousel = function(view, images) {
+      var $carousel, $images, $left, $right, updateScrollers;
+
+      if (images.length) {
+        $carousel = view.$('.images-carousel');
+        $images = $carousel.find('.images-container');
+        $left = $carousel.find('.left-scroller');
+        $right = $carousel.find('.right-scroller');
+
+        $images.empty();
+        _.each(images, function(image) {
+          $images.append('<img src="/static/images/scaled/' + image + '">');
+        });
+
+        updateScrollers = function() {
+          var minScroll = 0;
+          var maxScroll = $images.prop('scrollWidth') - $images.innerWidth();
+          var scrollLeft = $images.scrollLeft();
+
+          var isFarLeft = (scrollLeft === minScroll);
+          var isFarRight = (scrollLeft === maxScroll);
+
+          $left.toggle(!isFarLeft);
+          $right.toggle(!isFarRight);
+        };
+
+        $images.on('scroll', updateScrollers);
+
+        $left.on('click', function() {
+          var scrollLeft = $images.scrollLeft();
+          var scrollStep = $images.find('img').outerWidth(true);
+          $images.animate({scrollLeft: scrollLeft - scrollStep}, 'fast');
+        })
+
+        $right.on('click', function() {
+          var scrollLeft = $images.scrollLeft();
+          var scrollStep = $images.find('img').outerWidth(true);
+          $images.animate({scrollLeft: scrollLeft + scrollStep}, 'fast');
+        })
+
+        updateScrollers();
+        $carousel.show();
+      }
+    };
+
     // Smarter geocoding
     var util_geocode = Shareabouts.Util.MapQuest.geocode;
     Shareabouts.Util.MapQuest.geocode = function(location, bounds, options) {
