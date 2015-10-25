@@ -306,39 +306,39 @@ survey:
     - prompt: _(Please explain)
       type: text
       name: private-why_bad_other_reason
-    - prompt: _(How comfortable would you feel using this station at night?)
-      type: select
-      options:
-        - label: _(Choose one...)
-          value: ''
-        - label: _(Very comfortable)
-          value: verycomfortable
-        - label: _(Somewhat comfortable)
-          value: comfortable
-        - label: _(Neutral)
-          value: neutral
-        - label: _(Somewhat uncomfortable)
-          value: uncomfortable
-        - label: _(Very uncomfortable)
-          value: veryuncomfortable
-      name: private-safety
-      attrs:
-        - key: required
-    - prompt: _(Are there any better spots for stations in the immediate area?)
-      type: select
-      options:
-        - label: _(Y/N)
-          value: ''
-        - label: _(Yes)
-          value: 'yes'
-        - label: _(No)
-          value: 'no'
-      name: private-alt_spot
-      attrs:
-        - key: required
-    - prompt: _(Where would you suggest a station? Why?)
-      type: textarea
-      name: private-alt_suggestion
+    #- prompt: _(How comfortable would you feel using this station at night?)
+      #type: select
+      # options:
+      #   - label: _(Choose one...)
+      #     value: ''
+      #   - label: _(Very comfortable)
+      #     value: verycomfortable
+      #   - label: _(Somewhat comfortable)
+      #     value: comfortable
+      #   - label: _(Neutral)
+      #     value: neutral
+      #   - label: _(Somewhat uncomfortable)
+      #     value: uncomfortable
+      #   - label: _(Very uncomfortable)
+      #     value: veryuncomfortable
+      # name: private-safety
+      # attrs:
+    #     - key: required
+    # - prompt: _(Are there any better spots for stations in the immediate area?)
+    #   type: select
+    #   options:
+    #     - label: _(Y/N)
+    #       value: ''
+    #     - label: _(Yes)
+    #       value: 'yes'
+    #     - label: _(No)
+    #       value: 'no'
+    #   name: private-alt_spot
+    #   attrs:
+    #     - key: required
+    # - prompt: _(Where would you suggest a station? Why?)
+    #   type: textarea
+    #   name: private-alt_suggestion
     - prompt: _(Thanks! 3 quick questions about yourself.  What is your age?)
       type: select
       options:
