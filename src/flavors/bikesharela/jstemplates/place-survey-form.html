@@ -4,12 +4,10 @@
   <p>The bike share map closed to community input on June 30th.</p>
 
   {{else}}
-
   <br />
   <form id="new_response" class="new_response clearfix" action="#" method="post" novalidate>
     <input type="hidden" name="visible" value="on">
     <input type="hidden" name="user_token" value="{{{ user_token }}}">
-
     <fieldset>
       <div class="survey-field survey-field-good_spot">
         <label class="survey-label survey-label-good_spot" for="survey-good_spot">
@@ -70,7 +68,7 @@
         </div>
         <br>
       </div>
-      <div class="survey-field survey-field-safety">
+     <!-- <div class="survey-field survey-field-safety">
         <label class="survey-label survey-label-safety" for="survey-safety">
           {{#_}}How comfortable would you feel using this station at night?{{/_}}
         </label>
@@ -85,8 +83,8 @@
             <div class="validation-message">{{#_}}Please select one of these options.{{/_}}</div>
           </div>
         </div>
-      </div>
-      <div class="survey-field survey-field-alt_spot">
+      </div>-->
+      <!--<div class="survey-field survey-field-alt_spot">
         <label class="survey-label survey-label-alt_spot" for="survey-alt_spot">
           {{#_}}Are there any better spots for stations in the immediate area?{{/_}}
         </label>
@@ -108,11 +106,11 @@
           <textarea id="survey-alt_suggestion" name="private-alt_suggestion"></textarea>
           <br/>
         </div>
-      </div>
+      </div>-->
 
       <div class="survey-field survey-field-comments">
         <label class="survey-label survey-label-comments" for="survey-comments">
-          {{#_}}Anything else to tell us about bike share?{{/_}}
+          {{#_}}Anything else to tell us about this particular station?{{/_}}
         </label>
         <div class="survey-widgets survey-widgets-comments">
           <textarea id="survey-comments" name="private-comments" placeholder="{{#_}}Comment...{{/_}}"></textarea>
