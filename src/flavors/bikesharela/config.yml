@@ -1,9 +1,9 @@
 # Settings for the app
 app:
   # HTML Title
-  title: Bike Share Hawaii
+  title: Bike Share LA 
   # Header name
-  name: Bike Share Hawaii
+  name: Bike Share LA
   # Meta description that will show up in Google search results
   meta_description: _(Shareabouts is a mapping tool to gather crowd sourced public input. Use it to collect suggested locations and comments in a social, engaging process.)
   # Meta author that will show up in Google search results
@@ -152,7 +152,7 @@ activity:
   interval: 30000
 
 place:
-  adding_supported: false
+  adding_supported: true
   add_button_label: _(Add a Place)
   # Labels for the buttons that toggle the map and list views
   show_list_button_label: _(List All Places)
@@ -267,16 +267,12 @@ survey:
           value: ''
         - label: _(Near home)
           value: live
-        - label: _(Near transit stop)
+        - label: _(Near bus/train)
           value: transit
         - label: _(Near job)
           value: job
         - label: _(Near shopping/dining)
           value: shopping
-        - label: _(Near recreation)
-          value: recreation
-        - label: _(Important for community)
-          value: community
         - label: _(Other)
           value: other
       name: private-why_good
@@ -290,12 +286,16 @@ survey:
       options:
         - label: _(Choose one...)
           value: ''
-        - label: _(Wouldn't use bike share)
+        - label: _(Wouldn't use the bike share system)
           value: nousebikeshare
-        - label: _(Is in the way)
-          value: intheway
-        - label: _(No safe place to ride)
-          value: unsafe
+        - label: _(Don't like the location)
+          value: location
+        - label: _(No comfortable to ride)
+          value: comfortable
+        - label: _(Don't feel comfortable during the day)
+          value: day
+        - label: _(Don't feel comfortable during at night)
+          value: night
         - label: _(Not useful for me)
           value: nouse
         - label: _(Other)
@@ -344,16 +344,18 @@ survey:
       options:
         - label: _(Choose one...)
           value: ''
-        - label: _(<17)
-          value: under17
-        - label: _(17-24)
-          value: 17to24
-        - label: _(25-39)
+        - label: _(<18)
+          value: under18
+        - label: _(18-24)
+          value: 18to24
+        - label: _(25-34)
           value: 25to39
-        - label: _(40-49)
-          value: 40to49
-        - label: _(50+)
-          value: atleast50
+        - label: _(35-49)
+          value: 35to49
+        - label: _(50-64)
+          value: 50to64
+        - label: _(65+)
+          value: atleast65
       name: private-submitter_age
       optional: true
       sticky: true
@@ -366,8 +368,10 @@ survey:
           value: m
         - label: _(Female)
           value: f
-        - label: _(Other)
-          value: o
+        - label: _(Transgender MTF)
+          value: tmtf
+        - label: _(Transgender FTM)
+          value: tftm
       name: private-submitter_gender
       sticky: true
     - prompt: _(What is your race/ethnicity?)
@@ -375,20 +379,14 @@ survey:
       options:
         - label: _(Choose all that apply...)
           value: ''
-        - label: _(Hawaiian)
-          value: hawaiian
-        - label: _(Black/African American)
+        - label: _(Latino)
+          value: latino
+        - label: _(Black)
           value: black
-        - label: _(Caucasian)
-          value: caucasian
-        - label: _(Filipino)
-          value: filipino
-        - label: _(Chinese)
-          value: chinese
-        - label: _(Korean)
-          value: korean
-        - label: _(Japanese)
-          value: japanese
+        - label: _(White)
+          value: white
+        - label: _(Asian/Pacific Islander)
+          value: asian
         - label: _(Other)
           value: other
       name: private-submitter_race
