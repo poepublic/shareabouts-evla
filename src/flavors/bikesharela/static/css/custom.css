@@ -520,14 +520,6 @@ a.shareabouts-logo:hover {
 
 /* =Survey Form */
 
-.survey-field-why_good,
-.survey-field-why_good_other_reason,
-.survey-field-why_bad,
-.survey-field-why_bad_other_reason,
-.survey-field-alt_suggestion {
-  display: none;
-}
-
 .survey-field-why_good_other_reason,
 .survey-field-why_bad_other_reason {
   margin-top: -1.5em;
