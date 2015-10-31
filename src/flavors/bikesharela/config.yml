@@ -1,7 +1,7 @@
 # Settings for the app
 app:
   # HTML Title
-  title: Bike Share LA 
+  title: Bike Share LA
   # Header name
   name: Bike Share LA
   # Meta description that will show up in Google search results
