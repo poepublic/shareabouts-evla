@@ -311,7 +311,7 @@
       // If the address/location given is complete in that it already specifies
       // a city in some format that we recognize (see endStrings), pass it on
       // through. Otherwise, tack on "Hawaii".
-      var endStrings = [' hawaii', ' hi'],
+      var endStrings = [' los angeles', ' la', ' california', ' ca'],
           isComplete = false,
           end, i, locationEndsWith;
 
@@ -332,7 +332,7 @@
 
       // If no ends matched, specify the city.
       if (!isComplete) {
-        location = location + ', Hawaii';
+        location = location + ', Los Angeles, CA, USA';
       }
 
       return util_geocode.call(this, location, bounds, options);
