@@ -483,6 +483,7 @@ a.reply-link {
   background-color: #e2e71f;
   border: none;
   box-shadow: none;
+  margin-top: 0;
 }
 
 input.geocode-address-field {
@@ -758,7 +759,7 @@ p.responses-summary {
   }
   #sign-in-btn {
     max-width: none;
-    margin-top: 1.25em;
+    margin-top: 0.5rem;
   }
   .authed #sign-in-btn {
     margin-top: 0.5rem;
