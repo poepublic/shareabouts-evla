@@ -153,12 +153,12 @@ input[type=url],
 input[type=week],
 textarea {
   outline: 0;
-  border: 0.25em solid #b6e4ef;
+  border: 1px solid #e5e5e5;
 }
 input:focus,
 textarea:focus {
-  border: 0.25em solid #44cae7;
-  outline: 2px solid #44cae7;
+  border: 1px solid #e2e71f;
+  outline: 2px solid #e2e71f;
 }
 
 /* Old IE does not like this to be combine with :invalid rules.
@@ -236,6 +236,7 @@ label.survey-label {
   text-align: left;
   border: 1px solid #e5e5e5;
   font-weight: 400;
+  box-shadow: none;
   /*box-shadow: -0.25em 0.25em 3px rgba(0,0,0,0.08)*/
 }
 :checked + .btn-radio,
@@ -245,8 +246,8 @@ label.survey-label {
 .btn-checkbox.checked,
 .btn-checkbox:hover {
   background-color: #e2e71f;
-  color: #fff;
-  border: 1px solid #db0;
+  color: #000;
+  border: 1px solid #e2e71f;
 }
 
 
