@@ -65,7 +65,7 @@ place_types:
     rules:
       - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/la_map_icon.png
+          iconUrl: /static/css/images/la_map_icon_small.png
           iconSize: [20, 32]
           iconAnchor: [10, 32]
 
@@ -79,7 +79,7 @@ place_types:
     rules:
       - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/la_map_icon.png
+          iconUrl: /static/css/images/la_map_icon_small.png
           iconSize: [20, 32]
           iconAnchor: [10, 32]
 
@@ -93,7 +93,7 @@ place_types:
     rules:
       - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/la_map_icon.png
+          iconUrl: /static/css/images/la_map_icon_small.png
           iconSize: [20, 32]
           iconAnchor: [10, 32]
 
@@ -107,7 +107,7 @@ place_types:
     rules:
       - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/la_map_icon.png
+          iconUrl: /static/css/images/la_map_icon_small.png
           iconSize: [20, 32]
           iconAnchor: [10, 32]
 
@@ -121,7 +121,7 @@ place_types:
     rules:
       - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/la_map_icon.png
+          iconUrl: /static/css/images/la_map_icon_small.png
           iconSize: [20, 32]
           iconAnchor: [10, 32]
 
@@ -135,7 +135,7 @@ place_types:
     rules:
       - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/la_map_icon.png
+          iconUrl: /static/css/images/la_map_icon_small.png
           iconSize: [20, 32]
           iconAnchor: [10, 32]
 
