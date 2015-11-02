@@ -70,8 +70,21 @@ label {
 }
 
 h2 {
+  font-family: "calluna-sans", "Oswald","Open Sans", "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 1.6rem;
+  line-height: 1em;
   font-weight: 300;
+  font-style: normal;
+  color: #000;
+}
+
+h4 {
+  font-family: "calluna-sans", "Oswald","Open Sans", "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.2rem;
+  line-height: 1em;
+  font-weight: 100;
+  font-style: normal;
+  color: #000;
 }
 
 /* Buttons */
@@ -525,7 +538,8 @@ a.shareabouts-logo:hover {
   border-bottom: 1px solid #ccc;
 }
 .footer-logo {
-  height:150px;
+  margin-top:10px;
+  height:50px;
 }
 
 /* =Survey Form */
@@ -606,7 +620,6 @@ p.responses-summary {
   /*box-shadow: inset 0px 2px 2px rgba(0,0,0,0.25);*/
   margin-bottom: 1em;
   position: relative;
-
   display: none;
 }
 
