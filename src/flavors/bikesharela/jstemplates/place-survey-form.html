@@ -22,7 +22,7 @@
           </div>
         </div>
       </div>
-      <div class="survey-field survey-field-why_good" style="display: none;">
+      <div class="survey-field survey-field-why_good is-hidden" data-choice-name="private-good_spot" data-choice-value="yes">
         <label class="survey-label survey-label-why_good" for="survey-why_good">
           {{#_}}Great! What are your biggest reasons?{{/_}}
         </label>
@@ -38,13 +38,13 @@
           </div>
         </div>
       </div>
-      <div class="survey-field survey-field-why_good_other_reason">
+      <div class="survey-field survey-field-why_good_other_reason is-hidden" data-choice-name="private-why_good" data-choice-value="other">
         <div class="survey-widgets survey-widgets-why_good_other_reason">
-          <input id="survey-why_good_other_reason" name="private-why_good_other_reason" type="text" placeholder="{{#_}}please explain{{/_}}" size="30" value="{{ private-why_good_other_reason }}">
+          <input id="survey-why_good_other_reason" name="private-why_good_other_reason" type="text" placeholder="{{#_}}please explain{{/_}}" size="30" value="{{ private-why_good_other_reason }}" data-choice-name="private-why_good" data-choice-value="other">
         </div>
         <br>
       </div>
-      <div class="survey-field survey-field-why_bad" style="display: none;">
+      <div class="survey-field survey-field-why_bad is-hidden" data-choice-name="private-good_spot" data-choice-value="no">
         <label class="survey-label survey-label-why_bad" for="survey-why_bad">
           {{#_}}What are your biggest reasons why not?{{/_}}
         </label>
@@ -62,7 +62,7 @@
           </div>
         </div>
       </div>
-      <div class="survey-field survey-field-why_bad_other_reason">
+      <div class="survey-field survey-field-why_bad_other_reason is-hidden" data-choice-name="private-why_bad" data-choice-value="yes">
         <div class="survey-widgets survey-widgets-why_bad_other_reason">
           <input id="survey-why_bad_other_reason" name="private-why_bad_other_reason" type="text" placeholder="{{#_}}please explain{{/_}}" size="30" value="{{ private-why_bad_other_reason }}">
         </div>
@@ -98,7 +98,7 @@
         </div>
       </div>
 
-      <div class="survey-field survey-field-alt_suggestion">
+      <div class="survey-field survey-field-alt_suggestion is-hidden">
         <label class="survey-label survey-label-alt_suggestion" for="survey-alt_suggestion">
           {{#_}}Where would you suggest a station? Why?{{/_}}
         </label>

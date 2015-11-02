@@ -125,86 +125,104 @@
       showTotalResponseCount();
     });
 
-    function updateOtherQuestionVisibility(val, $otherField, $otherInput) {
-      if (val === 'other') {
-        $otherField.show();
-        $otherInput.attr('required', true);
-      } else if (val) {
-        $otherField.hide();
-        $otherInput.removeAttr('required').val('');
-      }
+    NS.updateAllDependentFields = function(choiceField, forceHide) {
+      var $choice = $(choiceField);
+      var $dependents = $('[data-choice-name="' + $choice.attr('name') + '"]');
+      $dependents.each(function(i, dep) {
+        NS.updateDependentField($choice, dep, forceHide);
+      });
     }
 
-    function updateConditionQuestionVisibility(val, $yesField, $yesInput, $noField, $noInput) {
-      if (val === 'yes') {
-        $yesField.show();
-        $yesInput.attr('required', true);
+    NS.updateDependentField = function(choiceField, detailField, forceHide) {
+      var $choice = $(choiceField);
+      var $detail = $(detailField);
+      var choiceFieldName = $detail.attr('data-choice-name');
+      var choiceFieldValue = $detail.attr('data-choice-value') || 'other';
+      var isChoiceSelected, isDetailRequired, $requiredChildren;
 
-        if ($noField) {
-          $noField.hide()
-          $noInput.removeAttr('required').prop('checked', false);
-        }
-      } else if (val === 'no') {
-        $yesField.hide();
-        $yesInput.removeAttr('required').prop('checked', false);
+      // Under some circumstances, such as when the choice field itself is
+      // hidden, we know we don't want to show the detail field, and we pass
+      // in a forceHide argument set to true.
+      if (forceHide) {
+        isChoiceSelected = false;
+      }
 
-        if ($noField) {
-          $noField.show();
-          $noInput.attr('required', true);
-        }
-      } else {
-        $yesField.hide();
-        $yesInput.removeAttr('required').prop('checked', false);
+      else {
+        switch ($choice.attr('type')) {
 
-        if ($noField) {
-          $noField.hide();
-          $noInput.removeAttr('required').prop('checked', false);
+          case 'checkbox':
+            if ($choice.val() != choiceFieldValue) { return; }
+            isChoiceSelected = $choice.is(':checked');
+            break;
+
+          case 'radio':
+            isChoiceSelected = ($choice.val() === choiceFieldValue) && $choice.is(':checked');
+            break;
+
+          case 'select':
+            isChoiceSelected = $choice.find('option:selected').attr('value') === choiceFieldValue;
+            break;
+
+          default:
+            isChoiceSelected = $choice.val() === choiceFieldValue;
+
         }
       }
+
+      // Show or hide the detail field, depending on whether the choice
+      // matches the value.
+      $detail.toggleClass('is-hidden', !isChoiceSelected);
+
+      isDetailRequired = $.data(detailField, 'originally-required');
+      $requiredChildren = $.data(detailField, 'required-children');
+
+      if (isChoiceSelected) {
+        // If the detail field was originally required, make it required now.
+        if (isDetailRequired) { $detail.attr('required', 'required'); }
+        $requiredChildren.attr('required', 'required');
+        // Instruct Shareabouts to not ignore the field or it's children when
+        // saving to the API server.
+        $detail.removeAttr('data-ignore');
+      }
+
+      else {
+        // Remove required attributes from hidden fields.
+        $detail.removeAttr('required');
+        $requiredChildren.removeAttr('required');
+        // Instruct Shareabouts to ignore the field and it's children when
+        // saving to the API server.
+        $detail.attr('data-ignore', 'ignore');
+      }
+
+      // Recursively update any dependent fields; force the dependencies to
+      // hide if the choice for this field is not selected.
+      $detail.find('input, textarea, select').each(function(i, subfield) {
+        NS.updateAllDependentFields(subfield, !isChoiceSelected);
+      });
     }
 
-    $(document).on('change', 'input[name="private-good_spot"]', function(evt) {
-      var val = $(this).val(),
-          $yesField = $('.survey-field-why_good'),
-          $yesInput = $('input[name="private-why_good"]'),
-          $noField = $('.survey-field-why_bad'),
-          $noInput = $('input[name="private-why_bad"]'),
-          $otherYesField = $('.survey-field-why_good_other_reason'),
-          $otherYesInput = $('input[name="private-why_good_other_reason"]'),
-          $otherNoField = $('.survey-field-why_bad_other_reason'),
-          $otherNoInput = $('input[name="private-why_bad_other_reason"]');
+    NS.configureDependentFields = function() {
+      // Any fields that have a data-choice-name attribute set should be
+      // interpreted as conditional detail fields. We will look in the
+      // data-choice-value attribute for the associated choice value. The
+      // default choice value is "other".
+      $('[data-choice-name]').each(function(i, field) {
+        var $detail = $(field);
+        var $choice = $('[name="' + $detail.attr('data-choice-name') + '"]');
 
-      updateConditionQuestionVisibility(val, $yesField, $yesInput, $noField, $noInput);
-      updateOtherQuestionVisibility($yesInput.val(), $otherYesField, $otherYesInput);
-      updateOtherQuestionVisibility($noInput.val(), $otherNoField, $otherNoInput);
-    });
+        $.data(field, 'originally-required', $detail.is(':required'));
+        $.data(field, 'required-children', $detail.find('[required]'));
 
-    $(document).on('change', 'input[name="private-why_good"]', function(evt) {
-      var val = $(this).val(),
-          $otherField = $('.survey-field-why_good_other_reason'),
-          $otherInput = $('input[name="private-why_good_other_reason"]');
-
-      updateOtherQuestionVisibility(val, $otherField, $otherInput);
-    });
-
-    $(document).on('change', 'input[name="private-why_bad"]', function(evt) {
-      var val = $(this).val(),
-          $otherField = $('.survey-field-why_bad_other_reason'),
-          $otherInput = $('input[name="private-why_bad_other_reason"]');
-
-      updateOtherQuestionVisibility(val, $otherField, $otherInput);
-    });
-
-    $(document).on('change', 'input[name="private-alt_spot"]', function(evt) {
-      var val = $(this).val(),
-          $yesField = $('.survey-field-alt_suggestion'),
-          $yesInput = $('textarea[name="private-alt_suggestion"]');
-
-      updateConditionQuestionVisibility(val, $yesField, $yesInput);
-    });
+        $choice.change(function(evt) {
+          NS.updateDependentField(this, field);
+        });
+      });
+    };
 
     // Fix the reply button action
     $(NS).on('panelshow', function(evt, router) {
+      NS.configureDependentFields();
+
       $('.reply-link').on('click', function(evt) {
         evt.preventDefault();
         var $panelScrollable = $('#content article').first(),
