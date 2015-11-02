@@ -62,7 +62,7 @@ li,
 label {
   font-family: "calluna-sans", "Oswald", "calluna", "Merriweather", "Garamond", serif;
   font-size: 1rem;
-  line-height: 1.6em;
+  line-height: 1.5em;
   letter-spacing: .4px;
   font-weight: 100;
   font-style: normal;
@@ -834,7 +834,7 @@ p.responses-summary {
   }
   #colophon {
     box-shadow: 0 -2px 3px rgba(0,0,0,0.1);
-    border-top: 1px solid #aaa;
+    border: none;
     height: 6rem;
     padding: 0.25rem 0 0 0;
   }
