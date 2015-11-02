@@ -223,7 +223,9 @@
     };
 
     // Fix the reply button action
-    $(NS).on('panelshow', function(evt, router) {
+    var surveyFormRender = NS.SurveyView.prototype.render;
+    NS.SurveyView.prototype.render = function() {
+      var result = surveyFormRender.call(this);
       NS.configureDependentFields();
 
       $('.reply-link').on('click', function(evt) {
@@ -232,7 +234,9 @@
             $firstLabel = $('.survey').find('label').first();
         $panelScrollable.scrollTo($firstLabel);
       });
-    });
+
+      return result;
+    };
 
     // Show the location images
     var placeDetailRender = NS.PlaceDetailView.prototype.render;
@@ -251,7 +255,7 @@
         $.ajax({
           url: '/static/images/metadata/' + siteid + '_images.json',
           success: function(data) {
-            place.set('images', data['images'])
+            place.set('images', data['images'], {silent: true})
             NS.showImagesCarousel(self, data['images']);
           }
         });
