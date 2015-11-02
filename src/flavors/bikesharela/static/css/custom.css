@@ -478,23 +478,44 @@ a.reply-link {
 -------------------------------------------------------------- */
 
 #geocode-address-bar {
-  padding-top: 0.5em;
+  padding: 0;
   background-color: #e2e71f;
+  border: none;
+  box-shadow: none;
 }
 
 input.geocode-address-field {
+  padding: 0.5rem;
+  height: 2.5rem;
   border-width: 0;
   background-color: #e2e71f;
-  font-color: #000000;
+  color: #000000;
   font-family: "calluna-sans", "Oswald","Quicksand";
   font-weight: 300;
-  padding-left: 2.5em;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  padding-left: 2.75rem;
 }
+
+.geocode-address-field::-webkit-input-placeholder,
+.geocode-address-field::-moz-placeholder,
+.geocode-address-field:-ms-input-placeholder {
+  color: black;
+}
+
 .geocode-address-label:before {
-  border: 0.2em solid #e2e71f;
+  border: 0.15rem solid #000;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 375rem;
+  top: -15%;
 }
 .geocode-address-label:after {
-  background-color: #f9cc00;
+  background-color: #000;
+  width: 0.15rem;
+  height: 0.5rem;
+  top: 15%;
+  left: 30%;
 }
 #geocode-address-bar .error {
   line-height: 1.2;
@@ -538,8 +559,8 @@ a.shareabouts-logo:hover {
   border-bottom: 1px solid #ccc;
 }
 .footer-logo {
-  margin-top:10px;
-  height:50px;
+  margin-top: 0.75rem;
+  height: 3rem;
 }
 
 /* =Survey Form */
@@ -677,10 +698,21 @@ p.responses-summary {
 }
 
 @media only screen and (min-width: 60em) {
+  .geocoding-enabled #content,
+  .geocoding-enabled #map-container {
+    top: 6.75rem;  /* Header bar is 4.5rem, Geocode bar is 2.25rem */
+    bottom: 6rem;
+  }
+
+  #geocode-address-bar {
+    top: 4.5rem;
+  }
+
   #site-header {
-    padding-left: 10px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: none;
     border-bottom: 1px solid #ddd;
+    height: 4.5rem;
+    padding: 0.75rem;
   }
   #site-title {
     width: auto;
@@ -692,8 +724,7 @@ p.responses-summary {
   }
   #site-logo {
     display: block;
-    max-height: 2em;
-    margin-top: 10px;
+    max-height: 3rem;
   }
   #site-deadline {
     position: absolute;
@@ -775,12 +806,12 @@ p.responses-summary {
   .total-response-indicator {
     font-size: 0.875em;
     position: fixed;
-    bottom: -1em;
+    bottom: 4.5rem;
     left: -1em;
     margin: 0;
     background-color: #000;
     color: #bbb;
-    padding: 0.5em 1em 1.5em 2em;
+    padding: 0.5em 1em 1em 2em;
     border-radius: 0 0.75em 0 0;
     box-shadow: 0.325em -0.325em rgba(0,0,0,0.1);
   }
@@ -798,6 +829,12 @@ p.responses-summary {
   #colophon {
     box-shadow: 0 -2px 3px rgba(0,0,0,0.1);
     border-top: 1px solid #aaa;
+    height: 6rem;
+    padding: 0.25rem 0 0 0;
+  }
+  .city-logos {
+    height: 4.5rem;
+    background-color: white;
   }
 
   .welcome-decor {
