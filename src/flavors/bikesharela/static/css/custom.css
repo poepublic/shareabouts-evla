@@ -154,6 +154,7 @@ input[type=week],
 textarea {
   outline: 0;
   border: 2px solid #e5e5e5;
+  transition: all 0.3s ease 0s;
 }
 input:focus,
 textarea:focus {
@@ -237,14 +238,18 @@ label.survey-label {
   border: 2px solid #e5e5e5;
   font-weight: 400;
   box-shadow: none;
-  /*box-shadow: -0.25em 0.25em 3px rgba(0,0,0,0.08)*/
+  transition: all 0.2s ease 0s;
+}
+.btn-radio:hover,
+.btn-checkbox:hover {
+  background-color: #f0f28d;
+  color: #000;
+  border: 2px solid #e3e680;
 }
 :checked + .btn-radio,
 .btn-radio.checked,
-.btn-radio:hover,
 :checked + .btn-checkbox,
-.btn-checkbox.checked,
-.btn-checkbox:hover {
+.btn-checkbox.checked {
   background-color: #e2e71f;
   color: #000;
   border: 2px solid #e2e71f;
@@ -675,6 +680,7 @@ p.responses-summary {
   font-weight: bold;
   color: #000;
   background-color: rgba(226,231,31,0.85);
+  transition: all 0.2s ease 0s;
 }
 
 .images-carousel .left-scroller {
