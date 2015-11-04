@@ -24,12 +24,14 @@
   <!-- Mobile Viewport Fix -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
 
+  {% block app_icons %}
   <!-- Favicon & Progressively-Enhanced Touch Icons: http://mathiasbynens.be/notes/touch-icons#sizes -->
   <link rel="shortcut icon" href="{{ config.static_url }}css/images/favicon.ico">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ config.static_url }}css/images/apple-touch-icon-144x144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ config.static_url }}css/images/apple-touch-icon-114x114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ config.static_url }}css/images/apple-touch-icon-72x72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="{{ config.static_url }}css/images/apple-touch-icon-precomposed.png">
+  {% endblock app_icons %}
 
   <!-- Google WebFonts -->
   <link href='//fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
@@ -47,7 +49,7 @@
 
   <link rel="profile" href="http://gmpg.org/xfn/11" />
 
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.4/leaflet.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
   <!--[if lte IE 8]>
       <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.4/leaflet.ie.css" />
   <![endif]-->
@@ -127,13 +129,15 @@
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}libs/jquery-1.10.2.js"><\/script>')</script><!-- FIXME: Maybe this should be pulled into the repo as a git submodule-->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.4/leaflet.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+
+  {% block cdn_load %}{% endblock %}
 
   {% if settings.DEBUG %}
   <script src="{{STATIC_URL}}libs/underscore.js"></script>
   <script src="{{STATIC_URL}}libs/backbone.js"></script>
   <script src="{{STATIC_URL}}libs/backbone.marionette.js"></script>
-  <script src="{{STATIC_URL}}libs/handlebars-1.0.0.js"></script>
+  <script src="{{STATIC_URL}}libs/handlebars-v3.0.3.js"></script>
   <script src="{{STATIC_URL}}libs/moment-with-locales.min.js"></script>
   <script src="{{STATIC_URL}}libs/json2.js"></script>
   <script src="{{STATIC_URL}}libs/leaflet.argo.js"></script>
