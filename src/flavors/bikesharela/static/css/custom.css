@@ -33,18 +33,18 @@ body, select, input, textarea {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "calluna-sans", "Oswald","Open Sans", "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "calluna-sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
 h1 {
-  font-family: "calluna-sans", "Oswald","Open Sans", "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "calluna-sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 1.5rem;
   line-height: 1.2em;
   font-weight: 300;
   font-style: normal;
-  color: #78dda5;
+  color: black;
 }
 
 .has-pages #site-title {
@@ -70,7 +70,7 @@ label {
 }
 
 h2 {
-  font-family: "calluna-sans", "Oswald","Open Sans", "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "calluna-sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 1.6rem;
   line-height: 1em;
   font-weight: 300;
@@ -79,7 +79,7 @@ h2 {
 }
 
 h4 {
-  font-family: "calluna-sans", "Oswald","Open Sans", "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "calluna-sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 1.2rem;
   line-height: 1em;
   font-weight: 100;
@@ -608,6 +608,19 @@ a.shareabouts-logo:hover {
 .access .btn:hover,
 #sign-in-btn:hover {
   color: #c9c9c9;
+}
+
+p.responses-summary {
+  font-size: 1.25rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  color: white;
+  background-color: black;
+  margin-bottom: 0;
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 
 /*.page-about h1,
