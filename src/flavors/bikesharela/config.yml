@@ -1,7 +1,7 @@
 # Settings for the app
 app:
   # HTML Title
-  title: Bike Share LA 
+  title: Bike Share LA
   # Header name
   name: Bike Share LA
   # Meta description that will show up in Google search results
@@ -32,12 +32,12 @@ map:
 
   geocoding_enabled: true
   geocode_field_label: _(Jump to an address...)
-  geocode_bounding_box:  [21.660619, -158.248444, 21.226022, -157.622910]  # top, left, bottom, right
+  # geocode_bounding_box:  [21.660619, -158.248444, 21.226022, -157.622910]  # top, left, bottom, right
 
   options:
     center:
-      lat: 21.3067192
-      lng: -157.8567346
+      lat: 34.04241857075928
+      lng: -118.24336051940918
     zoom: 14
     minZoom: 12
     maxZoom: 18
@@ -65,85 +65,85 @@ place_types:
     rules:
       - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/map-icon-inservice-legend.png
-          iconSize: [19, 25]
-          iconAnchor: [10, 25]
+          iconUrl: /static/css/images/la_map_icon_small.png
+          iconSize: [20, 32]
+          iconAnchor: [10, 32]
 
       - condition: '{{layer.focused}} === true'
         icon:
-          iconUrl: /static/css/images/map-icon-inservice.png
-          iconSize: [40, 52]
-          iconAnchor: [20, 52]
+          iconUrl: /static/css/images/la_map_icon.png
+          iconSize: [40, 64]
+          iconAnchor: [20, 64]
   B:
     label: _(station)
     rules:
       - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/map-icon-inservice-legend.png
-          iconSize: [19, 25]
-          iconAnchor: [10, 25]
+          iconUrl: /static/css/images/la_map_icon_small.png
+          iconSize: [20, 32]
+          iconAnchor: [10, 32]
 
       - condition: '{{layer.focused}} === true'
         icon:
-          iconUrl: /static/css/images/map-icon-inservice.png
-          iconSize: [40, 52]
-          iconAnchor: [20, 52]
+          iconUrl: /static/css/images/la_map_icon.png
+          iconSize: [40, 64]
+          iconAnchor: [20, 64]
   C:
     label: _(station)
     rules:
       - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/map-icon-inservice-legend.png
-          iconSize: [19, 25]
-          iconAnchor: [10, 25]
+          iconUrl: /static/css/images/la_map_icon_small.png
+          iconSize: [20, 32]
+          iconAnchor: [10, 32]
 
       - condition: '{{layer.focused}} === true'
         icon:
-          iconUrl: /static/css/images/map-icon-inservice.png
-          iconSize: [40, 52]
-          iconAnchor: [20, 52]
+          iconUrl: /static/css/images/la_map_icon.png
+          iconSize: [40, 64]
+          iconAnchor: [20, 64]
   D:
     label: _(station)
     rules:
       - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/map-icon-inservice-legend.png
-          iconSize: [19, 25]
-          iconAnchor: [10, 25]
+          iconUrl: /static/css/images/la_map_icon_small.png
+          iconSize: [20, 32]
+          iconAnchor: [10, 32]
 
       - condition: '{{layer.focused}} === true'
         icon:
-          iconUrl: /static/css/images/map-icon-inservice.png
-          iconSize: [40, 52]
-          iconAnchor: [20, 52]
+          iconUrl: /static/css/images/la_map_icon.png
+          iconSize: [40, 64]
+          iconAnchor: [20, 64]
   E:
     label: _(station)
     rules:
       - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/map-icon-inservice-legend.png
-          iconSize: [19, 25]
-          iconAnchor: [10, 25]
+          iconUrl: /static/css/images/la_map_icon_small.png
+          iconSize: [20, 32]
+          iconAnchor: [10, 32]
 
       - condition: '{{layer.focused}} === true'
         icon:
-          iconUrl: /static/css/images/map-icon-inservice.png
-          iconSize: [40, 52]
-          iconAnchor: [20, 52]
+          iconUrl: /static/css/images/la_map_icon.png
+          iconSize: [40, 64]
+          iconAnchor: [20, 64]
   F:
     label: _(station)
     rules:
       - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/map-icon-inservice-legend.png
-          iconSize: [19, 25]
-          iconAnchor: [10, 25]
+          iconUrl: /static/css/images/la_map_icon_small.png
+          iconSize: [20, 32]
+          iconAnchor: [10, 32]
 
       - condition: '{{layer.focused}} === true'
         icon:
-          iconUrl: /static/css/images/map-icon-inservice.png
-          iconSize: [40, 52]
-          iconAnchor: [20, 52]
+          iconUrl: /static/css/images/la_map_icon.png
+          iconSize: [40, 64]
+          iconAnchor: [20, 64]
 
 activity:
   # Optional. Activity is supported by default. Set to false to disable.
@@ -152,7 +152,7 @@ activity:
   interval: 30000
 
 place:
-  adding_supported: true
+  adding_supported: false
   add_button_label: _(Add a Place)
   # Labels for the buttons that toggle the map and list views
   show_list_button_label: _(List All Places)
@@ -306,39 +306,39 @@ survey:
     - prompt: _(Please explain)
       type: text
       name: private-why_bad_other_reason
-    - prompt: _(How comfortable would you feel using this station at night?)
-      type: select
-      options:
-        - label: _(Choose one...)
-          value: ''
-        - label: _(Very comfortable)
-          value: verycomfortable
-        - label: _(Somewhat comfortable)
-          value: comfortable
-        - label: _(Neutral)
-          value: neutral
-        - label: _(Somewhat uncomfortable)
-          value: uncomfortable
-        - label: _(Very uncomfortable)
-          value: veryuncomfortable
-      name: private-safety
-      attrs:
-        - key: required
-    - prompt: _(Are there any better spots for stations in the immediate area?)
-      type: select
-      options:
-        - label: _(Y/N)
-          value: ''
-        - label: _(Yes)
-          value: 'yes'
-        - label: _(No)
-          value: 'no'
-      name: private-alt_spot
-      attrs:
-        - key: required
-    - prompt: _(Where would you suggest a station? Why?)
-      type: textarea
-      name: private-alt_suggestion
+    #- prompt: _(How comfortable would you feel using this station at night?)
+      #type: select
+      # options:
+      #   - label: _(Choose one...)
+      #     value: ''
+      #   - label: _(Very comfortable)
+      #     value: verycomfortable
+      #   - label: _(Somewhat comfortable)
+      #     value: comfortable
+      #   - label: _(Neutral)
+      #     value: neutral
+      #   - label: _(Somewhat uncomfortable)
+      #     value: uncomfortable
+      #   - label: _(Very uncomfortable)
+      #     value: veryuncomfortable
+      # name: private-safety
+      # attrs:
+    #     - key: required
+    # - prompt: _(Are there any better spots for stations in the immediate area?)
+    #   type: select
+    #   options:
+    #     - label: _(Y/N)
+    #       value: ''
+    #     - label: _(Yes)
+    #       value: 'yes'
+    #     - label: _(No)
+    #       value: 'no'
+    #   name: private-alt_spot
+    #   attrs:
+    #     - key: required
+    # - prompt: _(Where would you suggest a station? Why?)
+    #   type: textarea
+    #   name: private-alt_suggestion
     - prompt: _(Thanks! 3 quick questions about yourself.  What is your age?)
       type: select
       options:

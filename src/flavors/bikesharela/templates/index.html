@@ -3,8 +3,7 @@
 {% get_current_language as LANGUAGE_CODE %}
 
 {% block site-title %}
-<a href="http://www.bikesharehawaii.org/"><span id="site-title-text">{{ config.app.title }}</span><img id="site-logo" src="{{ config.static_url }}css/images/BSH-Logo-Color.jpeg" title="{{ config.app.name }}"></a>
-<strong id="site-deadline"><em>{% blocktrans %}Submit comments by June 30, 2015!{% endblocktrans %}</em></strong>
+<a href="http://www.bikesharehawaii.org/"><span id="site-title-text">{{ config.app.title }}</span><img id="site-logo" src="{{ config.static_url }}css/images/Metro_Bike_Share_Logo-04.png" title="{{ config.app.name }}"></a>
 {% endblock %}
 
 {% block meta %}
@@ -38,10 +37,10 @@
     <meta property="og:title" content="{{ config.app.title }}" />
     <meta property="og:description" content="{{ config.app.meta_description }}" />
   {% endif%}
-
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Quicksand:400|Merriweather:300|Open+Sans:300' rel='stylesheet' type='text/css'>
 {% endblock %}
-
 <!--
   This will place content at the top of the side bar
  -->
@@ -55,8 +54,14 @@
 <p class="total-response-indicator hidden">{% blocktrans %}<span class="total-response-count">0</span> Total Responses{% endblocktrans %}</p>
 
 <p id="powered-by">{% blocktrans %}Powered by <a href="https://github.com/openplans/shareabouts/" class="shareabouts-logo" target="_blank">Shareabouts</a><!--, <span class="nobreak">hosted by <a href="http://openplans.org/" class="openplans-logo" target="_blank">OpenPlans</a></span-->{% endblocktrans %}</p>
-{% endblock %}
 
+<div class="city-logos">
+   <img src="../static/images/Metro_Bike_Share_Partner_Logos_Lockup-10.svg" class="footer-logo">
+</div>
+{% endblock %}
+<div>
+
+</div>
 <!--
   Analytics, custom JS, and such go here
  -->
@@ -123,93 +128,115 @@
       showTotalResponseCount();
     });
 
-    function updateOtherQuestionVisibility(val, $otherField, $otherInput) {
-      if (val === 'other') {
-        $otherField.show();
-        $otherInput.attr('required', true);
-      } else if (val) {
-        $otherField.hide();
-        $otherInput.removeAttr('required').val('');
-      }
+    NS.updateAllDependentFields = function(choiceField, forceHide) {
+      var $choice = $(choiceField);
+      var $dependents = $('[data-choice-name="' + $choice.attr('name') + '"]');
+      $dependents.each(function(i, dep) {
+        NS.updateDependentField($choice, dep, forceHide);
+      });
     }
 
-    function updateConditionQuestionVisibility(val, $yesField, $yesInput, $noField, $noInput) {
-      if (val === 'yes') {
-        $yesField.show();
-        $yesInput.attr('required', true);
+    NS.updateDependentField = function(choiceField, detailField, forceHide) {
+      var $choice = $(choiceField);
+      var $detail = $(detailField);
+      var choiceFieldName = $detail.attr('data-choice-name');
+      var choiceFieldValue = $detail.attr('data-choice-value') || 'other';
+      var isChoiceSelected, isDetailRequired, $requiredChildren;
 
-        if ($noField) {
-          $noField.hide()
-          $noInput.removeAttr('required').prop('checked', false);
-        }
-      } else if (val === 'no') {
-        $yesField.hide();
-        $yesInput.removeAttr('required').prop('checked', false);
+      // Under some circumstances, such as when the choice field itself is
+      // hidden, we know we don't want to show the detail field, and we pass
+      // in a forceHide argument set to true.
+      if (forceHide) {
+        isChoiceSelected = false;
+      }
 
-        if ($noField) {
-          $noField.show();
-          $noInput.attr('required', true);
-        }
-      } else {
-        $yesField.hide();
-        $yesInput.removeAttr('required').prop('checked', false);
+      else {
+        switch ($choice.attr('type')) {
 
-        if ($noField) {
-          $noField.hide();
-          $noInput.removeAttr('required').prop('checked', false);
+          case 'checkbox':
+            if ($choice.val() != choiceFieldValue) { return; }
+            isChoiceSelected = $choice.is(':checked');
+            break;
+
+          case 'radio':
+            isChoiceSelected = ($choice.val() === choiceFieldValue) && $choice.is(':checked');
+            break;
+
+          case 'select':
+            isChoiceSelected = $choice.find('option:selected').attr('value') === choiceFieldValue;
+            break;
+
+          default:
+            isChoiceSelected = $choice.val() === choiceFieldValue;
+
         }
       }
+
+      // Show or hide the detail field, depending on whether the choice
+      // matches the value.
+      $detail.toggleClass('is-hidden', !isChoiceSelected);
+
+      isDetailRequired = $.data(detailField, 'originally-required');
+      $requiredChildren = $.data(detailField, 'required-children');
+
+      if (isChoiceSelected) {
+        // If the detail field was originally required, make it required now.
+        if (isDetailRequired) { $detail.attr('required', 'required'); }
+        $requiredChildren.attr('required', 'required');
+        // Instruct Shareabouts to not ignore the field or it's children when
+        // saving to the API server.
+        $detail.removeAttr('data-ignore');
+      }
+
+      else {
+        // Remove required attributes from hidden fields.
+        $detail.removeAttr('required');
+        $requiredChildren.removeAttr('required');
+        // Instruct Shareabouts to ignore the field and it's children when
+        // saving to the API server.
+        $detail.attr('data-ignore', 'ignore');
+      }
+
+      // Recursively update any dependent fields; force the dependencies to
+      // hide if the choice for this field is not selected.
+      $detail.find('input, textarea, select').each(function(i, subfield) {
+        NS.updateAllDependentFields(subfield, !isChoiceSelected);
+      });
     }
 
-    $(document).on('change', 'input[name="private-good_spot"]', function(evt) {
-      var val = $(this).val(),
-          $yesField = $('.survey-field-why_good'),
-          $yesInput = $('input[name="private-why_good"]'),
-          $noField = $('.survey-field-why_bad'),
-          $noInput = $('input[name="private-why_bad"]'),
-          $otherYesField = $('.survey-field-why_good_other_reason'),
-          $otherYesInput = $('input[name="private-why_good_other_reason"]'),
-          $otherNoField = $('.survey-field-why_bad_other_reason'),
-          $otherNoInput = $('input[name="private-why_bad_other_reason"]');
+    NS.configureDependentFields = function() {
+      // Any fields that have a data-choice-name attribute set should be
+      // interpreted as conditional detail fields. We will look in the
+      // data-choice-value attribute for the associated choice value. The
+      // default choice value is "other".
+      $('[data-choice-name]').each(function(i, field) {
+        var $detail = $(field);
+        var $choice = $('[name="' + $detail.attr('data-choice-name') + '"]');
 
-      updateConditionQuestionVisibility(val, $yesField, $yesInput, $noField, $noInput);
-      updateOtherQuestionVisibility($yesInput.val(), $otherYesField, $otherYesInput);
-      updateOtherQuestionVisibility($noInput.val(), $otherNoField, $otherNoInput);
-    });
+        $.data(field, 'originally-required', $detail.is(':required'));
+        $.data(field, 'required-children', $detail.find('[required]'));
 
-    $(document).on('change', 'input[name="private-why_good"]', function(evt) {
-      var val = $(this).val(),
-          $otherField = $('.survey-field-why_good_other_reason'),
-          $otherInput = $('input[name="private-why_good_other_reason"]');
-
-      updateOtherQuestionVisibility(val, $otherField, $otherInput);
-    });
-
-    $(document).on('change', 'input[name="private-why_bad"]', function(evt) {
-      var val = $(this).val(),
-          $otherField = $('.survey-field-why_bad_other_reason'),
-          $otherInput = $('input[name="private-why_bad_other_reason"]');
-
-      updateOtherQuestionVisibility(val, $otherField, $otherInput);
-    });
-
-    $(document).on('change', 'input[name="private-alt_spot"]', function(evt) {
-      var val = $(this).val(),
-          $yesField = $('.survey-field-alt_suggestion'),
-          $yesInput = $('textarea[name="private-alt_suggestion"]');
-
-      updateConditionQuestionVisibility(val, $yesField, $yesInput);
-    });
+        $choice.change(function(evt) {
+          NS.updateDependentField(this, field);
+        });
+      });
+    };
 
     // Fix the reply button action
-    $(NS).on('panelshow', function(evt, router) {
+    var surveyFormRender = NS.SurveyView.prototype.render;
+    NS.SurveyView.prototype.render = function() {
+      var result = surveyFormRender.call(this);
+      NS.configureDependentFields();
+
       $('.reply-link').on('click', function(evt) {
         evt.preventDefault();
         var $panelScrollable = $('#content article').first(),
             $firstLabel = $('.survey').find('label').first();
         $panelScrollable.scrollTo($firstLabel);
       });
-    });
+
+      return result;
+    };
 
     // Show the location images
     var placeDetailRender = NS.PlaceDetailView.prototype.render;
@@ -228,7 +255,7 @@
         $.ajax({
           url: '/static/images/metadata/' + siteid + '_images.json',
           success: function(data) {
-            place.set('images', data['images'])
+            place.set('images', data['images'], {silent: true})
             NS.showImagesCarousel(self, data['images']);
           }
         });
@@ -288,7 +315,7 @@
       // If the address/location given is complete in that it already specifies
       // a city in some format that we recognize (see endStrings), pass it on
       // through. Otherwise, tack on "Hawaii".
-      var endStrings = [' hawaii', ' hi'],
+      var endStrings = [' los angeles', ' la', ' california', ' ca'],
           isComplete = false,
           end, i, locationEndsWith;
 
@@ -309,7 +336,7 @@
 
       // If no ends matched, specify the city.
       if (!isComplete) {
-        location = location + ', Hawaii';
+        location = location + ', Los Angeles, CA, USA';
       }
 
       return util_geocode.call(this, location, bounds, options);
