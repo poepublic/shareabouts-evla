@@ -129,19 +129,21 @@
     });
 
     NS.updateAllDependentFields = function(choiceField, forceHide) {
-      var $choice = $(choiceField);
-      var $dependents = $('[data-choice-name="' + $choice.attr('name') + '"]');
+      var $choice = this.$(choiceField);
+      var $dependents = this.$('[data-choice-name="' + $choice.attr('name') + '"]');
+      var self = this;
       $dependents.each(function(i, dep) {
-        NS.updateDependentField($choice, dep, forceHide);
+        NS.updateDependentField.call(self, $choice, dep, forceHide);
       });
     }
 
     NS.updateDependentField = function(choiceField, detailField, forceHide) {
-      var $choice = $(choiceField);
-      var $detail = $(detailField);
+      var $choice = this.$(choiceField);
+      var $detail = this.$(detailField);
       var choiceFieldName = $detail.attr('data-choice-name');
       var choiceFieldValue = $detail.attr('data-choice-value') || 'other';
       var isChoiceSelected, isDetailRequired, $requiredChildren;
+      var self = this;
 
       // Under some circumstances, such as when the choice field itself is
       // hidden, we know we don't want to show the detail field, and we pass
@@ -200,7 +202,7 @@
       // Recursively update any dependent fields; force the dependencies to
       // hide if the choice for this field is not selected.
       $detail.find('input, textarea, select').each(function(i, subfield) {
-        NS.updateAllDependentFields(subfield, !isChoiceSelected);
+        NS.updateAllDependentFields.call(self, subfield, !isChoiceSelected);
       });
     }
 
@@ -209,15 +211,16 @@
       // interpreted as conditional detail fields. We will look in the
       // data-choice-value attribute for the associated choice value. The
       // default choice value is "other".
-      $('[data-choice-name]').each(function(i, field) {
-        var $detail = $(field);
-        var $choice = $('[name="' + $detail.attr('data-choice-name') + '"]');
+      var self = this;
+      self.$('[data-choice-name]').each(function(i, field) {
+        var $detail = self.$(field);
+        var $choice = self.$('[name="' + $detail.attr('data-choice-name') + '"]');
 
         $.data(field, 'originally-required', $detail.is(':required'));
         $.data(field, 'required-children', $detail.find('[required]'));
 
         $choice.change(function(evt) {
-          NS.updateDependentField(this, field);
+          NS.updateDependentField.call(self, this, field);
         });
       });
     };
@@ -226,7 +229,7 @@
     var surveyFormRender = NS.SurveyView.prototype.render;
     NS.SurveyView.prototype.render = function() {
       var result = surveyFormRender.call(this);
-      NS.configureDependentFields();
+      NS.configureDependentFields.call(this);
 
       $('.reply-link').on('click', function(evt) {
         evt.preventDefault();
