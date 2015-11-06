@@ -42,8 +42,11 @@ map:
     minZoom: 12
     maxZoom: 18
   layers:
-    - url: http://{s}.tiles.mapbox.com/v3/openplans.jgp5g7f0/{z}/{x}/{y}.png
+    - url: http://{s}.tiles.mapbox.com/v3/openplans.47efd453/{z}/{x}/{y}.png  # Base Map
       attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
+    - url: http://{s}.tiles.mapbox.com/v3/openplans.ccd44d47/{z}/{x}/{y}.png  # Bus Lines
+    - url: http://{s}.tiles.mapbox.com/v3/openplans.af9078e9/{z}/{x}/{y}.png  # Rail Lines
+    - url: http://{s}.tiles.mapbox.com/v3/openplans.3683abf9/{z}/{x}/{y}.png  # Base Map Labels
     # - url: http://{s}.tiles.mapbox.com/v3/openplans.PhillyBikeShare/{z}/{x}/{y}.png
     #   detectRetina: true
 
