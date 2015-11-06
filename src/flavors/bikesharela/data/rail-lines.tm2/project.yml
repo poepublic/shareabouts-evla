@@ -1,0 +1,25 @@
+_prefs: 
+  mapid: openplans.af9078e9
+  saveCenter: true
+_properties: {}
+attribution: ''
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - -118.2685
+  - 34.0491
+  - 12
+description: ''
+format: "png8:m=h"
+interactivity_layer: ''
+layers: null
+maxzoom: 22
+minzoom: 10
+name: LA Rail Lines
+source: "mapbox:///openplans.4fa33d50"
+styles: 
+  - style.mss
+template: ''
