@@ -27,7 +27,11 @@ def BasicAuthMiddleware(application):
         cookie_authorized = False
 
         # Check if the auth cookie is already around
-        if 'HTTP_COOKIE' in environ:
+        if environ['PATH_INFO'].startswith('/api'):
+            del environ['HTTP_AUTHORIZATION']
+            cookie_authorized = True
+
+        elif 'HTTP_COOKIE' in environ:
             cookie_jar = SimpleCookie(environ['HTTP_COOKIE'])
             if cookie in cookie_jar:
                 cookie_authorized = True
@@ -51,7 +55,7 @@ def BasicAuthMiddleware(application):
                 return not_authorized(environ, start_response, 'Invalid username/password.')
 
         def start_response_with_cookie(status, headers, exc_info=None):
-            headers.append(('Set-cookie', cookie + '=session'))
+            headers.append(('Set-cookie', cookie + '=session; Max-Age=3600'))
             return start_response(status, headers, exc_info)
 
         return application(environ, start_response_with_cookie)
