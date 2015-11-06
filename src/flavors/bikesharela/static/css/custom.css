@@ -48,7 +48,7 @@ h1 {
   font-family: "ff-scala-sans-web", "calluna-sans", "Verdana", sans-serif;
   font-size: 1.5rem;
   line-height: 1.2em;
-  font-weight: 300;
+  font-weight: bold;
   font-style: normal;
   color: black;
 }
@@ -91,6 +91,14 @@ h4 {
   font-weight: 100;
   font-style: normal;
   color: #000;
+}
+
+.page-about h4 {
+  line-height: 1.4em;
+}
+
+.page-about img {
+  padding: 0.5rem;
 }
 
 /* Buttons */
@@ -190,9 +198,14 @@ textarea:focus {
   margin-bottom: 1.125em;
   display: inline-block;
 }
+.place-detail p,
 label.survey-label {
-  font-family: "ff-scala-sans-web", "calluna-sans", "Verdana", sans-serif;
-  font-size: 1.1em;
+  font-family: "Verdana", sans-serif;
+  font-size: 0.9em;
+}
+
+.place-detail h4 {
+  font-weight: bold;
 }
 
 .validation-message {
@@ -717,6 +730,10 @@ p.responses-summary {
   cursor: pointer;
   color: white;
   background-color: rgba(0,0,0,0.85);
+}
+
+.btn, .btn:visited, .btn:link {
+  box-shadow: none;
 }
 
 
