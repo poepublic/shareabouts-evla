@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-16 16:42-0400\n"
+"POT-Creation-Date: 2015-11-04 16:42-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,510 +17,410 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: _config.translations.py:1
-msgid "Enter an address..."
+#: src/flavors/bikesharela/_config.translations.py:1
+msgid "Jump to an address..."
 msgstr ""
 
-#: _config.translations.py:2
+#: src/flavors/bikesharela/_config.translations.py:2
 msgid ""
 "Shareabouts is a mapping tool to gather crowd sourced public input. Use it "
 "to collect suggested locations and comments in a social, engaging process."
 msgstr ""
 
-#: _config.translations.py:3 _config.translations.py:59
-#: _config.translations.py:83
+#: src/flavors/bikesharela/_config.translations.py:3
+#: src/flavors/bikesharela/_config.translations.py:70
+#: src/flavors/bikesharela/_config.translations.py:94
 msgid "Someone"
 msgstr ""
 
-#: _config.translations.py:4
+#: src/flavors/bikesharela/_config.translations.py:4
 msgid "support"
 msgstr ""
 
-#: _config.translations.py:5
+#: src/flavors/bikesharela/_config.translations.py:5
 msgid "Support"
 msgstr ""
 
-#: _config.translations.py:6
+#: src/flavors/bikesharela/_config.translations.py:6
 msgid "supports"
 msgstr ""
 
-#: _config.translations.py:7
-msgid "surveys"
-msgstr ""
-
-#: _config.translations.py:8
-msgid "surveyed"
-msgstr ""
-
-#: _config.translations.py:9 _config.translations.py:58
-msgid "Fill out the survey"
-msgstr ""
-
-#: _config.translations.py:10 jstemplates/place-survey-form.html:14
-msgid "Is this a good spot for a bike share station?"
-msgstr ""
-
-#: _config.translations.py:11 _config.translations.py:37
-msgid "Y/N"
-msgstr ""
-
-#: _config.translations.py:12 _config.translations.py:38
-#: jstemplates/place-survey-form.html:42
-msgid "Yes"
-msgstr ""
-
-#: _config.translations.py:13 _config.translations.py:39
-#: jstemplates/place-survey-form.html:24
-msgid "No"
-msgstr ""
-
-#: _config.translations.py:14 jstemplates/place-survey-form.html:9
-msgid "Great! What's your biggest reason?"
-msgstr ""
-
-#: _config.translations.py:15 _config.translations.py:23
-#: _config.translations.py:30 _config.translations.py:44
-#: _config.translations.py:49
-msgid "Choose one..."
-msgstr ""
-
-#: _config.translations.py:16 jstemplates/place-survey-form.html:18
-msgid "Near home"
-msgstr ""
-
-#: _config.translations.py:17 jstemplates/place-survey-form.html:21
-msgid "Near transit stop"
-msgstr ""
-
-#: _config.translations.py:18 jstemplates/place-survey-form.html:19
-msgid "Near job"
-msgstr ""
-
-#: _config.translations.py:19 jstemplates/place-survey-form.html:20
-msgid "Near shopping"
-msgstr ""
-
-#: _config.translations.py:20 jstemplates/place-survey-form.html:12
-msgid "Important for community"
-msgstr ""
-
-#: _config.translations.py:21 _config.translations.py:28
-#: _config.translations.py:47 _config.translations.py:55
-#: jstemplates/place-survey-form.html:26
-msgid "Other"
-msgstr ""
-
-#: _config.translations.py:22 jstemplates/place-survey-form.html:37
-msgid "What's your biggest reason why not?"
-msgstr ""
-
-#: _config.translations.py:24 jstemplates/place-survey-form.html:41
-msgid "Wouldn't use bike share"
-msgstr ""
-
-#: _config.translations.py:25 jstemplates/place-survey-form.html:13
-msgid "Is in the way"
-msgstr ""
-
-#: _config.translations.py:26 jstemplates/place-survey-form.html:23
-msgid "No safe place to ride"
-msgstr ""
-
-#: _config.translations.py:27 jstemplates/place-survey-form.html:25
-msgid "Not useful for me"
-msgstr ""
-
-#: _config.translations.py:29 jstemplates/place-survey-form.html:11
-msgid "How comfortable would you feel using this station at night?"
-msgstr ""
-
-#: _config.translations.py:31 jstemplates/place-survey-form.html:32
-msgid "Very comfortable"
-msgstr ""
-
-#: _config.translations.py:32 jstemplates/place-survey-form.html:29
-msgid "Somewhat comfortable"
-msgstr ""
-
-#: _config.translations.py:33 jstemplates/place-survey-form.html:22
-msgid "Neutral"
-msgstr ""
-
-#: _config.translations.py:34 jstemplates/place-survey-form.html:30
-msgid "Somewhat uncomfortable"
-msgstr ""
-
-#: _config.translations.py:35 jstemplates/place-survey-form.html:33
-msgid "Very uncomfortable"
-msgstr ""
-
-#: _config.translations.py:36 jstemplates/place-survey-form.html:3
-msgid "Are there any better spots for stations in the immediate area?"
-msgstr ""
-
-#: _config.translations.py:40 jstemplates/place-survey-form.html:38
-msgid "Where would you suggest a station? Why?"
-msgstr ""
-
-#: _config.translations.py:41 jstemplates/place-survey-form.html:1
-msgid "Age"
-msgstr ""
-
-#: _config.translations.py:42
-msgid "Thanks! 3 quick questions about yourself.  What is your age?"
-msgstr ""
-
-#: _config.translations.py:43 jstemplates/place-survey-form.html:35
-msgid "What is your gender?"
-msgstr ""
-
-#: _config.translations.py:45 jstemplates/place-survey-form.html:16
-msgid "Male"
-msgstr ""
-
-#: _config.translations.py:46 jstemplates/place-survey-form.html:8
-msgid "Female"
-msgstr ""
-
-#: _config.translations.py:48 jstemplates/place-survey-form.html:36
-msgid "What is your race/ethnicity?"
-msgstr ""
-
-#: _config.translations.py:50 jstemplates/place-survey-form.html:10
-msgid "Hispanic/Latino"
-msgstr ""
-
-#: _config.translations.py:51 jstemplates/place-survey-form.html:5
-msgid "Black/African American"
-msgstr ""
-
-#: _config.translations.py:52 jstemplates/place-survey-form.html:39
-msgid "White"
-msgstr ""
-
-#: _config.translations.py:53 jstemplates/place-survey-form.html:17
-msgid "Native American"
-msgstr ""
-
-#: _config.translations.py:54 jstemplates/place-survey-form.html:4
-msgid "Asian/Pacific Islander"
-msgstr ""
-
-#: _config.translations.py:56 _config.translations.py:61
-msgid "Submit"
-msgstr ""
-
-#: _config.translations.py:57
-msgid "survey"
-msgstr ""
-
-#: _config.translations.py:60
-msgid "Show the Map"
-msgstr ""
-
-#: _config.translations.py:62
-msgid "Tell us more..."
-msgstr ""
-
-#: _config.translations.py:63
-msgid "Your Name"
-msgstr ""
-
-#: _config.translations.py:64
-msgid "Name"
-msgstr ""
-
-#: _config.translations.py:65
-msgid "Your Email"
-msgstr ""
-
-#: _config.translations.py:66
-msgid "Email address"
-msgstr ""
-
-#: _config.translations.py:67
-msgid "Your Phone"
-msgstr ""
-
-#: _config.translations.py:68 jstemplates/place-survey-form.html:27
-msgid "Phone"
-msgstr ""
-
-#: _config.translations.py:69 _config.translations.py:70
-msgid "Location Name"
-msgstr ""
-
-#: _config.translations.py:71
-msgid "Location Type"
-msgstr ""
-
-#: _config.translations.py:72
-msgid "Choose One"
-msgstr ""
-
-#: _config.translations.py:73
-msgid "Landmark"
-msgstr ""
-
-#: _config.translations.py:74
-msgid "Park"
-msgstr ""
-
-#: _config.translations.py:75
-msgid "School"
-msgstr ""
-
-#: _config.translations.py:76
-msgid "Description"
-msgstr ""
-
-#: _config.translations.py:77
-msgid "Description..."
-msgstr ""
-
-#: _config.translations.py:78
-msgid "Image"
-msgstr ""
-
-#: _config.translations.py:79
-msgid "Add an Image"
-msgstr ""
-
-#: _config.translations.py:80
-msgid "Add a Place"
-msgstr ""
-
-#: _config.translations.py:81
-msgid "created"
-msgstr ""
-
-#: _config.translations.py:82
-msgid "List All Places"
-msgstr ""
-
-#: _config.translations.py:84 _config.translations.py:85
-#: _config.translations.py:86
+#: src/flavors/bikesharela/_config.translations.py:7
+#: src/flavors/bikesharela/_config.translations.py:8
+#: src/flavors/bikesharela/_config.translations.py:9
+#: src/flavors/bikesharela/_config.translations.py:10
+#: src/flavors/bikesharela/_config.translations.py:11
+#: src/flavors/bikesharela/_config.translations.py:12
 msgid "station"
 msgstr ""
 
-#: _config.translations.py:87
+#: src/flavors/bikesharela/_config.translations.py:13
+msgid "surveys"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:14
+msgid "surveyed"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:15
+#: src/flavors/bikesharela/_config.translations.py:69
+msgid "Fill out the survey"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:16
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:21
+msgid "Is this a good spot for a bike share station?"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:17
+msgid "Y/N"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:18
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:46
+msgid "Yes"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:19
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:30
+msgid "No"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:20
+msgid "Great! What's your biggest reason?"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:21
+#: src/flavors/bikesharela/_config.translations.py:29
+#: src/flavors/bikesharela/_config.translations.py:39
+#: src/flavors/bikesharela/_config.translations.py:47
+#: src/flavors/bikesharela/_config.translations.py:60
+msgid "Choose one..."
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:22
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:26
+msgid "Near home"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:23
+msgid "Near bus/train"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:24
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:27
+msgid "Near job"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:25
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:28
+msgid "Near shopping/dining"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:26
+#: src/flavors/bikesharela/_config.translations.py:36
+#: src/flavors/bikesharela/_config.translations.py:58
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:32
+msgid "Other"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:27
+#: src/flavors/bikesharela/_config.translations.py:37
+msgid "Please explain"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:28
+msgid "What's your biggest reason why not?"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:30
+msgid "Wouldn't use the bike share system"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:31
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:17
+msgid "Don't like the location"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:32
+msgid "No comfortable to ride"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:33
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:15
+msgid "Don't feel comfortable during the day"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:34
+msgid "Don't feel comfortable during at night"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:35
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:31
+msgid "Not useful for me"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:38
+msgid "Thanks! 3 quick questions about yourself.  What is your age?"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:40
+msgid "<18"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:41
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:6
+msgid "18-24"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:42
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:7
+msgid "25-34"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:43
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:8
+msgid "35-49"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:44
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:9
+msgid "50-64"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:45
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:10
+msgid "65+"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:46
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:41
+msgid "What is your gender?"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:48
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:24
+msgid "Male"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:49
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:19
+msgid "Female"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:50
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:37
+msgid "Transgender MTF"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:51
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:36
+msgid "Transgender FTM"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:52
+msgid "What is your race/ethnicity?"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:53
+msgid "Choose all that apply..."
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:54
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:22
+msgid "Latino"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:55
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:13
+msgid "Black"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:56
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:43
+msgid "White"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:57
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:12
+msgid "Asian/Pacific Islander"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:59
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:40
+msgid "What is your annual household income?"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:61
+msgid "<$20,000"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:62
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:2
+msgid "$20,000-$49,999"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:63
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:3
+msgid "$50,000-$99,999"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:64
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:1
+msgid "$100,000+"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:65
+msgid "Phone number"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:66
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:18
+msgid "Email"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:67
+#: src/flavors/bikesharela/_config.translations.py:72
+msgid "Submit"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:68
+msgid "survey"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:71
+msgid "Show the Map"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:73
+msgid "Tell us more..."
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:74
+msgid "Your Name"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:75
+msgid "Name"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:76
+msgid "Your Email"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:77
+msgid "Email address"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:78
+msgid "Your Phone"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:79
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:33
+msgid "Phone"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:80
+#: src/flavors/bikesharela/_config.translations.py:81
+msgid "Location Name"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:82
+msgid "Location Type"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:83
+msgid "Choose One"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:84
+msgid "Landmark"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:85
+msgid "Park"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:86
+msgid "School"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:87
+msgid "Description"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:88
+msgid "Description..."
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:89
+msgid "Image"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:90
+msgid "Add an Image"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:91
+msgid "Add a Place"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:92
+msgid "created"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:93
+msgid "List All Places"
+msgstr ""
+
+#: src/flavors/bikesharela/_config.translations.py:95
 msgid "Welcome"
 msgstr ""
 
-#: _config.translations.py:88 jstemplates/pages/bikeshare.html:1
-msgid "About Bike Share"
-msgstr ""
-
-#: _config.translations.py:89 jstemplates/pages/thismap.html:1
-msgid "About This Map"
-msgstr ""
-
-#: _config.translations.py:90 jstemplates/pages/criteria.html:2
-msgid "Location Criteria"
-msgstr ""
-
-#: _config.translations.py:91
-msgid "Also Look For..."
-msgstr ""
-
-#: jstemplates/pages/about.html:1 jstemplates/pages/thismap.html:3
-msgid "Bike lanes"
-msgstr ""
-
-#: jstemplates/pages/about.html:2
-msgid "Bike share is coming to Philadelphia!"
-msgstr ""
-
-#: jstemplates/pages/about.html:3
-msgid "Bike trails"
-msgstr ""
-
-#: jstemplates/pages/about.html:4
+#: src/flavors/bikesharela/jstemplates/pages/about.html:1
 msgid ""
 "Click any potential location <img src=\"/static/css/images/map-icon-"
 "inservice-legend.png\"> to get started!"
 msgstr ""
 
-#: jstemplates/pages/about.html:5
-msgid "Rail Stations"
+#: src/flavors/bikesharela/jstemplates/pages/about.html:2
+msgid "Help us build Metro Bike Share!"
 msgstr ""
 
-#: jstemplates/pages/about.html:6
+#: src/flavors/bikesharela/jstemplates/pages/about.html:3
+msgid "Let us know what you think about the proposed station locations!"
+msgstr ""
+
+#: src/flavors/bikesharela/jstemplates/pages/about.html:4
 msgid ""
-"The City needs your help to identify 60 station locations to launch the "
-"program in Spring 2015. Tell us what you think about the possible locations "
-"<img src=\"/static/css/images/map-icon-inservice-legend.png\"> on this map."
+"Thanks for your interest in bike share! The commenting period on this map "
+"has closed, however please stay tuned for announcements about future public "
+"meetings, at which findings will be shared."
 msgstr ""
 
-#: jstemplates/pages/about.html:7
+#: src/flavors/bikesharela/jstemplates/pages/about.html:5
 msgid ""
-"The comment period will be open until <strong>October 20, 2014</strong>."
+"The Metro Bikeshare Pilot in Downtown LA will launch in Spring 2016 with up "
+"to 80 stations and 1,000 bikes. Leave us feedback about which stations are "
+"important to you, to further refine the system map many of you helped to "
+"create. Final station selection will be based on feasibility, space "
+"availability, accessibility, demand, and support."
 msgstr ""
 
-#: jstemplates/pages/also.html:1
-msgid "Also look for..."
+#: src/flavors/bikesharela/jstemplates/pages/about.html:6
+msgid "The comment period will be open until <strong>June 30, 2015</strong>."
 msgstr ""
 
-#: jstemplates/pages/also.html:2
-msgid ""
-"Keep your eyes out for temporary bike share artwork on the sidewalks "
-"(above). These \"medallions\" were designed with the Mural Arts Program and "
-"mark possible bike share locations. When you find one, text us your comments "
-"to the number on the medallion."
-msgstr ""
-
-#: jstemplates/pages/also.html:3
-msgid ""
-"This website and these medallions mark the beginning of a public outreach "
-"process to help the City plan bike share in Philadelphia. Later in the fall, "
-"we will be reporting on what we've heard through this process online and at "
-"community meetings, which will be another opportunity for the public to "
-"comment on proposed stations before we launch in spring 2015. Look for "
-"announcements about these meetings on "
-msgstr ""
-
-#: jstemplates/pages/bikeshare.html:2
-msgid ""
-"All bicycles and stations will be owned by the City of Philadelphia and will "
-"be cleaned and maintained by the company <a href=\"http://"
-"bicycletransitsystems.com/\" target=\"_blank\">Bicycle Transit Systems</a>, "
-"the City's chosen bike share operator. For more information, visit "
-msgstr ""
-
-#: jstemplates/pages/bikeshare.html:3
-msgid ""
-"Bike share is public transportation on your schedule. In spring 2015, "
-"Philadelphia will join Chicago, Washington DC, Boston, New York City, and "
-"more than 30 other cities across North America in offering this new form of "
-"affordable, convenient transportation."
-msgstr ""
-
-#: jstemplates/pages/bikeshare.html:4
-msgid ""
-"With bike share, members and walk-up users will be able to check out bikes "
-"from one of 60 stations, take a 30-minute trip for work, school, errands, or "
-"fun, and then return the bike to any other station in the system. Pricing is "
-"still in development. Bikes will feature easily adjustable seats, front and "
-"rear LED lights, baskets, and bells."
-msgstr ""
-
-#: jstemplates/pages/criteria.html:1
-msgid ""
-"If on a sidewalk, the sidewalk must be at least 13' wide to maintain clear "
-"space for pedestrians."
-msgstr ""
-
-#: jstemplates/pages/criteria.html:3
-msgid "Most stations will be around 60 feet long and hold 20 bikes."
-msgstr ""
-
-#: jstemplates/pages/criteria.html:4
-msgid ""
-"NOTE: this image shows only a kiosk and two bike docks. Actual stations will "
-"have one kiosk but as many as 20 docks (stretching around 60 feet)."
-msgstr ""
-
-#: jstemplates/pages/criteria.html:5
-msgid "Site Requirements"
-msgstr ""
-
-#: jstemplates/pages/criteria.html:6
-msgid "Station Basics"
-msgstr ""
-
-#: jstemplates/pages/criteria.html:7
-msgid ""
-"Stations are 6.5 feet wide and can be between 45 and 75 feet long (that's "
-"about the length of 3 to 5 mid-sized cars, nose to tail)."
-msgstr ""
-
-#: jstemplates/pages/criteria.html:8
-msgid "Stations are solar powered and wireless connected."
-msgstr ""
-
-#: jstemplates/pages/criteria.html:9
-msgid ""
-"Stations must be placed on hard surfaces (e.g., concrete, asphalt, brick, "
-"pavers). No grass or landscaped areas."
-msgstr ""
-
-#: jstemplates/pages/criteria.html:10
-msgid "Stations must be visible and accessible from the sidewalk."
-msgstr ""
-
-#: jstemplates/pages/criteria.html:11
-msgid "Stations should receive sunlight for around 6 hours a day."
-msgstr ""
-
-#: jstemplates/pages/thismap.html:2
-msgid "Available space"
-msgstr ""
-
-#: jstemplates/pages/thismap.html:4
-msgid "Employment, shopping, cultural, and recreational destinations"
-msgstr ""
-
-#: jstemplates/pages/thismap.html:5
-msgid ""
-"Later in the fall, we will be reporting on what we've heard through this "
-"process online and at community meetings, which will be another opportunity "
-"for the public to comment on proposed stations before bike share launches in "
-"Spring 2015."
-msgstr ""
-
-#: jstemplates/pages/thismap.html:6
-msgid ""
-"Meetings with stakeholders such as Philadelphia Parks & Recreation, SEPTA, "
-"universities, property owners, and community groups"
-msgstr ""
-
-#: jstemplates/pages/thismap.html:7
-msgid "Population density"
-msgstr ""
-
-#: jstemplates/pages/thismap.html:8
-msgid "Site visits"
-msgstr ""
-
-#: jstemplates/pages/thismap.html:9
-msgid ""
-"The possible locations shown on the map were identified based on a number of "
-"factors including:"
-msgstr ""
-
-#: jstemplates/pages/thismap.html:10
-msgid ""
-"This website marks the beginning of a public outreach process to help the "
-"City of Philadelphia plan for bike share. The City needs your help to "
-"identify 60 station locations for program launch next spring. The map shows "
-"almost 100 potential station locations. Please comment on these possible "
-"locations and share other feedback by October 20, 2014."
-msgstr ""
-
-#: jstemplates/pages/thismap.html:11
-msgid ""
-"Thousands of bike share suggestions made over the past year by "
-"Philadelphians via a crowd-sourced bike share map run by a local bike share "
-"advocacy organization"
-msgstr ""
-
-#: jstemplates/pages/thismap.html:12
-msgid "What's Next?"
-msgstr ""
-
-#: jstemplates/pages/thismap.html:13
-msgid "Why are these stations in consideration?"
-msgstr ""
-
-#: jstemplates/place-detail-promotion-bar.html:1
+#: src/flavors/bikesharela/jstemplates/place-detail-promotion-bar.html:1
 msgid "Recommend on Facebook"
 msgstr ""
 
-#: jstemplates/place-detail-promotion-bar.html:2
+#: src/flavors/bikesharela/jstemplates/place-detail-promotion-bar.html:2
 msgid "Tweet This"
 msgstr ""
 
-#: jstemplates/place-detail-survey.html:1
+#: src/flavors/bikesharela/jstemplates/place-detail-survey.html:1
 msgid ""
 "\n"
 "        {{ responses.length }}\n"
@@ -530,80 +430,120 @@ msgid ""
 "      "
 msgstr ""
 
-#: jstemplates/place-detail-survey.html:6
+#: src/flavors/bikesharela/jstemplates/place-detail-survey.html:6
 msgid "What do you think?"
 msgstr ""
 
-#: jstemplates/place-detail.html:1
-msgid ""
-"Bike share station under consideration at this site in consultation with "
-"property owner."
-msgstr ""
-
-#: jstemplates/place-detail.html:2
+#: src/flavors/bikesharela/jstemplates/place-detail.html:1
 msgid "Bike share station under consideration at this site."
 msgstr ""
 
-#: jstemplates/place-detail.html:3
+#: src/flavors/bikesharela/jstemplates/place-detail.html:2
+msgid "On-sidewalk bike share station under consideration at this site."
+msgstr ""
+
+#: src/flavors/bikesharela/jstemplates/place-detail.html:3
 msgid ""
-"HELP!! Bike share station under consideration in this general area but space "
-"is tight; please help us find a good spot."
+"On-street bike share station under consideration at this site in partking "
+"restricted area."
 msgstr ""
 
-#: jstemplates/place-detail.html:4
-msgid "Site Criteria"
+#: src/flavors/bikesharela/jstemplates/place-detail.html:4
+msgid ""
+"On-street bike share station under consideration at this site in place of "
+"parking."
 msgstr ""
 
-#: jstemplates/place-survey-form.html:2
-msgid "Anything else to tell us about bike share?"
+#: src/flavors/bikesharela/jstemplates/place-detail.html:5
+msgid ""
+"This site is potentially feasible, but alternative suggestions are welcome!"
 msgstr ""
 
-#: jstemplates/place-survey-form.html:6
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:4
+msgid "&lt;$20,000"
+msgstr ""
+
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:5
+msgid "&lt;18"
+msgstr ""
+
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:11
+msgid "Anything else to tell us about this particular station?"
+msgstr ""
+
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:14
 msgid "Comment..."
 msgstr ""
 
-#: jstemplates/place-survey-form.html:7
-msgid "Email"
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:16
+msgid "Don't feel comfortable during the night"
 msgstr ""
 
-#: jstemplates/place-survey-form.html:15
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:20
+msgid "Great! What are your biggest reasons?"
+msgstr ""
+
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:23
 msgid "Log Out"
 msgstr ""
 
-#: jstemplates/place-survey-form.html:28
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:25
+msgid "Near Bus/Train"
+msgstr ""
+
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:29
+msgid "No comfortable place to ride"
+msgstr ""
+
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:34
 msgid "Please select one of these options."
 msgstr ""
 
-#: jstemplates/place-survey-form.html:31
-msgid "Thanks! 3 quick questions about yourself. These are optional."
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:35
+msgid "Thanks! Please tell us about yourself (optional)."
 msgstr ""
 
-#: jstemplates/place-survey-form.html:34
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:38
+msgid "What are your biggest reasons why not?"
+msgstr ""
+
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:39
 msgid "What is your age?"
 msgstr ""
 
-#: jstemplates/place-survey-form.html:40
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:42
+msgid "What is your race/ethnicity? (select all that apply)"
+msgstr ""
+
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:44
 msgid ""
 "Would you like to receive future text or email updates about bike share? If "
 "so, provide a cell phone number or email address."
 msgstr ""
 
-#: jstemplates/place-survey-response.html:1
-msgid "Thanks for your input!"
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:45
+msgid "Wouldn't use bike share"
 msgstr ""
 
-#: templates/index.html:7
-msgid "Submit comments by October 20, 2014!"
+#: src/flavors/bikesharela/jstemplates/place-survey-form.html:47
+msgid "please explain"
 msgstr ""
 
-#: templates/index.html:54
+#: src/flavors/bikesharela/jstemplates/place-survey-response.html:1
+msgid ""
+"Thanks for your input! Learn more &amp; comment on more proposed stations at "
+"<a class=\"learn-more-link\" href=\"{{original_path}}\" rel=\"internal"
+"\">{{ host }}</a>!"
+msgstr ""
+
+#: src/flavors/bikesharela/templates/index.html:55
 msgid "<span class=\"total-response-count\">0</span> Total Responses"
 msgstr ""
 
-#: templates/index.html:56
+#: src/flavors/bikesharela/templates/index.html:57
 msgid ""
-"Powered by <a href=\"http://shareabouts.org/\" class=\"shareabouts-logo\" "
-"target=\"_blank\">Shareabouts</a>, <span class=\"nobreak\">a project of <a "
-"href=\"http://openplans.org/\" class=\"openplans-logo\" target=\"_blank"
-"\">OpenPlans</a></span>"
+"Powered by <a href=\"https://github.com/openplans/shareabouts/\" class="
+"\"shareabouts-logo\" target=\"_blank\">Shareabouts</a><!--, <span class="
+"\"nobreak\">hosted by <a href=\"http://openplans.org/\" class=\"openplans-"
+"logo\" target=\"_blank\">OpenPlans</a></span-->"
 msgstr ""

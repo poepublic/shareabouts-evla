@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+
+<Parameters>
+  <Parameter name="center">0,0.0002,12</Parameter>
+  <Parameter name="description"><![CDATA[This lines, stations, and stops for bus and rail transit in Los Angeles]]></Parameter>
+  <Parameter name="format">pbf</Parameter>
+  <Parameter name="json"><![CDATA[{"vector_layers":[{"id":"bus-lines","description":"Bus Lines","fields":{"VAR_DESCR":"String","VAR_DIREC":"Number","VAR_IDENT":"String","VAR_ROUTE":"String"}},{"id":"gold-line","description":"Gold Line","fields":{"FNODE_":"Number","LENGTH":"Number","Miles":"Number","TNODE_":"Number"}},{"id":"green-line","description":"Green Line","fields":{"Feet":"Number","MTFCC":"String","Miles":"Number"}},{"id":"blue-line","description":"Blue Line","fields":{"bearing":"Number","shared":"Number"}},{"id":"expo-line","description":"Expo Line","fields":{"ID":"Number","shared":"Number"}},{"id":"rp-lines","description":"Red & Purple Lines","fields":{"bearing":"Number","line":"String"}},{"id":"bus-stops","description":"Bus Stops","fields":{"ALONG":"String","AT":"String","DIR_ALPHA":"String","LAT":"Number","LINE":"Number","LONG":"Number","STOPNUM":"Number"}},{"id":"rail-stations","description":"Rail Stations","fields":{"DIR":"String","LAT":"Number","LINE":"String","LINENUM":"Number","LINENUM2":"Number","LONG":"Number","POINT_X":"Number","POINT_Y":"Number","STATION":"String","STNSEQ":"Number","STNSEQ2":"Number","STOPNUM":"Number","TPIS_NAME":"String"}}]}]]></Parameter>
+  <Parameter name="maxzoom">16</Parameter>
+  <Parameter name="minzoom">12</Parameter>
+  <Parameter name="name"><![CDATA[LA Bus & Rail]]></Parameter>
+</Parameters>
+
+
+<Layer name="bus-lines"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/bus-lines.geojson]]></Parameter>
+       <Parameter name="layer"><![CDATA[bus-lines]]></Parameter>
+       <Parameter name="type"><![CDATA[geojson]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="gold-line"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/gold-line.geojson]]></Parameter>
+       <Parameter name="layer"><![CDATA[gold-line]]></Parameter>
+       <Parameter name="type"><![CDATA[geojson]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="green-line"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/green-line.geojson]]></Parameter>
+       <Parameter name="layer"><![CDATA[green-line]]></Parameter>
+       <Parameter name="type"><![CDATA[geojson]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="blue-line"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/blue-line.geojson]]></Parameter>
+       <Parameter name="layer"><![CDATA[blue-line]]></Parameter>
+       <Parameter name="type"><![CDATA[geojson]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="expo-line"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/expo-line.geojson]]></Parameter>
+       <Parameter name="layer"><![CDATA[expo-line]]></Parameter>
+       <Parameter name="type"><![CDATA[geojson]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="rp-lines"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/rp-lines.geojson]]></Parameter>
+       <Parameter name="layer"><![CDATA[rp-lines]]></Parameter>
+       <Parameter name="type"><![CDATA[geojson]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="bus-stops"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/bus-stops.geojson]]></Parameter>
+       <Parameter name="layer"><![CDATA[bus-stops]]></Parameter>
+       <Parameter name="type"><![CDATA[geojson]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="rail-stations"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/rail-stations.geojson]]></Parameter>
+       <Parameter name="layer"><![CDATA[rail-stations]]></Parameter>
+       <Parameter name="type"><![CDATA[geojson]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

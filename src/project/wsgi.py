@@ -36,3 +36,6 @@ application = ExpiresMiddleware(application, {
     'text/css':               365*24*60*60,
     'image/png':              365*24*60*60,
 })
+
+from .basic_auth import BasicAuthMiddleware
+application = BasicAuthMiddleware(application)

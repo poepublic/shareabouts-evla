@@ -1,0 +1,133 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: openplans.4fa33d50
+  rev: s-b6bd0198
+  saveCenter: true
+attribution: ''
+center: 
+  - 0
+  - 0.0002
+  - 12
+description: This lines, stations, and stops for bus and rail transit in Los Angeles
+Layer: 
+  - id: bus-lines
+    Datasource: 
+      file: /home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/bus-lines.geojson
+      layer: bus-lines
+      type: geojson
+    description: Bus Lines
+    fields: 
+      VAR_DESCR: String
+      VAR_DIREC: Number
+      VAR_IDENT: String
+      VAR_ROUTE: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: gold-line
+    Datasource: 
+      file: /home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/gold-line.geojson
+      layer: gold-line
+      type: geojson
+    description: Gold Line
+    fields: 
+      FNODE_: Number
+      LENGTH: Number
+      Miles: Number
+      TNODE_: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: green-line
+    Datasource: 
+      file: /home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/green-line.geojson
+      layer: green-line
+      type: geojson
+    description: Green Line
+    fields: 
+      Feet: Number
+      Miles: Number
+      MTFCC: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: blue-line
+    Datasource: 
+      file: /home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/blue-line.geojson
+      layer: blue-line
+      type: geojson
+    description: Blue Line
+    fields: 
+      bearing: Number
+      shared: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: expo-line
+    Datasource: 
+      file: /home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/expo-line.geojson
+      layer: expo-line
+      type: geojson
+    description: Expo Line
+    fields: 
+      ID: Number
+      shared: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: rp-lines
+    Datasource: 
+      file: /home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/rp-lines.geojson
+      layer: rp-lines
+      type: geojson
+    description: Red & Purple Lines
+    fields: 
+      bearing: Number
+      line: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: bus-stops
+    Datasource: 
+      file: /home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/bus-stops.geojson
+      layer: bus-stops
+      type: geojson
+    description: Bus Stops
+    fields: 
+      ALONG: String
+      AT: String
+      DIR_ALPHA: String
+      LAT: Number
+      LINE: Number
+      LONG: Number
+      STOPNUM: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: rail-stations
+    Datasource: 
+      file: /home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/rail-stations.geojson
+      layer: rail-stations
+      type: geojson
+    description: Rail Stations
+    fields: 
+      DIR: String
+      LAT: Number
+      LINE: String
+      LINENUM: Number
+      LINENUM2: Number
+      LONG: Number
+      POINT_X: Number
+      POINT_Y: Number
+      STATION: String
+      STNSEQ: Number
+      STNSEQ2: Number
+      STOPNUM: Number
+      TPIS_NAME: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+maxzoom: 16
+minzoom: 12
+name: LA Bus & Rail

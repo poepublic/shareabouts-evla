@@ -383,6 +383,19 @@
       }
     }
 
+    var originalMapViewInitialize = Shareabouts.MapView.prototype.initialize;
+    NS.MapView.prototype.initialize = function() {
+      originalMapViewInitialize.apply(this, arguments);
+
+      this.map.eachLayer(function(layer) {
+        if (layer.options && layer.options.name === 'bus-lines') {
+          NS.busLinesLayer = layer;
+        } else if (layer.options && layer.options.name === 'rail-lines') {
+          NS.railLinesLayer = layer;
+        }
+      });
+    };
+
   }(Shareabouts, jQuery));
 </script>
 {% endblock %}
