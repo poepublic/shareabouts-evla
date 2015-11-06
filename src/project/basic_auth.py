@@ -51,7 +51,7 @@ def BasicAuthMiddleware(application):
                 return not_authorized(environ, start_response, 'Invalid username/password.')
 
         def start_response_with_cookie(status, headers, exc_info=None):
-            headers.append(('Set-cookie', cookie + '=session; Max-Age=3600; Path=/'))
+            headers.append(('Set-cookie', cookie + '=session'))
             return start_response(status, headers, exc_info)
 
         return application(environ, start_response_with_cookie)
