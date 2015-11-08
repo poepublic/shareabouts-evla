@@ -1,5 +1,14 @@
 #!/usr/bin/env python
 
+"""
+This script is just used to write the image index. To actually resize the images
+you could use a command like:
+
+    # Resize JPGs in current folder to height=600
+    mogrify -geometry x600 *.JPG
+
+"""
+
 from __future__ import print_function, unicode_literals
 
 import json
@@ -22,8 +31,9 @@ def write_current_index():
 
 for _, _, filenames in os.walk(IMAGES_ROOT):
     for filename in sorted(filenames):
-        if filename.endswith('.JPG'):
-            index = filename[:8]
+        if filename.lower().endswith('.jpg'):
+            last_underscore = filename.rfind('_')
+            index = filename[:last_underscore]
             if index != current_index:
                 # Write image index if we have one
                 write_current_index()
