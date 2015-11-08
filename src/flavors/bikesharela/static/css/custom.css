@@ -606,6 +606,10 @@ a.shareabouts-logo:hover {
 }
 
 .total-response-indicator {
+  display: none;
+}
+
+.total-response-indicator {
   font-size: 1em;
   color: black;
 }
