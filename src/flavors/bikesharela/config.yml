@@ -31,7 +31,9 @@ map:
   geolocation_onload: false
 
   geocoding_enabled: true
+  geocoding_engine: 'Mapbox'
   geocode_field_label: _(Jump to an address...)
+  geocode_hint: [-118.24336051940918, 34.04241857075928]
   # geocode_bounding_box:  [21.660619, -158.248444, 21.226022, -157.622910]  # top, left, bottom, right
 
   options:

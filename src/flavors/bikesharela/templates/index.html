@@ -313,8 +313,8 @@
     };
 
     // Smarter geocoding
-    var util_geocode = Shareabouts.Util.MapQuest.geocode;
-    Shareabouts.Util.MapQuest.geocode = function(location, bounds, options) {
+    var util_geocode = Shareabouts.Util.Mapbox.geocode;
+    Shareabouts.Util.Mapbox.geocode = function(location, hint, options) {
       // If the address/location given is complete in that it already specifies
       // a city in some format that we recognize (see endStrings), pass it on
       // through. Otherwise, tack on "Hawaii".
@@ -342,7 +342,7 @@
         location = location + ', Los Angeles, CA, USA';
       }
 
-      return util_geocode.call(this, location, bounds, options);
+      return util_geocode.call(this, location, hint, options);
     };
 
     Gatekeeper.validate = function(form) {
