@@ -2,10 +2,6 @@ from __future__ import unicode_literals
 
 import base64
 import os
-try:
-    from http.cookies import SimpleCookie
-except ImportError:
-    from Cookie import SimpleCookie
 
 import logging
 log = logging.getLogger(__name__)
@@ -13,7 +9,6 @@ log = logging.getLogger(__name__)
 def BasicAuthMiddleware(application):
     username = os.environ.get('BASIC_AUTH_USERNAME')
     password = os.environ.get('BASIC_AUTH_PASSWORD')
-    cookie = os.environ.get('BASIC_AUTH_COOKIE')
     is_protected = (username and password)
 
     def not_authorized(environ, start_response, msg=None):
@@ -24,19 +19,14 @@ def BasicAuthMiddleware(application):
 
     def protected_application(environ, start_response):
         auth = environ.get('HTTP_AUTHORIZATION', b'').split()
-        cookie_authorized = False
+        is_path_exempt = False
 
         # Check if the auth cookie is already around
         if environ['PATH_INFO'].startswith('/api'):
             del environ['HTTP_AUTHORIZATION']
-            cookie_authorized = True
+            is_path_exempt = True
 
-        elif 'HTTP_COOKIE' in environ:
-            cookie_jar = SimpleCookie(environ['HTTP_COOKIE'])
-            if cookie in cookie_jar:
-                cookie_authorized = True
-
-        if not cookie_authorized:
+        if not is_path_exempt:
             if not auth or auth[0].lower() != b'basic':
                 return not_authorized(environ, start_response)
 
@@ -54,10 +44,6 @@ def BasicAuthMiddleware(application):
             if (username, password) != (auth_parts[0], auth_parts[2]):
                 return not_authorized(environ, start_response, 'Invalid username/password.')
 
-        def start_response_with_cookie(status, headers, exc_info=None):
-            headers.append(('Set-cookie', cookie + '=session; Max-Age=3600'))
-            return start_response(status, headers, exc_info)
-
-        return application(environ, start_response_with_cookie)
+        return application(environ, start_response)
 
     return protected_application if is_protected else application
