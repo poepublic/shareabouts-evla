@@ -97,9 +97,23 @@ h4 {
   line-height: 1.4em;
 }
 
-.page-about img {
-  padding: 0.5rem;
+.page-about .splash-image {
+  padding-bottom: 0.5rem;
 }
+
+.page-about .instructions {
+  text-align: center;
+}
+
+.page-about p {
+  text-align: justify;
+}
+
+.page-about .marker-sample {
+  height: 2em;
+}
+
+
 
 /* Buttons */
 .btn,
