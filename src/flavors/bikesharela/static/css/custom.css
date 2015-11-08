@@ -333,19 +333,8 @@ label.survey-label {
 }
 
 /* User Menu */
-#sign-in-btn {
-  max-width: 4.25em;
-  line-height: 1.25;
-  margin-top: 0.5em;
-}
-.authed #sign-in-btn {
-  margin-top: 0.125em;
-}
-#sign-in-btn:hover {
-  color: black;
-}
-a.logout-btn {
-  color: #a3c7d9;
+.auth-nav-container {
+  display: none;
 }
 
 
