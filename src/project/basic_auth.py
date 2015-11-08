@@ -2,11 +2,13 @@ from __future__ import unicode_literals
 
 import base64
 import os
+import re
 
 import logging
 log = logging.getLogger(__name__)
 
-def BasicAuthMiddleware(application):
+
+def BasicAuthMiddleware(application, exempt=()):
     username = os.environ.get('BASIC_AUTH_USERNAME')
     password = os.environ.get('BASIC_AUTH_PASSWORD')
     is_protected = (username and password)
@@ -18,15 +20,20 @@ def BasicAuthMiddleware(application):
         yield (msg or b'Not Authorized')
 
     def protected_application(environ, start_response):
-        auth = environ.get('HTTP_AUTHORIZATION', b'').split()
-        is_path_exempt = False
+        auth = environ.pop('HTTP_AUTHORIZATION', b'').split()
 
-        # Check if the auth cookie is already around
-        if environ['PATH_INFO'].startswith('/api'):
-            del environ['HTTP_AUTHORIZATION']
-            is_path_exempt = True
+        # Check if the path is exempt. Specifying exempt path patterns is useful
+        # when, for example, you're using a proxy to pass information at certain
+        # routes ahead to another service. You don't want to pass the basic auth
+        # credentials along as well, as the auth on the proxied service may be
+        # different.
+        path = environ['PATH_INFO']
+        for pattern in exempt:
+            if re.match(pattern, path):
+                break
 
-        if not is_path_exempt:
+        # If the path is not exempt, enforce the basic auth.
+        else:
             if not auth or auth[0].lower() != b'basic':
                 return not_authorized(environ, start_response)
 

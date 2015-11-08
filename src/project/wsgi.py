@@ -38,4 +38,6 @@ application = ExpiresMiddleware(application, {
 })
 
 from .basic_auth import BasicAuthMiddleware
-application = BasicAuthMiddleware(application)
+application = BasicAuthMiddleware(application, exempt=(
+    r'^/api/',
+))
