@@ -412,11 +412,6 @@ survey:
       name: private-submitter_income
       optional: true
       sticky: true
-    - prompt: _(Phone number)
-      name: private-submitter_phone
-      type: text
-      optional: true
-      sticky: true
     - prompt: _(Email)
       name: private-submitter_email
       type: text
