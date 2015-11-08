@@ -373,10 +373,8 @@ survey:
           value: m
         - label: _(Female)
           value: f
-        - label: _(Transgender MTF)
-          value: tmtf
-        - label: _(Transgender FTM)
-          value: tftm
+        - label: _(Transgender)
+          value: t
       name: private-submitter_gender
       sticky: true
     - prompt: _(What is your race/ethnicity?)
