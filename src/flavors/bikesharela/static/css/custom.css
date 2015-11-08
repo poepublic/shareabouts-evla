@@ -550,7 +550,7 @@ input.geocode-address-field {
   left: 30%;
 }
 #geocode-address-bar .error {
-  line-height: 1.2;
+  line-height: 1em;
   background-color: #F26161;
   box-shadow: 2px 2px 0 #F26161, 2px -2px 0 #F26161, -2px 2px 0 #F26161, -2px -2px 0 #F26161;
 }

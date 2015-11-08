@@ -320,6 +320,7 @@
       // through. Otherwise, tack on "Hawaii".
       var endStrings = [' los angeles', ' la', ' california', ' ca'],
           isComplete = false,
+          originalSuccess = options && options.success,
           end, i, locationEndsWith;
 
       locationEndsWith = function(str) {
@@ -341,6 +342,21 @@
       if (!isComplete) {
         location = location + ', Los Angeles, CA, USA';
       }
+
+      options.success = function(data) {
+        if (originalSuccess) {
+          // If the only result that came back is the generic LA, then
+          // act like nothing came back at all.
+          if (data.results.length > 0) {
+            if (data.results[0].locations[0].place_name ===
+                'Los Angeles, California, United States') {
+              data.results[0].locations = [];
+            }
+          }
+
+          originalSuccess(data);
+        }
+      };
 
       return util_geocode.call(this, location, hint, options);
     };
