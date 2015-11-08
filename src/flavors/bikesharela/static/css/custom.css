@@ -227,6 +227,9 @@ label.survey-label {
   display: block;
 }
 
+.survey textarea,
+.survey input[type="text"],
+.survey input[type="email"],
 .radio-group,
 .checkbox-group {
   margin-bottom: 1.5em;

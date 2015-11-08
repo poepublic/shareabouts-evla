@@ -344,7 +344,29 @@ survey:
     # - prompt: _(Where would you suggest a station? Why?)
     #   type: textarea
     #   name: private-alt_suggestion
-    - prompt: _(Thanks! 3 quick questions about yourself.  What is your age?)
+    - prompt: _(Are you a Downtown Los Angeles business or property owner?)
+      type: select
+      options:
+        - label: ''
+          value: ''
+        - label: _(Yes)
+          value: yes
+        - label: _(No)
+          value: no
+      name: private-owner
+      optional: true
+      sticky: true
+    - prompt: _(Name of Business/Address)
+      type: text
+      name: private-business_address
+      optional: true
+      sticky: true
+    - prompt: _(Contact Name)
+      type: text
+      name: private-business_contact
+      optional: true
+      sticky: true
+    - prompt: _(What is your age?)
       type: select
       options:
         - label: _(Choose one...)

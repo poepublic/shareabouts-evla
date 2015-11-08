@@ -81,6 +81,37 @@
 
       <hr>
       <h4 class="survey-label survey-demographics">{{#_}}Thanks! Please tell us about yourself (optional).{{/_}}</h4>
+
+      <div class="survey-field survey-field-private-owner">
+        <label class="survey-label survey-label-private_owner" for="survey-private_owner">
+          {{#_}}Are you a Downtown Los Angeles business or property owner?{{/_}}
+        </label>
+        <div class="survey-widgets survey-widgets-private_owner">
+          <div id="survey-private_owner" class="radio-group">
+            <input type="radio" name="private-private_owner" id="private_owner_yes" value="yes" /><label class="btn btn-radio" for="private_owner_yes">{{#_}}Yes{{/_}}</label>
+            <input type="radio" name="private-private_owner" id="private_owner_no" value="no" /><label class="btn btn-radio" for="private_owner_no">{{#_}}No{{/_}}</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="survey-field survey-field-private-business_address is-hidden" data-choice-name="private-private_owner" data-choice-value="yes">
+        <label class="survey-label survey-label-private-business_address" for="survey-private-business_address">
+          {{#_}}Name of Business/Address{{/_}}
+        </label>
+        <div class="survey-widgets survey-widgets-private-business_address">
+          <input id="survey-private-business_address" name="private-private-business_address" type="text" size="30" value="{{ private-business_address }}">
+        </div>
+      </div>
+
+      <div class="survey-field survey-field-private-business_contact is-hidden" data-choice-name="private-private_owner" data-choice-value="yes">
+        <label class="survey-label survey-label-private-business_contact" for="survey-private-business_contact">
+          {{#_}}Contact Name{{/_}}
+        </label>
+        <div class="survey-widgets survey-widgets-private-business_contact">
+          <input id="survey-private-business_contact" name="private-private-business_contact" type="text" size="30" value="{{ private-business_contact }}">
+        </div>
+      </div>
+
       <div class="survey-field survey-field-submitter_age">
         <label class="survey-label survey-label-submitter_age" for="survey-submitter_age">
           {{#_}}What is your age?{{/_}}
@@ -98,7 +129,7 @@
           </div>
         </div>
       </div>
-      <br/>
+
       <div class="survey-field survey-field-submitter_gender">
         <label class="survey-label survey-label-submitter_gender" for="survey-submitter_gender">
           {{#_}}What is your gender?{{/_}}
@@ -156,7 +187,6 @@
         <input id="survey-submitter_email" name="private-submitter_email" type="email" placeholder="{{#_}}Email{{/_}}" size="30" value="{{ private-submitter_email }}">
       </div>
     </div>
-    <br/>
 
     <input name="commit" type="submit" value="{{ survey_config.submit_btn_text }}" class="btn btn-primary btn-large submit-btn">
 
