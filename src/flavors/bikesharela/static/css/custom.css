@@ -705,7 +705,8 @@ p.responses-summary {
 }
 
 .images-carousel .images-container img {
-  width: 100%;
+  width: 95%;
+  height: auto;
   margin-right: 1em;
   border: 1px solid #e5e5e5;
 }
