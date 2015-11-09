@@ -260,6 +260,9 @@
           success: function(data) {
             place.set('images', data['images'], {silent: true})
             NS.showImagesCarousel(self, data['images']);
+          },
+          error: function() {
+            NS.showImagesCarousel(self, []);
           }
         });
       }
@@ -268,9 +271,10 @@
     };
 
     NS.showImagesCarousel = function(view, images) {
-      var $carousel, $images, $left, $right, updateScrollers;
+      var $carousel, $images, $left, $right, updateScrollers,
+          streetview = view.model.get('Streetview Image');
 
-      if (images.length) {
+      if (streetview || images.length) {
         $carousel = view.$('.images-carousel');
         $images = $carousel.find('.images-container');
         $left = $carousel.find('.left-scroller');
@@ -280,6 +284,9 @@
         _.each(images, function(image) {
           $images.append('<img src="/static/images/scaled/' + image + '">');
         });
+        if (streetview) {
+          $images.append('<img class="sv" src="' + streetview + '">')
+        }
 
         updateScrollers = function() {
           var minScroll = 0;
@@ -287,7 +294,7 @@
           var scrollLeft = $images.scrollLeft();
 
           var isFarLeft = (scrollLeft === minScroll);
-          var isFarRight = (scrollLeft === maxScroll);
+          var isFarRight = (scrollLeft >= maxScroll);
 
           $left.toggle(!isFarLeft);
           $right.toggle(!isFarRight);
@@ -307,8 +314,8 @@
           $images.animate({scrollLeft: scrollLeft + scrollStep}, 'fast');
         })
 
-        updateScrollers();
         $carousel.show();
+        updateScrollers();
       }
     };
 
