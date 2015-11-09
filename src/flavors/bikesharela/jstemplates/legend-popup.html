@@ -1,0 +1,59 @@
+<!-- <div>
+  <div class="layer-toggle-container"></div>
+  <img class="legend-visualization" src="/static/css/images/la_map_icon_general_small.png">
+  Potential Bike Share sites
+</div>
+
+<hr>
+ -->
+<div>
+  <div class="layer-toggle-container checkbox-group">
+    <input
+      type="checkbox"
+      id="leaflet-layer-toggle-bike-lanes"
+      {{#if layerStates.[bike-lanes]}} checked{{/if}}>
+    <label
+      class="btn btn-checkbox"
+      for="leaflet-layer-toggle-bike-lanes"><span>&times;</span></label>
+  </div>
+
+  <div class="legend-visualization" style="border-bottom: 2px dotted rgba(17, 133, 55, 0.87);"></div>
+  Bike Lanes
+</div>
+
+<div>
+  <div class="layer-toggle-container checkbox-group">
+    <input
+      type="checkbox"
+      id="leaflet-layer-toggle-bus-lines"
+      {{#if layerStates.[bus-lines]}} checked{{/if}}>
+    <label
+      class="btn btn-checkbox"
+      for="leaflet-layer-toggle-bus-lines"><span>&times;</span></label>
+  </div>
+
+  <div class="legend-visualization" style="border-bottom: 2px solid #888;"></div>
+  Bus Lines
+</div>
+
+<div>
+  <div class="layer-toggle-container checkbox-group">
+    <input
+      type="checkbox"
+      id="leaflet-layer-toggle-rail-lines"
+      {{#if layerStates.[rail-lines]}} checked{{/if}}>
+    <label
+      class="btn btn-checkbox"
+      for="leaflet-layer-toggle-rail-lines"><span>&times;</span></label>
+  </div>
+
+  <div class="legend-visualization">
+    <div style="border: 1px solid #E22A32; margin-bottom: 1px;"></div><!-- Red -->
+    <div style="border: 1px solid #A55DA9; margin-bottom: 1px;"></div><!-- Purple -->
+    <div style="border: 1px solid #0171BB; margin-bottom: 1px;"></div><!-- Blue -->
+    <div style="border: 1px solid #01A4E5; margin-bottom: 1px;"></div><!-- Expo -->
+    <div style="border: 1px solid #6EBE69; margin-bottom: 1px;"></div><!-- Green -->
+    <div style="border: 1px solid #FFB613; margin-bottom: 1px;"></div><!-- Gold -->
+  </div>
+  Rail Lines
+</div>

@@ -1,0 +1,77 @@
+{% load i18n %}
+
+<script>
+L.Control.Legend = L.Control.extend({
+    options: {
+      layers: {},
+      position: 'bottomleft',
+      templateData: {}
+    },
+
+    onAdd: function (map) {
+        this.map = map;
+
+        var self = this;
+        var controlDiv = L.DomUtil.create('div', 'leaflet-control-legend');
+        var controlUI = L.DomUtil.create('div', 'leaflet-control-legend-interior', controlDiv);
+        controlUI.title = 'Legend';
+
+        L.DomEvent
+            .addListener(controlUI, 'click', L.DomEvent.stopPropagation)
+            .addListener(controlUI, 'click', L.DomEvent.preventDefault)
+            .addListener(controlUI, 'click', function () { self.toggleLegend(); });
+
+        this.options.templateData.layerStates = {};
+        this.options.templateData.layerNames = [];
+        var layerName;
+        for (layerName in this.options.layers) {
+          this.options.templateData.layerNames.push(layerName);
+          this.options.templateData.layerStates[layerName] =
+            map.hasLayer(this.options.layers[layerName]);
+        }
+
+        this.legendWidget = L.DomUtil.create('div', 'leaflet-control-legend-popup hidden', controlDiv);
+
+        return controlDiv;
+    },
+
+    toggleLegend: function(on, undefined) {
+      var self = this;
+      this.legendWidget.innerHTML = Handlebars.templates['legend-popup'](this.options.templateData);
+
+      var busLinesUI = document.getElementById('leaflet-layer-toggle-bus-lines');
+      var bikeLanesUI = document.getElementById('leaflet-layer-toggle-bike-lanes');
+      var railLinesUI = document.getElementById('leaflet-layer-toggle-rail-lines');
+
+      var toggleLayer = function(ui, layerName) {
+        return function() {
+          self.options.templateData.layerStates[layerName] = ui.checked;
+          if (ui.checked) {
+            self.map.addLayer(self.options.layers[layerName]);
+          } else {
+            self.map.removeLayer(self.options.layers[layerName]);
+          }
+        };
+      }
+
+      var toggleBikeLanes = toggleLayer(bikeLanesUI, 'bike-lanes');
+      var toggleBusLines = toggleLayer(busLinesUI, 'bus-lines');
+      var toggleRailLines = toggleLayer(railLinesUI, 'rail-lines');
+
+      L.DomEvent
+        .addListener(bikeLanesUI, 'change', toggleBikeLanes)
+        .addListener(busLinesUI, 'change', toggleBusLines)
+        .addListener(railLinesUI, 'change', toggleRailLines);
+
+      if (on !== undefined) {
+        this.legendWidget.classList.toggle('hidden', !on);
+      } else {
+        this.legendWidget.classList.toggle('hidden');
+      }
+    }
+});
+
+L.control.legend = function (options) {
+    return new L.Control.Legend(options);
+};
+</script>

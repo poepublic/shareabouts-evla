@@ -66,6 +66,9 @@
   Analytics, custom JS, and such go here
  -->
 {% block includes %}
+
+{% include '_layer_toggle.html' %}
+
 <script>
   (function(NS, $) {
     NS.bootstrapped.mapHost = '{{ request.get_host }}';
@@ -423,12 +426,34 @@
       originalMapViewInitialize.apply(this, arguments);
 
       this.map.eachLayer(function(layer) {
-        if (layer.options && layer.options.name === 'bus-lines') {
-          NS.busLinesLayer = layer;
-        } else if (layer.options && layer.options.name === 'rail-lines') {
-          NS.railLinesLayer = layer;
+        if (layer.options) {
+          switch (layer.options.name) {
+          case 'bus-lines':
+            NS.busLinesLayer = layer;
+            layer.setZIndex(10);
+            break;
+
+          case 'rail-lines':
+            NS.railLinesLayer = layer;
+            layer.setZIndex(20);
+            break;
+
+          case 'bike-lanes':
+            NS.bikeLanesLayer = layer;
+            layer.setZIndex(30);
+            break;
+          }
         }
       });
+
+      // Add the legend toggle widget
+      this.map.addControl(L.control.legend({
+        layers: {
+          'bus-lines': NS.busLinesLayer,
+          'rail-lines': NS.railLinesLayer,
+          'bike-lanes': NS.bikeLanesLayer
+        }
+      }));
     };
 
   }(Shareabouts, jQuery));
