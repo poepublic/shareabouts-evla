@@ -5,9 +5,9 @@ app:
   # Header name
   name: Bike Share LA
   # Meta description that will show up in Google search results
-  meta_description: _(Shareabouts is a mapping tool to gather crowd sourced public input. Use it to collect suggested locations and comments in a social, engaging process.)
+  meta_description: _(Help us build Metro Bike Share! Let us know what you think about the proposed station locations!)
   # Meta author that will show up in Google search results
-  meta_author: OpenPlans.org
+  meta_author: Poe Public
 
 
   # When the map loads, existing places will be loaded in chunks. By default,
