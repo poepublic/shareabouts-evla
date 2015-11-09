@@ -67,7 +67,7 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  A:
+  specific:
     label: _(station)
     rules:
       - condition: '{{layer.focused}} === false'
@@ -81,76 +81,20 @@ place_types:
           iconUrl: /static/css/images/la_map_icon.png
           iconSize: [40, 64]
           iconAnchor: [20, 64]
-  B:
+  general:
     label: _(station)
     rules:
       - condition: '{{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/la_map_icon_small.png
-          iconSize: [20, 32]
-          iconAnchor: [10, 32]
+          iconUrl: /static/css/images/la_map_icon_general_small.png
+          iconSize: [20, 20]
+          iconAnchor: [10, 10]
 
       - condition: '{{layer.focused}} === true'
         icon:
-          iconUrl: /static/css/images/la_map_icon.png
-          iconSize: [40, 64]
-          iconAnchor: [20, 64]
-  C:
-    label: _(station)
-    rules:
-      - condition: '{{layer.focused}} === false'
-        icon:
-          iconUrl: /static/css/images/la_map_icon_small.png
-          iconSize: [20, 32]
-          iconAnchor: [10, 32]
-
-      - condition: '{{layer.focused}} === true'
-        icon:
-          iconUrl: /static/css/images/la_map_icon.png
-          iconSize: [40, 64]
-          iconAnchor: [20, 64]
-  D:
-    label: _(station)
-    rules:
-      - condition: '{{layer.focused}} === false'
-        icon:
-          iconUrl: /static/css/images/la_map_icon_small.png
-          iconSize: [20, 32]
-          iconAnchor: [10, 32]
-
-      - condition: '{{layer.focused}} === true'
-        icon:
-          iconUrl: /static/css/images/la_map_icon.png
-          iconSize: [40, 64]
-          iconAnchor: [20, 64]
-  E:
-    label: _(station)
-    rules:
-      - condition: '{{layer.focused}} === false'
-        icon:
-          iconUrl: /static/css/images/la_map_icon_small.png
-          iconSize: [20, 32]
-          iconAnchor: [10, 32]
-
-      - condition: '{{layer.focused}} === true'
-        icon:
-          iconUrl: /static/css/images/la_map_icon.png
-          iconSize: [40, 64]
-          iconAnchor: [20, 64]
-  F:
-    label: _(station)
-    rules:
-      - condition: '{{layer.focused}} === false'
-        icon:
-          iconUrl: /static/css/images/la_map_icon_small.png
-          iconSize: [20, 32]
-          iconAnchor: [10, 32]
-
-      - condition: '{{layer.focused}} === true'
-        icon:
-          iconUrl: /static/css/images/la_map_icon.png
-          iconSize: [40, 64]
-          iconAnchor: [20, 64]
+          iconUrl: /static/css/images/la_map_icon_general.png
+          iconSize: [40, 40]
+          iconAnchor: [20, 20]
 
 activity:
   # Optional. Activity is supported by default. Set to false to disable.
