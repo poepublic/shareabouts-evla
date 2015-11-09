@@ -53,6 +53,7 @@ map:
     - url: http://{s}.tiles.mapbox.com/v3/openplans.768cf85b/{z}/{x}/{y}.png  # Bike Lanes
       name: bike-lanes
     - url: http://{s}.tiles.mapbox.com/v3/openplans.3683abf9/{z}/{x}/{y}.png  # Base Map Labels
+      name: labels
     # - url: http://{s}.tiles.mapbox.com/v3/openplans.PhillyBikeShare/{z}/{x}/{y}.png
     #   detectRetina: true
 
