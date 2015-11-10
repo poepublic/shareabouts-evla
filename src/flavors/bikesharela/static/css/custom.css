@@ -754,7 +754,7 @@ p.responses-summary {
 /* =Leaflet Cegend Control
 -------------------------------------------------------------- */
 
-.leaflet-bottom {
+#map .leaflet-bottom {
   bottom: 2rem;
 }
 
@@ -863,7 +863,7 @@ p.responses-summary {
 }
 
 @media only screen and (min-width: 60em) {
-  .leaflet-bottom {
+  #map .leaflet-bottom {
     bottom: 0;
   }
 
