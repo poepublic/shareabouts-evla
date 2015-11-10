@@ -1,0 +1,25 @@
+_prefs: 
+  mapid: openplans.768cf85b
+  saveCenter: true
+_properties: {}
+attribution: ''
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - -118.3131
+  - 34.039
+  - 14
+description: ''
+format: "png8:m=h"
+interactivity_layer: ''
+layers: null
+maxzoom: 15
+minzoom: 0
+name: LA Bikeways
+source: "mapbox:///openplans.7b2f459c"
+styles: 
+  - style.mss
+template: ''

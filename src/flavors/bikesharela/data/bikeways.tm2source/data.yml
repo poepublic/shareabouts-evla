@@ -1,0 +1,34 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: openplans.7b2f459c
+  rev: s-e6fdfb50
+  saveCenter: true
+attribution: ''
+center: 
+  - -118.3214
+  - 34.0318
+  - 11
+description: ''
+Layer: 
+  - id: bikeways
+    Datasource: 
+      file: /home/mjumbewu/Programming/poepublic/shareabouts-bikesharela/src/flavors/bikesharela/data/ExistingBikeways_20151019_Public/ExistingBikeways_20151019_Public.shp
+      type: shape
+    description: Exising Bikeways
+    fields: 
+      Bikeway: String
+      BPID: Number
+      From_: String
+      InstallDat: String
+      Miles: Number
+      Network: String
+      Shape_Leng: Number
+      Street: String
+      To: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=lcc +lat_1=34.03333333333333 +lat_2=35.46666666666667 +lat_0=33.5 +lon_0=-118 +x_0=2000000 +y_0=500000.0000000001 +datum=NAD83 +units=us-ft +no_defs
+maxzoom: 15
+minzoom: 0
+name: LA Bikeways

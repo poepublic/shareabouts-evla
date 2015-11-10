@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="rgba(0, 0, 0, 0)">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">-118.3131,34.039,14</Parameter>
+  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="maxzoom">15</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="name"><![CDATA[LA Bikeways]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///openplans.7b2f459c]]></Parameter>
+</Parameters>
+
+
+<Style name="bikeways" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke-dasharray="3, 3" stroke="rgba(17, 133, 55, 0.87)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="2" stroke-dasharray="2, 2" stroke="rgba(17, 133, 55, 0.87)" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="1" stroke="rgba(17, 133, 55, 0.87)" />
+  </Rule>
+</Style>
+<Style name="bikeways-halo" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="4" stroke="rgba(255, 255, 255, 0.7)" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="rgba(255, 255, 255, 0.9)" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="2" stroke="#ffffff" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Layer name="bikeways"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>bikeways-halo</StyleName>
+    <StyleName>bikeways</StyleName>  </Layer>
+
+</Map>
