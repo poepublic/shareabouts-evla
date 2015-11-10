@@ -287,7 +287,8 @@
 
     NS.showImagesCarousel = function(view, images) {
       var $carousel, $images, $left, $right, updateScrollers,
-          streetview = view.model.get('Streetview Image');
+          streetview = view.model.get('Streetview Image'),
+          streetviewLink = view.model.get('Streetview Link');
 
       if (streetview || images.length) {
         $carousel = view.$('.images-carousel');
@@ -300,7 +301,11 @@
           $images.append('<img src="/static/images/scaled/' + image + '">');
         });
         if (streetview) {
-          $images.append('<img class="sv" src="' + streetview + '">')
+          $images.append(
+            (streetviewLink ? '<a href="' + streetviewLink + '" target="_blank" title="Open in Street View">' : '') +
+            '<img class="sv" src="' + streetview + '">' +
+            (streetviewLink ? '</a>' : '')
+          )
         }
 
         updateScrollers = function() {
