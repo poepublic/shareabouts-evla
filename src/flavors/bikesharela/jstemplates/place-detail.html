@@ -5,8 +5,12 @@
   <!-- <p>Bike share station under consideration at this site; give us your feedback.</p> -->
   <!-- <p>Bike share station under consideration at this site in consultation with property owner; give us your feedback.</p> -->
   <p>
-    {{#is location_type 'general' }}
+    {{#is location_type 'intersection' }}
       {{#_}}Bike share station under consideration around this intersection.{{/_}}
+    {{/is}}
+
+    {{#is location_type 'general' }}
+      {{#_}}Bike share station under consideration near this location.{{/_}}
     {{/is}}
 
     {{#is location_type 'specific' }}

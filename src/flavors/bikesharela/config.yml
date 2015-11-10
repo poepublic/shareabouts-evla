@@ -84,6 +84,20 @@ place_types:
           iconUrl: /static/css/images/la_map_icon.png
           iconSize: [40, 64]
           iconAnchor: [20, 64]
+  intersection:
+    label: _(station)
+    rules:
+      - condition: '{{layer.focused}} === false'
+        icon:
+          iconUrl: /static/css/images/la_map_icon_general_small.png
+          iconSize: [20, 20]
+          iconAnchor: [10, 10]
+
+      - condition: '{{layer.focused}} === true'
+        icon:
+          iconUrl: /static/css/images/la_map_icon_general.png
+          iconSize: [40, 40]
+          iconAnchor: [20, 20]
   general:
     label: _(station)
     rules:

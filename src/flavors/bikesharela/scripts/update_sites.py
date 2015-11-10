@@ -59,13 +59,21 @@ for f in data['features']:
 
     if f['properties']['Streetview Link'] == 'Show at the intersection':
         del f['properties']['Streetview Link']
+        f['properties']['location_type'] = 'intersection'
+
+    elif f['properties']['Streetview Link'] == 'Show at general location':
+        del f['properties']['Streetview Link']
         f['properties']['location_type'] = 'general'
+
     else:
         match = re.match(
             r'^https://www.google.com/maps/@([\d\.-]+,[\d\.-]+),.*,([\d\.-]+)h,.*',
             f['properties']['Streetview Link'],
         )
-        assert match, f['properties']['Streetview Link']
+        assert match, (
+            'The location ' + sid + ' has an unexpected Streetview link of "' +
+            f['properties']['Streetview Link'] + '".'
+        )
         f['properties']['Streetview Image'] = 'https://maps.googleapis.com/maps/api/streetview?size=800x400&location={}&heading={}'.format(match.group(1), match.group(2))
 
 # with open('updated-potential-sites.geojson', 'w') as jfile:
