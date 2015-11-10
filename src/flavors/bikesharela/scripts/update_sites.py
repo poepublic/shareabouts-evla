@@ -36,7 +36,7 @@ for f in data['features']:
         if prop not in keep_props:
             del f['properties'][prop]
 
-    sid = f['properties'].pop('Name')
+    sid = str(f['properties'].pop('Name'))
     if sid in metadata:
         m = metadata[sid]
         f['properties']['Site_ID'] = sid.zfill(5)
