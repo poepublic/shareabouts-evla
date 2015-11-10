@@ -31,11 +31,13 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ config.app.title }}">
     <meta name="twitter:description" content="{{ config.app.meta_description }}">
+    <meta name="twitter:image:src" content="{{ STATIC_URL }}css/images/la_map_icon.png">
 
     <!-- Facebook -->
     <meta property="og:site_name" content="{{ config.app.title }}" />
     <meta property="og:title" content="{{ config.app.title }}" />
     <meta property="og:description" content="{{ config.app.meta_description }}" />
+    <meta property="og:image" content="{{ STATIC_URL }}css/images/la_map_icon.png">
   {% endif%}
 
   <script src="https://use.typekit.net/qfg7vgr.js"></script>
@@ -82,7 +84,7 @@
     });
 
     $(function() {
-      var url = window.location.protocol + '://{{ request.get_host }}';
+      var url = 'https://metro.net/bikeshare';
       $('header').append(
         '<div class="social">' +
         '  <ul class="sharing unstyled-list">' +
