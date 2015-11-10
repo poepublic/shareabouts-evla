@@ -836,6 +836,9 @@ p.responses-summary {
   line-height: 0.8rem;
   margin: 0;
   border-radius: 0.6rem;
+  overflow: hidden;
+  text-align: center;
+  width: 0.8rem;
 }
 
 .layer-toggle-container input + label span {
