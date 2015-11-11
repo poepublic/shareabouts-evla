@@ -31,13 +31,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ config.app.title }}">
     <meta name="twitter:description" content="{{ config.app.meta_description }}">
-    <meta name="twitter:image" content="{{ STATIC_URL }}images/mobile-screenshot.png">
+    <meta name="twitter:image" content="http://{{ request.get_host }}{{ STATIC_URL }}images/mobile-screenshot.png">
 
     <!-- Facebook -->
     <meta property="og:site_name" content="{{ config.app.title }}" />
     <meta property="og:title" content="{{ config.app.title }}" />
     <meta property="og:description" content="{{ config.app.meta_description }}" />
-    <meta property="og:image" content="{{ STATIC_URL }}images/mobile-screenshot.png">
+    <meta property="og:image" content="http://{{ request.get_host }}{{ STATIC_URL }}images/mobile-screenshot.png">
   {% endif%}
 
   <script src="https://use.typekit.net/qfg7vgr.js"></script>
