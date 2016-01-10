@@ -8,7 +8,7 @@ app:
   meta_description: _(Help us build Metro Bike Share! Let us know what you think about the proposed station locations!)
   # Meta author that will show up in Google search results
   meta_author: Poe Public
-
+  closed: true
 
   # When the map loads, existing places will be loaded in chunks. By default,
   # the size of the chunks will be a reasonable default dictated by the API
