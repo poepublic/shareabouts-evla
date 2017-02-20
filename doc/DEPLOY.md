@@ -7,9 +7,9 @@ You can deploy to any server that supports Django, but using a PaaS providers an
 Deploying to Heroku with the button
 ----------------------------
 
-The fastest way to deploy Shareabouts is to click the "Deploy to Heroku" button in the [README](https://github.com/openplans/shareabouts#shareabouts-). This will deploy the Shareabouts code for you on [Heroku](https://heroku.com), a popular cloud platform for running software. 
+The fastest way to deploy Shareabouts is to click the "Deploy to Heroku" button in the [README](https://github.com/openplans/shareabouts#shareabouts-). This will deploy the Shareabouts code for you on [Heroku](https://heroku.com), a popular cloud platform for running software.
 
-After clicking the button, you will see the configuration settings. Click "Deploy" confirm the setup, and in a few moments you'll have a Shareabouts map. 
+After clicking the button, you will see the configuration settings. Click "Deploy" confirm the setup, and in a few moments you'll have a Shareabouts map.
 
 if you don't have a Heroku account, you'll be prompted to create one. Your account will be free, and setting up Shareabouts will also be free (later you may pay some monthly hosting costs if you scale up, but this is explained and easy to control via the Heroku Dashboard).
 
@@ -36,8 +36,11 @@ From the root Shareabouts directory...
 
   You will need your dataset root API URL for this step.  Suppose you are using an API server named *api.shareabouts.org* with a username *mjumbewu* and a dataset called *niceplaces*. In this case, your dataset root will be `http://api.shareabouts.org/api/v2/mjumbewu/datasets/niceplaces/`.  In general, it will always be `http://<api server>/api/v2/<username>/datasets/<dataset slug>/`.
 
-         heroku config:set BUILDPACK_URL="https://github.com/ddollar/heroku-buildpack-multi.git" \
-                           SHAREABOUTS_FLAVOR=<flavor name> \
+         heroku buildpacks:set "https://github.com/heroku/heroku-buildpack-nodejs.git#v61"
+         heroku buildpacks:add "https://github.com/cyberdelia/heroku-geo-buildpack.git#e1b845b"
+         heroku buildpacks:add "https://github.com/piotras/heroku-buildpack-gettext.git#b4323a7"
+         heroku buildpacks:add "https://github.com/heroku/heroku-buildpack-python.git#v52"
+         heroku config:set SHAREABOUTS_FLAVOR=<flavor name> \
                            SHAREABOUTS_DATASET_ROOT=<dataset root url> \
                            SHAREABOUTS_DATASET_KEY=<dataset api key>
 
@@ -46,7 +49,7 @@ Should be all done!
 Deploying to Dotcloud manually
 --------------------------
 
-At OpenPlans, we deployed to Heroku and DotCloud internally, so all 
+At OpenPlans, we deployed to Heroku and DotCloud internally, so all
 of the files necessary are already in the repository. Other PaaS providers should be simple
 variations on these.
 

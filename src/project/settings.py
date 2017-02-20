@@ -2,7 +2,7 @@
 import datetime
 import os.path
 
-HERE = os.path.abspath(os.path.join(os.path.dirname(__file__)))
+HERE = os.path.dirname(__file__)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -294,6 +294,8 @@ if 'EMAIL_PASSWORD' in env:
     EMAIL_HOST_PASSWORD = env['EMAIL_PASSWORD']
 if 'EMAIL_USE_TLS' in env:
     EMAIL_USE_TLS = env['EMAIL_USE_TLS']
+if 'EMAIL_BACKEND' in env:
+    EMAIL_BACKEND = env['EMAIL_BACKEND']
 
 if 'EMAIL_NOTIFICATIONS_BCC' in env:
     EMAIL_NOTIFICATIONS_BCC = env['EMAIL_NOTIFICATIONS_BCC'].split(',')
@@ -320,6 +322,14 @@ if 'GOOGLE_ANALYTICS_DOMAIN' in env:
 
 MAPQUEST_KEY = env.get('MAPQUEST_KEY', 'Fmjtd%7Cluur2g0bnl%2C25%3Do5-9at29u')
 MAPBOX_TOKEN = env.get('MAPBOX_TOKEN', '')
+
+# Error logging
+import raven
+import re
+RAVEN_CONFIG = {
+    'dsn': os.environ.get('SENTRY_DSN'),
+    'public_dsn': re.sub(':[^/@]+', '', os.environ.get('SENTRY_DSN', '')),
+}
 
 ##############################################################################
 # Local settings overrides
@@ -361,6 +371,7 @@ if 'PACKAGE' not in SHAREABOUTS:
 # Help Django find any translation files.
 
 LOCALE_PATHS = (
+    os.path.join(HERE, '..', 'conf', 'locale'),
     os.path.join(HERE, '..', 'sa_web', 'locale'),
     os.path.join(HERE, '..', 'flavors', flavor, 'locale'),
 )
@@ -426,5 +437,3 @@ if SHAREABOUTS['DATASET_ROOT'].startswith('/'):
     #
 
     CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
-
-

@@ -737,6 +737,11 @@ a.close-btn span {
   padding-left: 22px;
   color: #007fbf;
 }
+.user-support.disabled:hover,
+.user-support.disabled:hover label {
+  cursor: default;
+  background-color: #a3c7d9;
+}
 .user-support input[type=checkbox]:checked ~ label {
   background-image: url(images/heart.png);
 }
@@ -1291,7 +1296,7 @@ a.close-unsupported-overlay {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 60em) {
+@media print, only screen and (min-width: 768px) and (max-width: 60em) {
   #map {
     height: 400px;
   }
@@ -1672,4 +1677,22 @@ a.close-unsupported-overlay {
     background-size: contain;
   }
 
+}
+
+@media only print {
+  #list-container.is-exposed {
+    display: block;
+    overflow: visible;
+    bottom: initial;
+  }
+
+  .place-list li {
+    page-break-inside: avoid;
+  }
+
+  .list-toggle-nav,
+  .geocoding-enabled #geocode-address-bar,
+  #pages-nav-container {
+    display: none;
+  }
 }

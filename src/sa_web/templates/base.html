@@ -61,11 +61,20 @@
 
 </head>
 <body class="{% if config.map.geocoding_enabled %} geocoding-enabled{% endif %}">
+  {% block sentry_init %}
+    {% if settings.RAVEN_CONFIG.public_dsn %}{% include '_sentry_init.html' %}{% endif %}
+  {% endblock %}
 
   <header id="site-header" class="clearfix{% if pages_config %} has-pages{% endif %}">
     <h1 id="site-title">{% block site-title %}{% endblock %}</h1>
+
+    {% block pre_auth_nav %}{% endblock %}
     <div id="auth-nav-container"></div>
+    {% block post_auth_nav %}{% endblock %}
+
+    {% block pre_pages_nav %}{% endblock %}
     <div id="pages-nav-container"></div>
+    {% block post_pages_nav %}{% endblock %}
 
     {% if config.data.app.list_enabled != False %}
     <nav class="list-toggle-nav">
@@ -130,6 +139,12 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}libs/jquery-1.10.2.js"><\/script>')</script><!-- FIXME: Maybe this should be pulled into the repo as a git submodule-->
   <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+
+  {% if settings.MAPBOX_TOKEN %}
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.11.2/mapbox-gl.css" rel='stylesheet' />
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.11.2/mapbox-gl.js"></script>
+  <script src="{{STATIC_URL}}libs/leaflet-mapbox-gl.js"></script>
+  {% endif %}
 
   {% block cdn_load %}{% endblock %}
 
