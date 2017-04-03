@@ -273,7 +273,7 @@ survey:
   adding_supported: true
 
   # Response config
-  show_responses: true
+  show_responses: false
   single_submission: true
   response_name: _(survey)
   response_plural_name: _(surveys)
