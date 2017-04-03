@@ -1,14 +1,14 @@
 # Settings for the app
 app:
   # HTML Title
-  title: Bike Share LA
+  title: LA Electric Vehicle Charging Stations
   # Header name
-  name: Bike Share LA
+  name: LA Electric Vehicle Charging Stations
   # Meta description that will show up in Google search results
-  meta_description: _(Help us build Metro Bike Share! Let us know what you think about the proposed station locations!)
+  meta_description: _(Tell us where you want to see electric vehicle charging stations in LA!)
   # Meta author that will show up in Google search results
   meta_author: Poe Public
-  closed: true
+  closed: false
 
   # When the map loads, existing places will be loaded in chunks. By default,
   # the size of the chunks will be a reasonable default dictated by the API
@@ -46,26 +46,14 @@ map:
   layers:
     - url: https://{s}.tiles.mapbox.com/v3/openplans.47efd453/{z}/{x}/{y}.png  # Base Map
       attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
-    - url: https://{s}.tiles.mapbox.com/v3/openplans.ccd44d47/{z}/{x}/{y}.png  # Bus Lines
-      name: bus-lines
-    - url: https://{s}.tiles.mapbox.com/v3/openplans.af9078e9/{z}/{x}/{y}.png  # Rail Lines
-      name: rail-lines
-    - url: https://{s}.tiles.mapbox.com/v3/openplans.768cf85b/{z}/{x}/{y}.png  # Bike Lanes
-      name: bike-lanes
-    - url: https://{s}.tiles.mapbox.com/v3/openplans.3683abf9/{z}/{x}/{y}.png  # Base Map Labels
-      name: labels
-    # - url: http://{s}.tiles.mapbox.com/v3/openplans.PhillyBikeShare/{z}/{x}/{y}.png
-    #   detectRetina: true
-
-#    - url: /static/data/philadelphia.geojson
-#      type: json
-#      rules:
-#        - condition: 'true'
-#          style:
-#            color: "#444"
-#            opacity: 0.6
-#            fillOpacity: 0.1
-#            weight: 1
+    # - url: https://{s}.tiles.mapbox.com/v3/openplans.ccd44d47/{z}/{x}/{y}.png  # Bus Lines
+    #   name: bus-lines
+    # - url: https://{s}.tiles.mapbox.com/v3/openplans.af9078e9/{z}/{x}/{y}.png  # Rail Lines
+    #   name: rail-lines
+    # - url: https://{s}.tiles.mapbox.com/v3/openplans.768cf85b/{z}/{x}/{y}.png  # Bike Lanes
+    #   name: bike-lanes
+    # - url: https://{s}.tiles.mapbox.com/v3/openplans.3683abf9/{z}/{x}/{y}.png  # Base Map Labels
+    #   name: labels
 
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
@@ -115,203 +103,57 @@ place_types:
 
 activity:
   # Optional. Activity is supported by default. Set to false to disable.
-  enabled: false
+  enabled: true
   # How often to refresh the activity list, in milliseconds.
   interval: 30000
 
 place:
-  adding_supported: false
-  add_button_label: _(Add a Place)
+  adding_supported: true
+  add_button_label: _(Suggest a Spot)
   # Labels for the buttons that toggle the map and list views
-  show_list_button_label: _(List All Places)
+  show_list_button_label: _(List All Suggestions)
   show_map_button_label: _(Show the Map)
-  action_text: _(added)
+  action_text: _(suggested)
   title: _(Tell us more...)
-  action_text: _(created)
   anonymous_name: _(Someone)
   submit_button_label: _(Submit)
 
-  location_item_name: location
+  location_item_name: _(station)
 
   items:
-    - prompt: _(Your Name)
-      type: text
-      name: submitter_name
-      optional: true
-      attrs:
-        - key: placeholder
-          value: _(Name)
-        - key: size
-          value: 30
-    - prompt: _(Your Email)
-      type: text
-      name: private-submitter_email
-      optional: true
-      attrs:
-        - key: placeholder
-          value: _(Email address)
-        - key: size
-          value: 30
-    - prompt: _(Your Phone)
-      type: text
-      name: private-submitter_phone
-      optional: true
-      attrs:
-        - key: placeholder
-          value: _(Phone)
-        - key: size
-          value: 30
-    - prompt: _(Location Name)
-      type: text
-      name: name
-      optional: true
-      attrs:
-        - key: placeholder
-          value: _(Location Name)
-        - key: size
-          value: 30
-    - prompt: _(Location Type)
-      type: select
+    - prompt: _(What are your biggest reasons that this is a good spot for a charging station?)
+      type: checkboxgroup
       options:
-        - label: _(Choose One)
-          value: ''
-        - label: _(Landmark)
-          value: landmark
-        - label: _(Park)
-          value: park
-        - label: _(School)
-          value: school
-      name: location_type
-      attrs:
-        - key: required
-    - prompt: _(Description)
-      type: textarea
-      name: description
-      optional: true
-      attrs:
-        - key: placeholder
-          value: _(Description...)
-    - prompt: _(Image)
-      inputfile_label: _(Add an Image)
-      type: file
-      name: my_image
-      optional: true
-      attrs:
-        - key: accept
-          value: image/*
-
-survey:
-  submission_type: surveys
-
-  # Response config
-  show_responses: true
-  single_submission: true
-  response_name: _(survey)
-  response_plural_name: _(surveys)
-  action_text: _(surveyed)
-  anonymous_name: _(Someone)
-
-  # Survey form config
-  title: _(Fill out the survey)
-  form_link_text: _(Fill out the survey)
-  submit_btn_text: _(Submit)
-  items:
-    - prompt: _(Is this a good spot for a bike share station?)
-      type: select
-      options:
-        - label: _(Y/N)
-          value: ''
-        - label: _(Yes)
-          value: 'yes'
-        - label: _(No)
-          value: 'no'
-      name: private-good_spot
-      attrs:
-        - key: required
-    - prompt: _(Great! What's your biggest reason?)
-      type: select
-      options:
-        - label: _(Choose one...)
-          value: ''
         - label: _(Near home)
           value: live
         - label: _(Near bus/train)
           value: transit
-        - label: _(Near job)
-          value: job
-        - label: _(Near shopping/dining)
+        - label: _(Near work)
+          value: work
+        - label: _(Near shopping/grocery)
           value: shopping
+        - label: _(Near medical or other services)
+          value: services
         - label: _(Other)
           value: other
       name: private-why_good
-      attrs:
-        - key: required
+      # attrs:
+      #   - key: required
     - prompt: _(Please explain)
       type: text
       name: private-why_good_other_reason
-    - prompt: _(What's your biggest reason why not?)
-      type: select
-      options:
-        - label: _(Choose one...)
-          value: ''
-        - label: _(Wouldn't use the bike share system)
-          value: nousebikeshare
-        - label: _(Don't like the location)
-          value: location
-        - label: _(No comfortable to ride)
-          value: comfortable
-        - label: _(Don't feel comfortable during the day)
-          value: day
-        - label: _(Don't feel comfortable during at night)
-          value: night
-        - label: _(Not useful for me)
-          value: nouse
-        - label: _(Other)
-          value: other
-      name: private-why_bad
       attrs:
         - key: required
-    - prompt: _(Please explain)
-      type: text
-      name: private-why_bad_other_reason
-    #- prompt: _(How comfortable would you feel using this station at night?)
-      #type: select
-      # options:
-      #   - label: _(Choose one...)
-      #     value: ''
-      #   - label: _(Very comfortable)
-      #     value: verycomfortable
-      #   - label: _(Somewhat comfortable)
-      #     value: comfortable
-      #   - label: _(Neutral)
-      #     value: neutral
-      #   - label: _(Somewhat uncomfortable)
-      #     value: uncomfortable
-      #   - label: _(Very uncomfortable)
-      #     value: veryuncomfortable
-      # name: private-safety
-      # attrs:
-    #     - key: required
-    # - prompt: _(Are there any better spots for stations in the immediate area?)
-    #   type: select
-    #   options:
-    #     - label: _(Y/N)
-    #       value: ''
-    #     - label: _(Yes)
-    #       value: 'yes'
-    #     - label: _(No)
-    #       value: 'no'
-    #   name: private-alt_spot
-    #   attrs:
-    #     - key: required
-    # - prompt: _(Where would you suggest a station? Why?)
-    #   type: textarea
-    #   name: private-alt_suggestion
-    - prompt: _(Are you a Downtown Los Angeles business or property owner?)
-      type: select
+        - key: 'data-choice-name'
+          value: 'private-why_good'
+    - prompt: _(Anything else to tell us about this particular station?)
+      type: textarea
+      name: private-other_info
+
+    # Demographic information
+    - prompt: _(Are you a Los Angeles business or property owner?)
+      type: radiogroup
       options:
-        - label: ''
-          value: ''
         - label: _(Yes)
           value: yes
         - label: _(No)
@@ -319,21 +161,39 @@ survey:
       name: private-owner
       optional: true
       sticky: true
-    - prompt: _(Name of Business/Address)
+    - prompt: _(Name of Business)
+      type: text
+      name: private-business_name
+      optional: true
+      sticky: true
+      attrs:
+        - key: 'data-choice-name'
+          value: 'private-owner'
+        - key: 'data-choice-value'
+          value: 'true'
+    - prompt: _(Address)
       type: text
       name: private-business_address
       optional: true
       sticky: true
+      attrs:
+        - key: 'data-choice-name'
+          value: 'private-owner'
+        - key: 'data-choice-value'
+          value: 'true'
     - prompt: _(Contact Name)
       type: text
       name: private-business_contact
       optional: true
       sticky: true
+      attrs:
+        - key: 'data-choice-name'
+          value: 'private-owner'
+        - key: 'data-choice-value'
+          value: 'true'
     - prompt: _(What is your age?)
-      type: select
+      type: radiogroup
       options:
-        - label: _(Choose one...)
-          value: ''
         - label: _(<18)
           value: under18
         - label: _(18-24)
@@ -349,24 +209,9 @@ survey:
       name: private-submitter_age
       optional: true
       sticky: true
-    - prompt: _(What is your gender?)
-      type: select
-      options:
-        - label: _(Choose one...)
-          value: ''
-        - label: _(Male)
-          value: m
-        - label: _(Female)
-          value: f
-        - label: _(Transgender)
-          value: t
-      name: private-submitter_gender
-      sticky: true
     - prompt: _(What is your race/ethnicity?)
-      type: select
+      type: checkboxgroup
       options:
-        - label: _(Choose all that apply...)
-          value: ''
         - label: _(Latino)
           value: latino
         - label: _(Black)
@@ -380,19 +225,35 @@ survey:
       name: private-submitter_race
       sticky: true
     - prompt: _(What is your annual household income?)
-      type: select
+      type: radiogroup
       options:
-        - label: _(Choose one...)
-          value: ''
-        - label: _(<$20,000)
-          value: under20k
-        - label: _($20,000-$49,999)
-          value: 20to50k
-        - label: _($50,000-$99,999)
-          value: 50to100k
+        - label: _(<$25,000)
+          value: under25k
+        - label: _($25,000-$34,999)
+          value: 25to35k
+        - label: _($35,000-$49,999)
+          value: 35to50k
+        - label: _($50,000-$74,999)
+          value: 50to75k
+        - label: _($75,000-$99,999)
+          value: 75to100k
         - label: _($100,000+)
           value: atleast100k
       name: private-submitter_income
+      optional: true
+      sticky: true
+    - prompt: _(How many operable vehicles are owned by your household?)
+      type: radiogroup
+      options:
+        - label: _(0)
+          value: 0
+        - label: _(1)
+          value: 1
+        - label: _(2)
+          value: 2
+        - label: _(3 or more)
+          value: 3ormore
+      name: private-submitter_vehicles_owned
       optional: true
       sticky: true
     - prompt: _(Email)
@@ -401,9 +262,224 @@ survey:
       optional: true
       sticky: true
 
+    - name: location_type
+      type: hidden
+      attrs:
+        - key: value
+          value: specific
+
+survey:
+  submission_type: surveys
+  adding_supported: true
+
+  # Response config
+  show_responses: true
+  single_submission: true
+  response_name: _(survey)
+  response_plural_name: _(surveys)
+  action_text: _(surveyed)
+  anonymous_name: _(Someone)
+
+  # Survey form config
+  title: _(What do you think?...)
+  form_link_text: _(What do you think?)
+  submit_btn_text: _(Submit)
+  items:
+    - prompt: _(Is this a good spot for an electric vehicle charging station?)
+      type: radiogroup
+      options:
+        - label: _(Yes)
+          value: 'yes'
+        - label: _(No)
+          value: 'no'
+      name: private-good_spot
+      attrs:
+        - key: required
+    - prompt: _(Great! What's your biggest reason?)
+      type: radiogroup
+      options:
+        - label: _(Near home)
+          value: live
+        - label: _(Near bus/train)
+          value: transit
+        - label: _(Near work)
+          value: work
+        - label: _(Near shopping/grocery)
+          value: shopping
+        - label: _(Near medical or other services)
+          value: services
+        - label: _(Other)
+          value: other
+      name: private-why_good
+      attrs:
+        - key: required
+        - key: data-choice-name
+          value: private-good_spot
+        - key: data-choice-value
+          value: 'yes'
+    - prompt: _(Please explain)
+      type: text
+      name: private-why_good_other_reason
+      attrs:
+        - key: required
+        - key: data-choice-name
+          value: private-why_good
+        - key: data-choice-value
+          value: 'other'
+    - prompt: _(What's your biggest reason why not?)
+      type: radiogroup
+      options:
+        - label: _(Wouldn't use car share)
+          value: nousebikeshare
+        - label: _(Don't like the location)
+          value: location
+        - label: _(Don't feel comfortable during the day)
+          value: day
+        - label: _(Don't feel comfortable during at night)
+          value: night
+        - label: _(Would use bus or train at this location instead)
+          value: transit
+        - label: _(Would use bikeshare at this location instead)
+          value: bikeshare
+        - label: _(Not useful for me)
+          value: nouse
+        - label: _(Other)
+          value: other
+      name: private-why_bad
+      attrs:
+        - key: required
+        - key: data-choice-name
+          value: private-good_spot
+        - key: data-choice-value
+          value: 'no'
+    - prompt: _(Please explain)
+      type: text
+      name: private-why_bad_other_reason
+      attrs:
+        - key: required
+        - key: data-choice-name
+          value: private-why_bad
+        - key: data-choice-value
+          value: 'other'
+    - prompt: _(Anything else to tell us about this particular station?)
+      type: textarea
+      name: private-other_info
+
+    # Demographic information
+    - prompt: _(Are you a Los Angeles business or property owner?)
+      type: radiogroup
+      options:
+        - label: _(Yes)
+          value: yes
+        - label: _(No)
+          value: no
+      name: private-owner
+      optional: true
+      sticky: true
+    - prompt: _(Name of Business)
+      type: text
+      name: private-business_name
+      optional: true
+      sticky: true
+      attrs:
+        - key: 'data-choice-name'
+          value: 'private-owner'
+        - key: 'data-choice-value'
+          value: 'true'
+    - prompt: _(Address)
+      type: text
+      name: private-business_address
+      optional: true
+      sticky: true
+      attrs:
+        - key: 'data-choice-name'
+          value: 'private-owner'
+        - key: 'data-choice-value'
+          value: 'true'
+    - prompt: _(Contact Name)
+      type: text
+      name: private-business_contact
+      optional: true
+      sticky: true
+      attrs:
+        - key: 'data-choice-name'
+          value: 'private-owner'
+        - key: 'data-choice-value'
+          value: 'true'
+    - prompt: _(What is your age?)
+      type: radiogroup
+      options:
+        - label: _(<18)
+          value: under18
+        - label: _(18-24)
+          value: 18to24
+        - label: _(25-34)
+          value: 25to39
+        - label: _(35-49)
+          value: 35to49
+        - label: _(50-64)
+          value: 50to64
+        - label: _(65+)
+          value: atleast65
+      name: private-submitter_age
+      optional: true
+      sticky: true
+    - prompt: _(What is your race/ethnicity?)
+      type: checkboxgroup
+      options:
+        - label: _(Latino)
+          value: latino
+        - label: _(Black)
+          value: black
+        - label: _(White)
+          value: white
+        - label: _(Asian/Pacific Islander)
+          value: asian
+        - label: _(Other)
+          value: other
+      name: private-submitter_race
+      sticky: true
+    - prompt: _(What is your annual household income?)
+      type: radiogroup
+      options:
+        - label: _(<$25,000)
+          value: under25k
+        - label: _($25,000-$34,999)
+          value: 25to35k
+        - label: _($35,000-$49,999)
+          value: 35to50k
+        - label: _($50,000-$74,999)
+          value: 50to75k
+        - label: _($75,000-$99,999)
+          value: 75to100k
+        - label: _($100,000+)
+          value: atleast100k
+      name: private-submitter_income
+      optional: true
+      sticky: true
+    - prompt: _(How many operable vehicles are owned by your household?)
+      type: radiogroup
+      options:
+        - label: _(0)
+          value: 0
+        - label: _(1)
+          value: 1
+        - label: _(2)
+          value: 2
+        - label: _(3 or more)
+          value: 3ormore
+      name: private-submitter_vehicles_owned
+      optional: true
+      sticky: true
+    - prompt: _(Email)
+      name: private-submitter_email
+      type: text
+      optional: true
+      sticky: true
 
 support:
   submission_type: support
+  adding_supported: false
   submit_btn_text: _(Support)
   response_name: _(support)
   response_plural_name: _(supports)
