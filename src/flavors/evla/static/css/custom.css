@@ -97,7 +97,8 @@ body.content-visible header .social {
 }
 
 .page-about .marker-sample {
-  height: 2em;
+  height: 1em;
+  vertical-align: middle;
 }
 
 
@@ -113,13 +114,15 @@ body.content-visible header .social {
   font-style: normal;
 
   border-radius: 0;
-  background-color: #000;
+  background-color: #007AB7;
   color: #fff;
 /*  border: 0;*/
   border-color: transparent;
+
+  transition: background-color 0.2s;
 }
 .btn:hover, .button:hover, button:hover {
-  background-color: #287AED;
+  background-color: #00B7E8;
 }
 /*.btn-primary, .btn-primary:visited, .btn-primary:link {
   background-color: #3979D4;
@@ -144,6 +147,26 @@ body.content-visible header .social {
   background-color: #eee;
   color: #ccc;
   box-shadow: none;
+}
+
+.radio-label-text, .checkbox-label-text {
+    display: inline-block;
+    width: auto;
+    border: 1px solid #e5e5e5;
+    transition: all 0.2s ease 0s;
+    margin: 0.1rem;
+}
+
+.radio-label-text:hover, .checkbox-label-text:hover {
+    background-color: #00B7E8;
+    color: #007AB7;
+    border: 1px solid #00B7E8;
+}
+
+:checked + .radio-label-text, .radio-label-text.checked, :checked + .checkbox-label-text, .checkbox-label-text.checked {
+    background-color: #007AB7;
+    color: #fff;
+    border: 1px solid #007AB7;
 }
 
 /* Forms */
@@ -351,8 +374,9 @@ label.survey-label {
 /* Drag Marker Instructions (for adding a new place) */
 .drag-marker-instructions,
 .drag-marker-warning {
-/*  background-color: rgba(240,240,0,0.2);*/
-/*  color: #444;*/
+  background-color: #FF8900;
+  color: white;
+  text-shadow: none;
 }
 .drag-marker-warning {
 /*  background-color: rgba(242, 206, 206, 0.8);*/
