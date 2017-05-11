@@ -2,41 +2,12 @@
 
 <header class="place-header clearfix">
   <h1>{{#if location_name }}{{ location_name }}{{^}}{{>location-string location }}{{/if}}</h1>
-  <!-- <p>Bike share station under consideration at this site; give us your feedback.</p> -->
-  <!-- <p>Bike share station under consideration at this site in consultation with property owner; give us your feedback.</p> -->
-  <p>
-    {{#is location_type 'intersection' }}
-      {{#_}}Bike share station under consideration around this intersection.{{/_}}
-    {{/is}}
-
-    {{#is location_type 'general' }}
-      {{#_}}Bike share station under consideration near this location.{{/_}}
-    {{/is}}
-
-    {{#is location_type 'specific' }}
-      {{#_}}Bike share station under consideration at this site.{{/_}}
-    {{/is}}
-  </p>
 </header>
 
 <section class="images-carousel">
   <div class="images-container"></div>
   <div class="scroller left-scroller">&lsaquo;</div>
   <div class="scroller right-scroller">&rsaquo;</div>
-</section>
-
-<section class="place-items">
-  {{# attachments }}
-  <div class="place-item place-item-attachment place-attachment-{{ name }}">
-    <img src="{{ file }}" class="place-value place-value-{{ name }}" alt="{{ name }}">
-  </div>
-  {{/ attachments }}
-  {{#each_place_item "submitter_name" "name" "location_type"}}
-  <div class="place-item place-item-{{ name }}">
-    <span class="place-label place-label-{{ name }}">{{ label }}</span>
-    <p class="place-value place-value-{{ name }}">{{nlToBr value }}</p>
-  </div>
-  {{/each_place_item }}
 </section>
 
 {{#if survey_config}}

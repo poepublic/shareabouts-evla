@@ -3,7 +3,7 @@
 {% get_current_language as LANGUAGE_CODE %}
 
 {% block site-title %}
-<a href="https://www.metro.net/walkbikeroll" target="_blank"><img id="site-logo" src="{{ config.static_url }}images/car-logo.png" title="{{ config.app.name }}"><span id="site-title-text">Where will you<br>pick up your car?</span></a>
+<a href="https://www.bluela.com/" target="_blank"><img id="site-logo" src="{{ config.static_url }}images/car-logo.png" title="{{ config.app.name }}"><span id="site-title-text">Where will you<br>pick up your car?</span></a>
 
 <!-- Facebook Pixel Code -->
 <script>
@@ -67,9 +67,10 @@
 <p id="powered-by">{% blocktrans %}Powered by <a href="https://github.com/openplans/shareabouts/" class="shareabouts-logo" target="_blank">Shareabouts</a><!--, <span class="nobreak">hosted by <a href="http://openplans.org/" class="openplans-logo" target="_blank">OpenPlans</a></span-->{% endblocktrans %}</p>
 
 <div class="city-logos">
-  <img src="{{STATIC_URL}}images/blueLA_R.png" class="footer-logo">
-  <img src="{{STATIC_URL}}images/Seal_of_Los_Angeles_California.png" class="footer-logo">
-  <img src="{{STATIC_URL}}images/ladot_white.png" class="footer-logo">
+     <img src="{{STATIC_URL}}images/blueLA_R.png" class="footer-logo"><!--
+  --><img src="{{STATIC_URL}}images/ccilogo.png" class="footer-logo">&nbsp;&nbsp;&nbsp;<!--
+  --><img src="{{STATIC_URL}}images/Seal_of_Los_Angeles_California.png" class="footer-logo"><!--
+  --><img src="{{STATIC_URL}}images/ladot_white.png" class="footer-logo"><!--
 </div>
 {% endblock %}
 <div>
@@ -282,6 +283,15 @@
 
       return result;
     };
+
+    var surveyGetSubmissionStatus = NS.SurveyView.prototype.getSubmissionStatus;
+    NS.SurveyView.prototype.getSubmissionStatus = function(userToken) {
+      if (this.collection.options.placeModel.get('user_token') === userToken) {
+        return this.collection.options.placeModel;
+      } else {
+        return surveyGetSubmissionStatus.call(this, userToken);
+      }
+    }
 
     // Show the location images
     var placeDetailRender = NS.PlaceDetailView.prototype.render;

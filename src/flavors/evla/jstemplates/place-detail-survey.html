@@ -1,0 +1,9 @@
+          {{#if survey_config.single_submission}}
+            {{^if user_submitted}}
+              {{>place-survey-form}}
+            {{else}}
+              {{>place-survey-response}}
+            {{/if}}
+          {{else}}
+            {{>place-survey-form}}
+          {{/if}}
