@@ -156,6 +156,8 @@ place:
           value: work
         - label: _(Near shopping/grocery)
           value: shopping
+        - label: _(Near recreation/entertainment)
+          value: recreation
         - label: _(Near medical or other services)
           value: services
         - label: _(Other)
@@ -330,6 +332,8 @@ survey:
           value: work
         - label: _(Near shopping/grocery)
           value: shopping
+        - label: _(Near recreation/entertainment)
+          value: recreation
         - label: _(Near medical or other services)
           value: services
         - label: _(Other)
