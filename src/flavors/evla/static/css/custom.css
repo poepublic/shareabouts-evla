@@ -340,6 +340,7 @@ label.survey-label {
   display: inline-block;
   max-height: 2em;
 }
+
 /*#site-deadline {
   display: block;
   font-family: Merriweather;
@@ -1040,4 +1041,17 @@ p.responses-summary {
 }
 
 @media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+}
+
+/* =Iframe Embedding
+-------------------------------------------------------------- */
+
+.iframe-display #site-header,
+.iframe-display #geocode-address-bar {
+  display: none;
+}
+
+.iframe-display #map-container,
+.iframe-display #content {
+  top: 0;
 }

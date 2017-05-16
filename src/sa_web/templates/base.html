@@ -62,6 +62,8 @@
 
 </head>
 <body class="{% if config.map.geocoding_enabled %} geocoding-enabled{% endif %}">
+  {% block early_body %}{% endblock %}
+  
   {% block sentry_init %}
     {% if settings.RAVEN_CONFIG.public_dsn %}{% include '_sentry_init.html' %}{% endif %}
   {% endblock %}

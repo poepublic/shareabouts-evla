@@ -52,6 +52,29 @@
   <!-- <script src="https://use.typekit.net/qfg7vgr.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script> -->
 {% endblock %}
+
+{% block early_body %}
+<script>
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  var isIframe = getParameterByName('iframe');
+
+  if (isIframe !== null) {
+    var body = document.getElementsByTagName('body')[0];
+    var classes = body.getAttribute('class') + ' iframe-display';
+    body.setAttribute('class', classes);
+  }
+</script>
+{% endblock %}
+
 <!--
   This will place content at the top of the side bar
  -->
